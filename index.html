@@ -2,23 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
-    <title>My Title</title>
+    <title>Plan Contable</title>
   </head>
   <body>
-    <h1>Plan Contable General Empresarial</h1>
-    <form action="" id="account-form">
-      <label for="">Cuenta: </label>
-      <input type="text" id="account">
-      <button id="show-account">Show modal</button>
-    </form>
+    <section class="content">
+      <h1>Plan Contable General Empresarial</h1>
+      <form action="">
+        <label for="">Cuenta: </label>
+        <input type="text" id="account-code" value="10">
+        <button id="see-account">Show modal</button>
+      </form>
+    </section>
 
-    <div class="modal">
-      <span class="modal-close" onclick="closeModal()">x</span>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nihil id commodi ipsa vitae dolore molestiae minus enim. Nulla ut recusandae nemo quam autem minus totam impedit, quod accusamus optio?</p>
-    </div>
+    <section class="content" id="account">
+      <section>
+        <h1 id="account-name"></h1>
+        <p id="account-description"></p>
+      </section>
 
+      <section>
+        <h2>NOMENCLATURA Y DESCRIPCIÓN DE LAS SUBCUENTAS</h2>
+        <article id="sub-accounts"></article>
+      </section>
+
+      <section>
+        <h2>DINÁMICA CONTABLE</h2>
+
+        <article>
+          <h3>ES DEBITADA POR:</h3>
+          <div id="debited"></div>
+        </article>
+
+        <article>
+          <h3>ES ACREDITADA POR:</h3>
+          <div id="accredited"></div>
+        </article>
+      </section>
+
+      <section>
+        <h2>COMENTARIOS</h2>
+        <article id="comments"></article>
+      </section>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="pcge.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
