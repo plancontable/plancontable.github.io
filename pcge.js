@@ -1,15 +1,21 @@
 const pcge = {
   '1': {
     name: 'ACTIVO DISPONIBLE Y EXIGIBLE',
-    description: 'Incluye las cuentas de la 10 hasta la 19. Comprende los fondos en caja y en instituciones financieras, y las cuentas por cobrar.', 'Los registros efectuados en estas cuentas en el ejercicio económico se efectuarán sin considerar el plazo de convertibilidad en efectivo. Para la presentación de estados financieros, se identificará la parte corriente de la que no lo es, para mostrarlas por separado. En el caso de los saldos en instituciones financieras que resulten acreedoras, se reclasificarán para su presentación en el rubro de pasivo que corresponda.'
-    accounts: [
+    description: `Incluye las cuentas de la 10 hasta la 19. Comprende los fondos en caja y en instituciones
+      financieras, y las cuentas por cobrar.
+      Los registros efectuados en estas cuentas en el ejercicio económico se efectuarán sin
+      considerar el plazo de convertibilidad en efectivo. Para la presentación de estados
+      financieros, se identificará la parte corriente de la que no lo es, para mostrarlas por
+      separado. En el caso de los saldos en instituciones financieras que resulten acreedoras,
+      se reclasificarán para su presentación en el rubro de pasivo que corresponda.`,
+    accounts: {
       '10': {
         content: `Agrupa las subcuentas que representan medios de pago como dinero en efectivo,
           cheques, giros, transferencias electrónicas, entre otros, así como los depósitos en
           instituciones financieras, y otros equivalentes de efectivo disponibles a requerimiento
           del titular. Por su naturaleza corresponden a partidas del activo disponible; sin embargo,
           algunas de ellas podrían estar sujetas a restricción en su disposición o uso.`,
-        subAccounts: [
+        subAccounts: {
           '101': {
             name: 'Caja',
             description: `Efectivo en caja`
@@ -25,7 +31,7 @@ const pcge = {
               transportadoras de caudales. Incluye los cheques girados no entregados a los
               beneficiarios.`
           }
-        ]
+        }
       },
       '11': {
         content: `Incluye inversiones en instrumentos financieros clasificados de acuerdo con un modelo
@@ -37,7 +43,7 @@ const pcge = {
           registran en la cuenta 30. Además, esta cuenta contiene los instrumentos financieros
           primarios acordados para su compra futura, cuando son reconocidos en la fecha de
           contratación del instrumento.`,
-        subAccounts: [
+        subAccounts: {
           '111': {
             name: 'Inversiones mantenidas para negociación',
             description: `Corresponde a las que se
@@ -50,8 +56,8 @@ const pcge = {
               4.1.5).`
           }
 
-        ]
+        }
       },
-    ]
+    }
   }
 }
