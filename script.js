@@ -1,16 +1,68 @@
-function showModal(event) {
-  document.querySelector('.modal')
-    .classList.add("is-active");
-}
-
-function closeModal() {
-  document.querySelector('.modal')
-    .classList.remove("is-active");
-}
-
-document.querySelector('#show-account').addEventListener('click', event => {
+document.querySelector('#see-account').addEventListener('click', event => {
   event.preventDefault()
-  const account = document.querySelector('#account').value
-  console.log(account)
-  showModal()
-});
+  const accountCode = document.querySelector('#account-code').value
+  let [account] = PCGE.filter(account => account.code == accountCode)
+  changeAccount(account)
+  document.querySelector('#account').style.visibility = 'visible'
+})
+
+function changeAccount(account) {
+  drawAccount(account)
+  drawSubAccounts(account)
+  drawDynamics(account)
+  drawComments(account)
+}
+
+function drawAccount(account) {
+  document.querySelector('#account-name').textContent =
+    `${account.code} ${account.name}`
+  document.querySelector('#account-description').textContent =
+    account.description
+}
+
+function drawSubAccounts(account) {
+  document.querySelector('#sub-accounts').innerHTML = ''
+
+  for (let subAccount of account.subAccounts) {
+    document.querySelector('#sub-accounts').appendChild(
+        elt('p',
+          elt('strong', `${subAccount.code} ${subAccount.name}: `),
+          subAccount.description)
+    )
+  }
+}
+
+function drawDynamics(account) {
+  document.querySelector('#debited').innerHTML = ''
+  for (let debit of account.debited) {
+    document.querySelector('#debited').appendChild(
+      elt('li', debit)
+    )
+  }
+
+  document.querySelector('#accredited').innerHTML = ''
+  for (let acredit of account.accredited) {
+    document.querySelector('#accredited').appendChild(
+      elt('li', acredit)
+    )
+  }
+}
+
+function drawComments(account) {
+  document.querySelector('#comments').innerHTML = ''
+  for (let paragraph of account.comments) {
+    document.querySelector('#comments').appendChild(
+      elt('p', paragraph)
+    )
+  }
+}
+
+function elt(type, ...children) {
+  let node = document.createElement(type);
+  for (let child of children) {
+    if (typeof child != 'string') node.appendChild(child);
+    else node.appendChild(document.createTextNode(child));
+  }
+  return node;
+}
+
