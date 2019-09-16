@@ -9,11 +9,10 @@
   </head>
   <body>
     <section class="content">
-      <h1>Plan Contable General Empresarial</h1>
-      <form action="">
-        <label for="">Cuenta: </label>
-        <input type="text" id="account-code" value="10">
-        <button id="see-account">Show modal</button>
+      <h1 class="title">PLAN CONTABLE GENERAL EMPRESARIAL</h1>
+      <form action="" class="search">
+        <input type="number" id="account-code" min="10" max="99" placeholder="Cuenta">
+        <button id="see-account">BUSCAR</button>
       </form>
     </section>
 
@@ -32,12 +31,12 @@
         <h2>DINÁMICA CONTABLE</h2>
 
         <article>
-          <h3>ES DEBITADA POR:</h3>
+          <h3>Es debitada por:</h3>
           <div id="debited"></div>
         </article>
 
         <article>
-          <h3>ES ACREDITADA POR:</h3>
+          <h3>Es acreditada por:</h3>
           <div id="accredited"></div>
         </article>
       </section>
