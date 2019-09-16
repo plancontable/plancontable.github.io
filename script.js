@@ -1,7 +1,11 @@
 document.querySelector('#see-account').addEventListener('click', event => {
   event.preventDefault()
   const accountCode = document.querySelector('#account-code').value
+  if (accountCode < 10 || accountCode > 99) {
+
+  }
   let [account] = PCGE.filter(account => account.code == accountCode)
+  if (account === undefined) return
   changeAccount(account)
   document.querySelector('#account').style.visibility = 'visible'
 })
@@ -25,9 +29,9 @@ function drawSubAccounts(account) {
 
   for (let subAccount of account.subAccounts) {
     document.querySelector('#sub-accounts').appendChild(
-        elt('p',
-          elt('strong', `${subAccount.code} ${subAccount.name}: `),
-          subAccount.description)
+      elt('div',
+        elt('h3', `${subAccount.code} ${subAccount.name}: `),
+        elt('p', subAccount.description))
     )
   }
 }
