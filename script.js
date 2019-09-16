@@ -1,4 +1,4 @@
-document.querySelector('#see-account').addEventListener('click', event => {
+document.querySelector('#search-account').addEventListener('click', event => {
   event.preventDefault()
   const accountCode = document.querySelector('#account-code').value
   let [account] = PCGE.filter(account => account.code == accountCode)
