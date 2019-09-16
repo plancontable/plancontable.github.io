@@ -12,6 +12,7 @@ function changeAccount(account) {
   drawSubAccounts(account)
   drawDynamics(account)
   drawComments(account)
+  drawRecognitionAndMeasurement(account)
 }
 
 function drawAccount(account) {
@@ -23,12 +24,20 @@ function drawAccount(account) {
 
 function drawSubAccounts(account) {
   document.querySelector('#sub-accounts').innerHTML = ''
-
   for (let subAccount of account.subAccounts) {
     document.querySelector('#sub-accounts').appendChild(
       elt('div',
         elt('h3', `${subAccount.code} ${subAccount.name}: `),
         elt('p', subAccount.description))
+    )
+  }
+}
+
+function drawRecognitionAndMeasurement(account) {
+  document.querySelector('#recognition-and-measurement').innerHTML = ''
+  for (let paragraph of account.recognitionAndMeasurement) {
+    document.querySelector('#recognition-and-measurement').appendChild(
+      elt('p', paragraph)
     )
   }
 }
