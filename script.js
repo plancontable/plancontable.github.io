@@ -1,9 +1,6 @@
 document.querySelector('#see-account').addEventListener('click', event => {
   event.preventDefault()
   const accountCode = document.querySelector('#account-code').value
-  if (accountCode < 10 || accountCode > 99) {
-
-  }
   let [account] = PCGE.filter(account => account.code == accountCode)
   if (account === undefined) return
   changeAccount(account)
