@@ -58,6 +58,10 @@ function renderComments(comments) {
   $('#comments').innerHTML = htmlString
 }
 
+function selectInput() {
+  $('#account-code').select();
+}
+
 function $(selector) {
   return document.querySelector(selector)
 }
