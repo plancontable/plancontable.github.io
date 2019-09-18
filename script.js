@@ -1,10 +1,10 @@
-document.querySelector('#search-account').addEventListener('click', event => {
+$('#search-account').addEventListener('click', event => {
   event.preventDefault()
-  const accountCode = document.querySelector('#account-code').value
+  const accountCode = $('#account-code').value
   let [account] = PCGE.filter(account => account.code == accountCode)
   if (account === undefined) return
   changeAccount(account)
-  document.querySelector('#account').style.visibility = 'visible'
+  $('#account').style.visibility = 'visible'
 })
 
 function changeAccount(account) {
@@ -16,16 +16,16 @@ function changeAccount(account) {
 }
 
 function drawAccount(account) {
-  document.querySelector('#account-name').textContent =
+  $('#account-name').textContent =
     `${account.code} ${account.name}`
-  document.querySelector('#account-description').textContent =
+  $('#account-description').textContent =
     account.description
 }
 
 function drawSubAccounts(account) {
-  document.querySelector('#sub-accounts').innerHTML = ''
+  $('#sub-accounts').innerHTML = ''
   for (let subAccount of account.subAccounts) {
-    document.querySelector('#sub-accounts').appendChild(
+    $('#sub-accounts').appendChild(
       elt('div',
         elt('h3', `${subAccount.code} ${subAccount.name}: `),
         elt('p', subAccount.description))
@@ -34,34 +34,34 @@ function drawSubAccounts(account) {
 }
 
 function drawRecognitionAndMeasurement(account) {
-  document.querySelector('#recognition-and-measurement').innerHTML = ''
+  $('#recognition-and-measurement').innerHTML = ''
   for (let paragraph of account.recognitionAndMeasurement) {
-    document.querySelector('#recognition-and-measurement').appendChild(
+    $('#recognition-and-measurement').appendChild(
       elt('p', paragraph)
     )
   }
 }
 
 function drawDynamics(account) {
-  document.querySelector('#debited').innerHTML = ''
+  $('#debited').innerHTML = ''
   for (let debit of account.debited) {
-    document.querySelector('#debited').appendChild(
+    $('#debited').appendChild(
       elt('li', debit)
     )
   }
 
-  document.querySelector('#accredited').innerHTML = ''
+  $('#accredited').innerHTML = ''
   for (let acredit of account.accredited) {
-    document.querySelector('#accredited').appendChild(
+    $('#accredited').appendChild(
       elt('li', acredit)
     )
   }
 }
 
 function drawComments(account) {
-  document.querySelector('#comments').innerHTML = ''
+  $('#comments').innerHTML = ''
   for (let paragraph of account.comments) {
-    document.querySelector('#comments').appendChild(
+    $('#comments').appendChild(
       elt('p', paragraph)
     )
   }
@@ -76,3 +76,6 @@ function elt(type, ...children) {
   return node;
 }
 
+function $(selector) {
+  return document.querySelector(selector)
+}
