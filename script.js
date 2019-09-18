@@ -3,79 +3,62 @@ $('#search-account').addEventListener('click', event => {
   const accountCode = $('#account-code').value
   let [account] = PCGE.filter(account => account.code == accountCode)
   if (account === undefined) return
-  changeAccount(account)
+  renderAccount(account)
   $('#account').style.visibility = 'visible'
 })
 
-function changeAccount(account) {
-  drawAccount(account)
-  drawSubAccounts(account)
-  drawDynamics(account)
-  drawComments(account)
-  drawRecognitionAndMeasurement(account)
+function renderAccount(account) {
+  renderDescription(account)
+  renderSubAccounts(account.subAccounts)
+  renderRecognitionAndMeasurement(account.recognitionAndMeasurement)
+  renderDynamics(account)
+  renderComments(account.comments)
 }
 
-function drawAccount(account) {
-  $('#account-name').textContent =
-    `${account.code} ${account.name}`
-  $('#account-description').textContent =
-    account.description
+function renderDescription(account) {
+  $('#account-name').textContent = `${account.code} ${account.name}`
+  $('#account-description').textContent = account.description
 }
 
-function drawSubAccounts(account) {
-  $('#sub-accounts').innerHTML = ''
-  for (let subAccount of account.subAccounts) {
-    $('#sub-accounts').appendChild(
-      elt('div',
-        elt('h3', `${subAccount.code} ${subAccount.name}: `),
-        elt('p', subAccount.description))
-    )
-  }
+function renderSubAccounts(subAccounts) {
+  let template = ''
+  subAccounts.forEach(s => template += `<article>
+                                          <h3>${s.code} ${s.name}</h3>
+                                          <p>${s.description}</p>
+                                        </article>`)
+  $('#sub-accounts').innerHTML = template
 }
 
-function drawRecognitionAndMeasurement(account) {
-  $('#recognition-and-measurement').innerHTML = ''
-  for (let paragraph of account.recognitionAndMeasurement) {
-    $('#recognition-and-measurement').appendChild(
-      elt('p', paragraph)
-    )
-  }
+function renderRecognitionAndMeasurement(recognitionAndMeasurement) {
+  let template = ''
+  recognitionAndMeasurement.forEach(paragraph => template += `<p>${paragraph}</p>`)
+  $('#recognition-and-measurement').innerHTML = template
 }
 
-function drawDynamics(account) {
-  $('#debited').innerHTML = ''
-  for (let debit of account.debited) {
-    $('#debited').appendChild(
-      elt('li', debit)
-    )
-  }
-
-  $('#accredited').innerHTML = ''
-  for (let acredit of account.accredited) {
-    $('#accredited').appendChild(
-      elt('li', acredit)
-    )
-  }
+function renderDynamics(account) {
+  renderDebited(account.debited)
+  renderAccredited(account.accredited)
 }
 
-function drawComments(account) {
-  $('#comments').innerHTML = ''
-  for (let paragraph of account.comments) {
-    $('#comments').appendChild(
-      elt('p', paragraph)
-    )
-  }
+function renderDebited(debited) {
+  let template = ''
+  debited.forEach(debit => template += `<li>${debit}</li>`)
+  $('#debited').innerHTML = template
 }
 
-function elt(type, ...children) {
-  let node = document.createElement(type);
-  for (let child of children) {
-    if (typeof child != 'string') node.appendChild(child);
-    else node.appendChild(document.createTextNode(child));
-  }
-  return node;
+function renderAccredited(accredited) {
+  let template = ''
+  accredited.forEach(accredit => template += `<li>${accredit}</li>`)
+  $('#accredited').innerHTML = template
+}
+
+function renderComments(comments) {
+  let template = ''
+  comments.forEach(paragraph => template += `<p>${paragraph}</p>`)
+  $('#comments').innerHTML = template
 }
 
 function $(selector) {
   return document.querySelector(selector)
 }
+
