@@ -21,18 +21,18 @@ function renderDescription(account) {
 }
 
 function renderSubAccounts(subAccounts) {
-  let template = ''
-  subAccounts.forEach(s => template += `<article>
+  let htmlString = ''
+  subAccounts.forEach(s => htmlString += `<article>
                                           <h3>${s.code} ${s.name}</h3>
                                           <p>${s.description}</p>
                                         </article>`)
-  $('#sub-accounts').innerHTML = template
+  $('#sub-accounts').innerHTML = htmlString
 }
 
 function renderRecognitionAndMeasurement(recognitionAndMeasurement) {
-  let template = ''
-  recognitionAndMeasurement.forEach(paragraph => template += `<p>${paragraph}</p>`)
-  $('#recognition-and-measurement').innerHTML = template
+  let htmlString = ''
+  recognitionAndMeasurement.forEach(paragraph => htmlString += `<p>${paragraph}</p>`)
+  $('#recognition-and-measurement').innerHTML = htmlString
 }
 
 function renderDynamics(account) {
@@ -41,21 +41,21 @@ function renderDynamics(account) {
 }
 
 function renderDebited(debited) {
-  let template = ''
-  debited.forEach(debit => template += `<li>${debit}</li>`)
-  $('#debited').innerHTML = template
+  let htmlString = ''
+  debited.forEach(debit => htmlString += `<li>${debit}</li>`)
+  $('#debited').innerHTML = htmlString
 }
 
 function renderAccredited(accredited) {
-  let template = ''
-  accredited.forEach(accredit => template += `<li>${accredit}</li>`)
-  $('#accredited').innerHTML = template
+  let htmlString = ''
+  accredited.forEach(accredit => htmlString += `<li>${accredit}</li>`)
+  $('#accredited').innerHTML = htmlString
 }
 
 function renderComments(comments) {
-  let template = ''
-  comments.forEach(paragraph => template += `<p>${paragraph}</p>`)
-  $('#comments').innerHTML = template
+  let htmlString = ''
+  comments.forEach(paragraph => htmlString += `<p>${paragraph}</p>`)
+  $('#comments').innerHTML = htmlString
 }
 
 function $(selector) {
