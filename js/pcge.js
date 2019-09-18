@@ -355,7 +355,7 @@ const PCGE = [
       },
       {
         code: '167',
-        name: 'Tributos por acredita',
+        name: 'Tributos por acreditar',
         description: `Comprende la acumulación de pagos a cuenta por
           impuesto a la renta e ITAN, el IGV por acreditar en compras y no domiciliados,
           así como el impuesto a la renta por aplicar en obras por impuestos mientras se
