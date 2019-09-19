@@ -23,9 +23,9 @@ function renderDescription(account) {
 function renderSubAccounts(subAccounts) {
   let htmlString = ''
   subAccounts.forEach(s => htmlString += `<article>
-                                          <h3>${s.code} ${s.name}</h3>
-                                          <p>${s.description}</p>
-                                        </article>`)
+                                           <h3>${s.code} ${s.name}</h3>
+                                           <p>${s.description}</p>
+                                         </article>`)
   $('#sub-accounts').innerHTML = htmlString
 }
 
