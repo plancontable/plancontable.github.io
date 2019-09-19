@@ -1340,6 +1340,889 @@ const PCGE = [
     ]
   },
   {
+    code: '30',
+    name: 'INVERSIONES MOBILIARIAS',
+    description: `Comprende las inversiones financieras cuyo propósito es obtener rendimientos, en
+      adición a la devolución del capital invertido. Incluye inversiones en instrumentos de
+      deuda que se espera y se tiene la capacidad de mantener hasta el vencimiento;
+      instrumentos representativos de derechos patrimoniales; participaciones en fondos y en
+      acuerdos conjuntos, incluyendo activos por derechos de compra adquiridos.`,
+    subAccounts: [
+      {
+        code: '301',
+        name: 'Inversiones a ser mantenidas hasta el vencimiento',
+        description: `Instrumentos financieros
+          representativos de deuda adquiridos. Entre ellos están los valores emitidos o
+          garantizados, por el Estado, por el sistema financiero, u otras entidades. Su
+          propósito es obtener los rendimientos pactados en fechas establecidas, así
+          como la devolución del monto invertido.`
+      },
+      {
+        code: '302',
+        name: 'Instrumentos financieros representativos de derecho patrimonial',
+        description: `Inversiones en acciones o participaciones, incluyendo a las entidades
+          relacionadas, cuyo propósito es obtener rendimientos, por su naturaleza
+          variable, y que no se mantienen para su venta. Incluyen las acciones
+          representativas del capital social, acciones de inversión y otras formas
+          societarias, sea que se ejerza control, influencia significativa o ninguna de ellos.`
+      },
+      {
+        code: '303',
+        name: 'Certificados de participación en fondos – cuotas',
+        description: `Comprende la participación
+          en fondos mutuos y en fondos de inversión, regulados y supervisados.`
+      },
+      {
+        code: '304',
+        name: 'Participaciones en acuerdos conjuntos',
+        description: `Incluye inversiones en operaciones
+          conjuntas y en negocios conjuntos, cuya distinción depende de los derechos y
+          obligaciones de las partes establecidas en el acuerdo. Si el acuerdo establece
+          derechos sobre los activos y obligaciones respecto de los pasivos, se identifica
+          una operación conjunta, mientras que si se establecen acuerdos respecto del
+          activo neto (valor residual de activos menos pasivos), se trata como un negocio
+          conjunto.`
+      },
+      {
+        code: '308',
+        name: 'Inversiones mobiliarias – Acuerdo de compra',
+        description: `Incluye los acuerdos de
+          compra por las inversiones a ser mantenidas hasta el vencimiento, así como los
+          instrumentos financieros representativos de derecho patrimonial, cuando son
+          liquidados en una base convencional.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Se reconoce la inversión a ser mantenida hasta el vencimiento a su valor razonable,
+        más los costos de transacción directamente atribuibles a la compra o a su emisión. Con
+        posterioridad a su reconocimiento inicial, las inversiones a ser mantenidas hasta el
+        vencimiento serán medidas al costo amortizado utilizando el método de la tasa de
+        interés efectiva (NIIF 9, párrafo 4.1.2).`,
+      `Los instrumentos financieros representativos de deuda se registrarán al costo de
+        adquisición, el que incluye todos los costos de transacción. Posteriormente pueden ser
+        medidos al costo amortizado o al valor razonable (NIIF 9, párrafo 4.1.4)`,
+      `En el caso de inversiones en acciones y/o participaciones en subsidiarias y asociadas,
+        éstas se pueden medir al costo, al valor de participación patrimonial, o al valor
+        razonable, con posterioridad a su reconocimiento inicial (NIC 27, párrafo 10). En la
+        oportunidad del reconocimiento inicial, debe medirse y registrarse, si existiese, cualquier
+        plusvalía mercantil contenida en el costo de adquisición cuando se trata de una
+        combinación de negocios (NIIF 3, párrafo 32).`,
+      `Cuando exista evidencia de deterioro del valor de la inversión, en tanto la inversión se
+        mida al costo, el importe en libros del valor del activo se reducirá mediante una cuenta
+        de valuación, cuando no se sigue el método de participación patrimonial.`,
+      `Las participaciones en acuerdos conjuntos se miden en los estados financieros
+        separador del inversor, dependiendo del tipo de acuerdo conjunto. Cuando se trata de
+        una operación conjunta, la medición es inicialmente al costo, y posteriormente se
+        incrementa o disminuye por los cambios netos en el acuerdo. Para efectos de
+        presentación, se reconoce la participación proporcional en el acuerdo para cada activo,
+        pasivo, ingreso y gasto, los que a su vez son medidos considerando cada NIIF que les
+        resulte aplicable (NIIF 11, párrafos 20 y 21).`,
+      `Este PCGE no contempla cuentas de reconocimiento para cada uno de esos activos,
+        pasivos, ingresos y gastos, incorporados en una operación conjunta. Sin embargo, las
+        entidades podrán adicionar los códigos contables, en lo no regulado por este Plan, para
+        efectuar el registro contable de la participación en dichos elementos y sus cambios.
+        Cuando la naturaleza el acuerdo conjunto es un negocio conjunto, se mide inicialmente
+        al costo y luego se utiliza el método de participación patrimonial, a menos que no ejerza
+        influencia significativa o control, en cuyo caso deberá medirse al valor razonable (NIIF
+        11, párrafos 24 y 25).`,
+      `NIIF PYMES:
+        Los instrumentos financieros se miden al costo amortizado, excepto para las inversiones
+        en acciones preferentes no convertibles (en acciones ordinarias), y en acciones
+        ordinarias y preferentes sin opción de venta que cotizan en bolsa o cuyo valor razonable
+        pueda ser medido confiablemente sin incurrir en costos desproporcionados (11.4).`,
+    ],
+    debited: [
+      'El costo de adquisición de los instrumentos financieros.',
+      'El valor de las acciones recibidas por distribución de utilidades como pago de deudores.',
+      'La diferencia de cambio en caso se incremente el tipo de cambio, cuando se trate de instrumentos financieros representativos de deuda.',
+      'La recuperación de valor por la aplicación del costo amortizado bajo el método de la tasa de interés efectiva, o por la aplicación del método de participación patrimonial.',
+    ],
+    accredited: [
+      'El costo de los instrumentos financieros vendidos o redimidos.',
+      'La diferencia de cambio si disminuye el tipo de cambio, en el caso de instrumentos financieros representativos de deuda.',
+      'La reducción del valor por la aplicación del costo amortizado bajo el método de la tasa de interés efectiva, o por la aplicación del método de participación patrimonial.',
+      'Los dividendos recibidos correspondientes a períodos anteriores a la fecha de adquisición.',
+    ],
+    comments: [
+      `Las inversiones en instrumentos de deuda, a ser mantenidas hasta el vencimiento,
+        cuyo valor se encuentre expresado en moneda extranjera, se re-expresarán a la tasa
+        de cambio aplicable a la fecha del estado de situación financiera.`,
+    ]
+  },
+  {
+    code: '31',
+    name: 'PROPIEDADES DE INVERSIÓN',
+    description: `Incluye las propiedades (terrenos o edificaciones) cuya tenencia (por el propietario o por
+      el arrendatario que haya acordado un arrendamiento financiero para financiar una
+      propiedad de inversión), tiene el propósito de obtener rentas, aumentar el valor del
+      capital o ambos, en lugar de utilizar dichas propiedades para: a) la producción o
+      suministro de bienes o servicios, o para fines administrativos; o, para, b) su venta en el
+      curso normal de las operaciones`,
+    subAccounts: [
+      {
+        code: '311',
+        name: 'Terrenos',
+        description: `Urbanos o rurales que se mantienen para obtener ganancias de
+          capital y/o para su arrendamiento a terceros.`
+      },
+      {
+        code: '312',
+        name: 'Edificaciones',
+        description: `Incluye los inmuebles destinados a la obtención de rentas
+          mediante su alquiler a terceros o mediante su incremento de valor.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los bienes que componen esta cuenta deben registrarse inicialmente al costo de
+        adquisición, incluyendo los costos asociados (NIC 40, párrafo 20). Si la propiedad de
+        inversión fue financiada con una operación de arrendamiento financiero, el costo inicial
+        se reconocerá al importe que resulte menor entre el valor razonable de la propiedad y
+        el valor presente de los pagos mínimos por arrendamiento (NIC 40, párrafo 25).`,
+      `Con posterioridad a su reconocimiento inicial todas las partidas de propiedades de
+        inversión deben ser medidas a su valor razonable con cambios en resultados, o al costo
+        menos el importe acumulado de las pérdidas por deterioro de valor y menos la
+        depreciación acumulada (NIC 40, párrafo 30).`,
+      `Los intereses devengados durante el período de construcción de propiedades de
+        inversiones que clasifican como activos aptos, según se definen en la NIC 23, se
+        capitalizan hasta el momento en que el activo esté en condiciones de ser utilizado en el
+        propósito de negocio.`,
+      `NIIF PYMES:
+        Mientras que de acuerdo con las NIIF completas, la elección del modelo de medición en
+        el reconocimiento posterior, valor razonable o costo, no está sujeto a condición, la
+        sección 16 de la NIIF PYMES establece como modelo de medición el de valor razonable,
+        cuando dicho valor puede ser medido sin costo o esfuerzo desproporcionado. Si ese no
+        es el caso, entonces puede seguirse el modelo del costo, similar al de los bienes de
+        propiedad, planta y equipo.`,
+      `Por otro lado, no se admite la capitalización de intereses en ningún caso.`,
+    ],
+    debited: [
+      'El costo de adquisición o de construcción, acondicionamiento o equipamiento.',
+      'La transferencia de activos inmobiliarios de la cuenta de propiedad, planta y equipo, cuyo propósito de negocio se cambia al de este tipo de activo.',
+      'La transferencia del costo de construcciones en curso terminadas.',
+      'Los costos de financiación en el caso de activos aptos, acumulados durante la etapa de construcción.',
+      'Las mejoras y renovaciones capitalizables.',
+      'Los incrementos de valor por medición al valor razonable.',
+    ],
+    accredited: [
+      'El costo de las unidades vendidas o retiradas, o transferidas a la cuenta de activos no corrientes disponibles para la venta.',
+      'La transferencia a la cuenta de propiedad, planta y equipo, cuando se destinan al uso de la entidad.',
+      'Las disminuciones de valor por medición al valor razonable.',
+    ],
+    comments: [
+      `Aquellas inversiones en inmuebles cuya política contable de medición se realice a
+        valor razonable, no están sujetas a depreciación. En el caso de no existir un mercado
+        activo que determine dicho valor, se podrá optar por el valor razonable sobre la base
+        de una valuación hecha por un tasador independiente.`,
+      `En el caso que un inmueble se utilice, en una parte para arrendar a terceros o
+        aumentar el valor del capital y en otra, para uso en la producción o propósitos
+        administrativos, y si estas porciones pueden ser reconocidas separadamente, la
+        entidad deberá registrar tales porciones en forma separada, en las cuentas, 31
+        Propiedades de inversión y 33 Propiedad, planta y equipo, el valor correspondiente a
+        cada porción de activo.`,
+      `Un activo que se haya dispuesto para la venta en lugar de su uso continuado, debe
+        ser clasificado como activo no corriente mantenido para la venta, en la cuenta 27.`,
+    ]
+  },
+  {
+    code: '32',
+    name: 'ACTIVOS POR DERECHO DE USO',
+    description: `Agrupa las subcuentas en las que se registran los activos que se adquiere bajo la
+      modalidad de arrendamiento financiero. También incluye los arrendamientos operativos,
+      excepto cuando el arrendamiento es a corto plazo y cuando el activo subyacente es de
+      bajo valor, en cuyo caso es opcional su tratamiento como activo.`,
+    subAccounts: [
+      {
+        code: '321',
+        name: 'Propiedades de inversión – Arrendamiento financiero',
+        description: `Comprende los
+          activos de propiedades de inversión que se mantienen para obtener ganancias
+          de capital o para su arrendamiento a terceros, adquiridos bajo la modalidad de
+          arrendamiento financiero.`
+      },
+      {
+        code: '322',
+        name: 'Propiedad, planta y equipo - Arrendamiento financiero',
+        description: `Comprende los
+          activos de propiedad, planta y equipo, adquiridos en arrendamiento financiero,
+          que la entidad utiliza para la producción o suministro de bienes y servicios, para
+          arrendarlos a terceros o para propósitos administrativos, y que se espera usar
+          por más de un periodo económico.`
+      },
+      {
+        code: '323',
+        name: 'Propiedad, planta y equipo - Arrendamiento operativo',
+        description: `Incluye activos en
+          arrendamiento operativo bajo el control de la entidad.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los bienes por derecho de uso se reconocerán al inicio del contrato de arrendamiento
+        conjuntamente con un pasivo por arrendamiento, en la contabilidad del arrendatario
+        (NIIF 16, párrafo 22). El costo inicial del activo incluirá todos los siguientes componentes:
+        el pasivo por arrendamiento inicial; los pagos por arrendamiento realizados antes o a
+        partir de la fecha de inicio del contrato, menos los incentivos de arrendamiento recibidos;
+        los costos directos iniciales incurridos; y, una estimación por desmantelamiento y
+        restauración del lugar de emplazamiento del activo arrendado (NIIF 16, párrafo 24).`,
+      `El pasivo por arrendamiento inicialmente se mide al valor presente de los pagos por
+        arrendamiento no desembolsados. La tasa de descuento es la tasa de interés implícita
+        si puede ser determinada, sino se usará la tasa marginal de endeudamiento (NIIF 16,
+        párrafo 26). El pasivo incluye los pagos fijos menos cualquier incentivo de arrendamiento
+        por cobrar, los pagos variables que dependen de un índice o una tasa, importes que se
+        espera pagar por garantías de valor residual, el precio por una opción de compra,
+        cuando razonablemente se espera ejercer la opción, y penalizaciones, si se acuerda
+        contractualmente una opción para la terminación anticipada a favor del arrendatario
+        (NIIF 16, párrafo 27).`,
+      `En la medición posterior, el activo se mide al costo menos depreciación y
+        desvalorización acumuladas, salvo que activos similares en propiedad de inversión se
+        midan al valor razonable, o en propiedad, planta y equipo, al valor revaluado, en cuyo
+        caso aplicará estas mediciones a los bienes por derecho de uso similares (NIIF 16,
+        párrafos 30 A, 34 y 35). A su vez, el pasivo se medirá posteriormente, incrementándolo
+        para reflejar el interés sobre el valor descontado previo, y reduciéndolo por los pagos
+        efectuados.`,
+      `También se actualizará el pasivo por los cambios contractuales de variaciones en el
+        arrendamiento, y otros cambios contractuales como la ampliación o extensión de los
+        contratos (NIIF 16, párrafo 36). En caso no se opte por seguir el tratamiento descrito
+        para activos por arrendamiento operativo, cuando ello es posible a opción del
+        arrendatario, se continuará reconociendo gasto por alquileres. La elección del
+        reconocimiento de gastos por alquileres, en lugar de un activo por derecho de uso,
+        solamente está permitida para arrendamientos de hasta un año de plazo, o
+        arrendamientos donde el activo subyacente es de bajo valor (NIIF 16, párrafo 5).`,
+      `La contabilidad del arrendador reflejará el activo físico por el control del atributo de
+        propiedad, siguiendo el tratamiento prescrito en las NIIF para ese tipo de activos. Sus
+        ingresos, en casos de activos por derecho de uso originados en operaciones de
+        arrendamiento financiero, serán del tipo financiero, y por arrendamientos operativos,
+        reconocerá ingresos por arrendamiento.`,
+      `NIIF PYMES:
+        Los gastos por alquileres se reconocen en forma lineal, conforme se devengan, por lo
+        que se prescribe un tratamiento contable distinto al establecido en las NIIF completas.`,
+    ],
+    debited: [
+      'El costo de adquisición y otros directamente relacionados.',
+      'Los costos posteriores capitalizables.',
+      'Véase también la dinámica de las cuentas 31 y 33.',
+    ],
+    accredited: [
+      'La desapropiación o devolución del bien.',
+      'El traslado a la cuenta de propiedad inmobiliaria y propiedad, planta y equipo, según sea el caso, al finalizar el contrato de arrendamiento financiero al ejercer la opción de compra.',
+      'La terminación de los contratos de arrendamiento.',
+      'Véase también la dinámica de las cuentas 31 y 33.',
+    ],
+    comments: [
+      `Los activos por derecho de uso acumulan derechos en la contabilidad del arrendatario
+        que están bajo el control de la entidad, en tanto tienen la facultad de decidir sobre el
+        atributo de uso o gestión del activo. Su tratamiento es igual a la de un activo de
+        propiedad, planta y equipo.`,
+    ]
+  },
+  {
+    code: '33',
+    name: 'PROPIEDAD, PLANTA Y EQUIPO',
+    description: `Agrupa los activos tangibles que: a) posee una entidad para su uso en la producción o
+      suministro de bienes y servicios, para arrendarlos a terceros o para propósitos
+      administrativos; y b) se espera usar durante más de un período. La clasificación para
+      efectos de reconocimiento en registros distingue los componentes del valor de cada
+      activo.`,
+    subAccounts: [
+      {
+        code: '330',
+        name: 'Planta productora',
+        description: `Corresponde a los activos biológicos vivos que: se utilizan
+          en el suministro de productos agrícolas, se espera produzcan durante más de
+          un periodo, y la probabilidad de su venta como producto agrícola es remota. Esta
+          clase de propiedad, planta y equipo, es clasificada como activo biológico de
+          acuerdo con la NIIF PYMES.`
+      },
+      {
+        code: '331',
+        name: 'Terrenos',
+        description: `Comprende el valor de los terrenos destinados al uso de la entidad;
+          pueden ser urbanos o agrícolas.`
+      },
+      {
+        code: '332',
+        name: 'Edificaciones',
+        description: `Incluye aquellos que están destinados al proceso productivo o al
+          uso administrativo. También se incluyen como parte de esta subcuenta, las
+          mejoras en locales arrendados.`
+      },
+      {
+        code: '333',
+        name: 'Maquinarias y equipos de explotación',
+        description: `Corresponde a las que se utilizan en
+          el proceso productivo.`
+      },
+      {
+        code: '334',
+        name: 'Unidades de transporte',
+        description: `Incluye los vehículos motorizados y no motorizados
+          para el transporte de bienes o para uso del personal.`
+      },
+      {
+        code: '335',
+        name: 'Muebles y enseres',
+        description: `Comprende el mobiliario y los enseres utilizados en todos
+          los procesos empresariales, incluyendo el administrativo.`
+      },
+      {
+        code: '336',
+        name: 'Equipos diversos',
+        description: `Incluye los equipos no utilizados directamente en el proceso
+          productivo, además de aquellos para el soporte administrativo.`
+      },
+      {
+        code: '337',
+        name: 'Herramientas y unidades de reemplazo',
+        description: `Contiene herramientas de
+          importancia material, y activos cuyo propósito es sustituir a otros en uso.`
+      },
+      {
+        code: '338',
+        name: 'Unidades por recibir',
+        description: `Bienes de propiedad, planta y equipo, para los cuales se
+          ha incurrido en costos y que están pendientes de ingreso a la entidad.`
+      },
+      {
+        code: '339',
+        name: 'Obras en curso',
+        description: `Bienes en proceso de construcción o montaje.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los bienes que componen esta cuenta deben registrarse inicialmente al costo de
+        adquisición o de construcción (NIC 16, párrafo 15), o al valor razonable determinado
+        mediante tasación, en el caso de bienes aportados, donados, recibidos en pago de
+        deuda, y otros similares.`,
+      `El costo incluye el total del valor de compra más todos los gastos necesarios para tener
+        el activo en el lugar y condiciones que permitan su funcionamiento y uso en las
+        condiciones planeadas. En particular este tipo de bienes incorporan como parte del
+        costo, aquellos relacionados con la instalación y desmantelamiento de los bienes (NIC
+        16, párrafos 16 y 17).`,
+      `Los intereses devengados durante el período de construcción e instalación de activos
+        aptos (véase la NIC 23) de propiedad, planta y equipo, se capitalizan hasta el momento
+        en que el activo esté en condiciones de entrar en servicio, independientemente de la
+        fecha en que sea efectivamente utilizado o trasladado a la respectiva cuenta de
+        propiedad, planta y equipo. A partir de esta ocurrencia los intereses deben afectarse a
+        los resultados del período.`,
+      `Los costos posteriores a la adquisición de un bien de propiedad, planta y equipo, deben
+        añadirse al valor en libros del activo cuando sea probable que de los mismos se deriven
+        beneficios económicos futuros adicionales a los originalmente evaluados, siguiendo
+        pautas normales de rendimiento para el activo existente (NIC 16, párrafos 11 al 14).
+        Tales costos posteriores corresponden a sustituciones e inspecciones. El
+        mantenimiento rutinario de los bienes corresponde a un gasto de mantenimiento.`,
+      `Con posterioridad a su reconocimiento inicial como un activo, todas las partidas de
+        propiedad, planta y equipo, deben ser medidas como sigue:`,
+      `- A su costo, menos el importe acumulado de las pérdidas por deterioro de valor y
+        menos la depreciación acumulada; o,`,
+      `- A su valor revaluado, menos el importe acumulado de las pérdidas por deterioro de
+        valor y menos la depreciación acumulada.`,
+      `En el caso de propiedades, planta y equipo, adquiridos bajo la modalidad de
+        arrendamiento financiero (activos por derecho de uso), su reconocimiento es en la
+        cuenta 32.`,
+      `NIIF PYMES:
+        No está permitida la capitalización de costos financieros (17.11), los que se reconocen
+        directamente como gastos en todos los casos.`,
+    ],
+    debited: [
+      'El costo de adquisición, de las construcciones, instalaciones, equipamiento, montaje de bienes, necesarios para estar en condiciones de ser utilizados.',
+      'El costo de desarrollo de los activos biológicos.',
+      'El valor de los activos, convenido o determinado mediante tasación de los inmuebles, y avalúo técnico de los otros bienes, recibidos por cesión, donación o aporte otorgado.',
+      'Las mejoras capitalizables.',
+      'La revaluación de activos.',
+      'Las transferencias de cuentas de propiedades de inversión.',
+      'Los costos de financiación, con abono a la subcuenta 725.',
+      'Las reclasificaciones entre cuentas en lo que hace a unidades por recibir, obras en curso, y de activos no corrientes mantenidos para la venta.',
+    ],
+    accredited: [
+      'El valor de las unidades vendidas, cedidas, o dadas de baja.',
+      'El costo de los bienes devueltos a los proveedores.',
+      'Las transferencias a cuentas de propiedades de inversión y activos no corrientes disponibles para la venta.',
+      'La desvalorización hasta por el monto revaluado previamente.',
+      'Las reclasificaciones entre cuentas en lo que hace a unidades por recibir y obras en curso.',
+    ],
+    comments: [
+      `Las plantas productoras que califican como bienes de propiedad, planta y equipo, son
+        aquellas donde el producto agrícola es cosechado, separándolo del activo biológico.
+        Un activo que se haya dispuesto para la venta y si su importe en libros será
+        recuperado, fundamentalmente a través de una transacción de venta en lugar de su
+        uso continuado, debe ser clasificado como activo no corriente mantenido para la
+        venta. Los inmuebles adquiridos o construidos por una entidad para su
+        comercialización serán clasificados como existencias.`,
+      `Los montos revaluados de cada tipo de activo se deben registrar en las subcuentas
+        que para el efecto existen, separados del costo. En consecuencia, el valor revaluado
+        podrá ser disminuido por el deterioro de valor que pueda sufrir posteriormente el
+        activo.`,
+      `Cuando se opta por el modelo de revaluación, se debe contemplar el tratamiento
+        previsto en la NIC 12, párrafo 20, para el impuesto diferido asociado al excedente de
+        revaluación.`,
+      `El deterioro de valor de propiedad, planta y equipo, se reconoce en las cuentas de
+        valuación descritas en la cuenta 36.`,
+      `La divisionaria 3391 Adaptación de terrenos, como parte de la subcuenta 339
+        Construcciones y obras en curso, acumula el costo invertido en la adecuación de
+        terrenos, cuyo propósito (destino) aún no ha sido decidido.`,
+      `La acumulación de activos de herramientas y similares prevista en la subcuenta 337,
+        como si se tratara de un solo activo, es adecuada cuando tales herramientas y
+        similares son de costo individual reducido, pero el monto total adquirido es
+        significativo.`,
+    ]
+  },
+  {
+    code: '34',
+    name: 'INTANGIBLES',
+    description: `Agrupa las subcuentas que representan activos identificables, de carácter no monetario
+      y sin sustancia o contenido físico.`,
+    subAccounts: [
+      {
+        code: '341',
+        name: 'Concesiones, licencias y otros derechos',
+        description: `Incluye los derechos obtenidos para
+          desarrollar proyectos o para explorar y/o explotar recursos naturales, entre otros;
+          permisos para efectuar operaciones específicas, por tiempo limitado o
+          indeterminado; y concesiones (de servicios públicos) adquiridas del Estado.`
+      },
+      {
+        code: '342',
+        name: 'Patentes y propiedad industrial',
+        description: `Costos de adquisición, desarrollo y registro
+          de patentes y otros activos de propiedad industrial.`
+      },
+      {
+        code: '343',
+        name: 'Programas de computadora (software)',
+        description: `Costos de inversión en el desarrollo
+          interno o costo de adquisición de programas de procesamiento electrónico de
+          datos.`
+      },
+      {
+        code: '344',
+        name: 'Costos de exploración y desarrollo',
+        description: `Comprende los costos que representan
+          la búsqueda de reservas de recursos naturales.`
+      },
+      {
+        code: '345',
+        name: 'Fórmulas, diseños y prototipos',
+        description: `Incluye los costos de desarrollo de fórmulas,
+          diseños y prototipos obtenidos con nuevos conocimientos científicos y
+          tecnológicos aprovechables por la entidad, de los que se obtendrán beneficios
+          económicos futuros.`
+      },
+      {
+        code: '347',
+        name: 'Plusvalía mercantil',
+        description: `Corresponde al exceso en la fecha de adquisición, del
+          costo de combinación de negocios sobre el valor razonable de los activos
+          identificables adquiridos menos el de los pasivos asumidos.`
+      },
+      {
+        code: '349',
+        name: 'Otros activos intangibles',
+        description: `Para reconocer cualquier otro activo intangible no
+          registrado en las subcuentas anteriores.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los Intangibles pueden ser adquiridos o generados (desarrollados) internamente. El
+        desarrollo interno puede corresponder a una fase de investigación, en cuyo caso se
+        reconocen como gastos directamente, o a una fase de desarrollo, etapa en la que
+        pueden dar lugar al reconocimiento de activos (NIC 38, párrafos 54 al 64). Se registran
+        inicialmente al costo de adquisición que incluye todos los costos incurridos atribuibles a
+        la preparación del activo para su uso previsto (NIC 38, párrafo 27).`,
+      `Después del tratamiento inicial los activos intangibles se miden al costo menos la
+        amortización acumulada y menos las pérdidas por deterioro. Si la entidad opta por el
+        modelo de la revaluación, se miden a su valor revaluado menos su amortización
+        acumulada y menos cualquier pérdida acumulada por desvalorización (NIC 38, párrafos
+        72 al 87).`,
+      `NIIF PYMES:
+        Los costos de investigación y desarrollo se reconocen como gasto, a menos que formen
+        parte de otro activo que cumpla los criterios para su reconocimiento (18.14): probabilidad
+        de beneficios económicos futuros; medición confiable; y, el activo no resulta de
+        desembolsos internos en un elemento intangible (18.4). Por otro lado, no se permite el
+        método de la revaluación en la medición posterior, debiendo medirse al costo menos
+        amortización y desvalorización acumulados.`,
+    ],
+    debited: [
+      'El costo de adquisición o desarrollo de los activos intangibles.',
+      'El valor asignado a los intangibles recibidos como donación o aporte.',
+      'La revaluación de activos intangibles.',
+    ],
+    accredited: [
+      'El costo de los intangibles vendidos o retirados.',
+      'La desvalorización de intangibles.',
+    ],
+    comments: [
+      `Los intangibles en fase de investigación no se incorporan como activos, ni aquellos,
+        que estando en fase de desarrollo, no cumplen las condiciones establecidas en la NIC
+        38 (párrafo 57).`,
+      `La capitalización de los costos de exploración y desarrollo de recursos naturales es
+        permitida, más no exigida, por la NIIF 6 Exploración y evaluación de recursos
+        minerales, sujeta a evaluaciones periódicas de pérdidas por desvalorización.`,
+      `NIIF PYMES:
+        No se reconocen activos generados internamente, excepto cuando corresponden a
+        otro activo existente`,
+    ]
+  },
+  {
+    code: '35',
+    name: 'ACTIVOS BIOLÓGICOS',
+    description: `Agrupa a los animales vivos y las plantas que forman parte de una actividad agrícola,
+      pecuaria y/o piscícola, que resultan de la gestión por parte de una entidad, de las
+      transformaciones de los activos biológicos, ya sea para destinarlos a la venta, para dar
+      lugar a productos agrícolas (activos realizables) o para convertirlos en otros activos
+      biológicos diferentes.`,
+    subAccounts: [
+      {
+        code: '351',
+        name: 'Activos biológicos en producción',
+        description: `Activos de origen animal o vegetal que se
+          encuentran en etapa productiva.`
+      },
+      {
+        code: '352',
+        name: 'Activos biológicos en desarrollo',
+        description: `Activos de origen animal o vegetal en
+          crecimiento o desarrollo, que aún no alcanzaron su etapa productiva.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `El activo biológico debe ser medido, al momento de su reconocimiento inicial, como en
+        la fecha de cada estado de situación financiera, a su valor razonable menos los costos
+        de venta estimados (NIC 41, párrafo 12). El valor razonable en el reconocimiento inicial
+        es generalmente el costo de adquisición. En el caso de que el valor razonable no pueda
+        ser medido confiablemente, y sólo en el momento del reconocimiento inicial, se puede
+        reconocer y medir el activo biológico, al costo sujeto a la depreciación acumulada y al
+        deterioro acumulado, posteriores. (NIC 41, párrafo 30).`,
+      `Por su parte, los productos agrícolas cosechados o recolectados que proceden de
+        activos biológicos, son medidos a su valor razonable menos los costos de venta
+        estimados, en el punto de cosecha o recolección. Ese valor razonable neto se considera
+        como costo para efectos de su reconocimiento como inventario (NIC 41, párrafo 13).`,
+      `NIIF PYMES:
+        La medición es al valor razonable cuando éste es fácilmente determinable sin costo o
+        esfuerzo desproporcionado; de no ser así, se miden al costo.`,
+    ],
+    debited: [
+      'La adquisición y/o costos incurridos en el desarrollo del activo biológico.',
+      'Incrementos por medición a valor razonable.',
+    ],
+    accredited: [
+      'El retiro o venta de los activos biológicos.',
+      'Reducción por medición a valor razonable.',
+    ],
+    comments: [
+      `Para propósitos del reconocimiento contable, se distinguen los componentes de la
+        valorización: costo, costo de financiación y valor razonable.`,
+      `Las ganancias o pérdidas surgidas por causa del reconocimiento inicial y posterior de
+        un activo biológico a su valor razonable, se incluyen en los resultados del periodo
+        (estado de resultados integrales), en las divisionarias 6622 y 7622, para gastos e
+        ingresos, respectivamente.`,
+      `Los activos que se hayan dispuesto para la venta y si su importe en libros será
+        recuperado, fundamentalmente a través de una transacción de venta en lugar de su
+        uso continuado, deben ser clasificados como activos no corrientes mantenidos para
+        la venta, en la subcuenta 274.`,
+    ]
+  },
+  {
+    code: '36',
+    name: 'DESVALORIZACIÓN DE ACTIVO INMOVILIZADO',
+    description: `Agrupa las subcuentas de medición de deterioro para: propiedad de inversión, cuando
+      es medida al costo; propiedad, planta y equipo; activos intangibles; activos biológicos
+      medidos al costo; e inversiones mobiliarias, individualmente considerados o por grupos
+      homogéneos.`,
+    subAccounts: [
+      {
+        code: '361',
+        name: 'Desvalorización de propiedades de inversión',
+        description: `Comprende la estimación del
+          deterioro de los activos que se mantienen para obtener ganancias de capital o
+          para su arrendamiento a terceros, cuando para su registro se ha empleado el
+          método del costo. Estos activos son registrados en la cuenta 31.`
+      },
+      {
+        code: '362',
+        name: 'Desvalorización de propiedades de inversión - Arrendamiento financiero',
+        description: `Acumula la estimación por desvalorización de los activos de propiedades de
+          inversión financiados con operaciones de arrendamiento financiero.`
+      },
+      {
+        code: '363',
+        name: 'Desvalorización de propiedad, planta y equipo - Arrendamiento financiero',
+        description: `Acumula la estimación por desvalorización de los activos de propiedad, planta y
+          equipo financiados con operaciones de arrendamiento financiero.`
+      },
+      {
+        code: '364',
+        name: 'Desvalorización de propiedad, planta y equipo',
+        description: `Comprende la estimación del
+          deterioro de los activos registrados en la cuenta 33.`
+      },
+      {
+        code: '365',
+        name: 'Desvalorización de intangibles',
+        description: `Comprende la estimación del deterioro de los
+          activos registrados en la cuenta 34.`
+      },
+      {
+        code: '366',
+        name: 'Desvalorización de activos biológicos',
+        description: `Comprende la estimación del deterioro
+          de los activos registrados en la cuenta 35, cuando son medidos al costo menos
+          la depreciación y el deterioro acumulados.`
+      },
+      {
+        code: '367',
+        name: 'Desvalorización de inversiones mobiliarias',
+        description: `Incluye la estimación de pérdida
+          de valor de los instrumentos financieros reconocidos en la cuenta 30, cuando
+          son medidos al costo.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `La evaluación de la desvalorización de activos inmovilizados se inicia con un análisis de
+        indicadores (indicios), de fuentes interna y externa, dando mayor consideración a las
+        últimas. Si en el análisis global de diversos indicadores, se estima que podrían existir
+        pérdidas por desvalorización, se procederá a la medición correspondiente del monto
+        recuperable del activo (NIC 36, párrafo 9). La medición puede efectuarse para cada
+        activo por separado o para un conjunto de activos agrupados por unidad generadora de
+        efectivo.`,
+      `Se registrará la desvalorización de los activos mencionados en las subcuentas
+        precedentes, en los casos en que el valor recuperable de un activo, ya sea por su precio
+        de venta neto o valor presente de las estimaciones de los flujos de efectivo futuros que
+        se prevé resultara del aprovechamiento de dichos activos, exceda su valor neto en
+        libros, deduciendo la depreciación o amortización acumuladas, según sea el caso, y las
+        estimaciones de desvalorización anteriores (NIC 36, párrafo 18).`,
+      `La pérdida por disminución de valor debe ser reconocida en el estado de resultados
+        (estado de resultados integrales). Es posible revertir una pérdida por deterioro sólo si se
+        presentan cambios en estimados anteriores y hasta que el valor no supere el costo neto
+        del activo, si éste hubiese seguido depreciándose o amortizándose normalmente.`,
+    ],
+    debited: [
+      'La reversión de pérdidas reconocidas previamente.',
+      'El importe del deterioro de los bienes retirados o vendidos.',
+      'El monto del deterioro de los bienes transferidos a Activos no corrientes disponibles para la venta.',
+    ],
+    accredited: [
+      'El valor estimado de la desvalorización de activos inmovilizados.',
+    ],
+    comments: [
+      `Las pérdidas por desvalorización se reconocen en la subcuenta 688, mientras que los
+        importes recuperados se reconocen en la subcuenta 757.`,
+      `Cuando la medición del activo inmovilizado se efectúa al valor razonable, no se
+        reconoce estimación por desvalorización.`,
+    ]
+  },
+  {
+    code: '37',
+    name: 'ACTIVO DIFERIDO',
+    description: `Incorpora los activos que se generan por diferencias temporales deducibles entre la
+      base contable y la base tributaria de activos y pasivos, y por el derecho a compensar
+      pérdidas tributarias en periodos posteriores. Asimismo, se incluyen en esta cuenta los
+      intereses diferidos no devengados, contenidos en cuentas por pagar.`,
+    subAccounts: [
+      {
+        code: '371',
+        name: 'Impuesto a las ganancias diferido',
+        description: `Contiene el efecto acumulado en el
+          impuesto a las ganancias, originado en diferencias temporales deducibles, que
+          se espera recuperar en periodos futuros. También acumula el efecto del escudo
+          fiscal asociado a pérdidas tributarias que razonablemente se espera compensar
+          en el futuro.`
+      },
+      {
+        code: '372',
+        name: 'Participaciones de los trabajadores diferidas',
+        description: `Acumula el efecto en las
+          participaciones de los trabajadores que se calculan sobre la base de la renta
+          tributaria (y no contable), originada en diferencias temporales deducibles, que se
+          espera recuperar en periodos futuros. También acumula el efecto del escudo
+          fiscal asociado a pérdidas tributarias que razonablemente se espera compensar
+          en el futuro.`
+      },
+      {
+        code: '373',
+        name: 'Intereses diferidos',
+        description: `Comprende los intereses no devengados como gasto en
+          transacciones con terceros, como préstamos y adquisiciones de activos que
+          incorporan costos financieros. Además, incluye los intereses no devengados en
+          medición a valor descontado, asociados a pasivos del tipo provisión.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Se reconocen activos por impuesto a las ganancias en la medida que resulte probable
+        que la entidad disponga de rentas tributarias (fiscales) futuras que permitan la aplicación
+        de las diferencias temporales deducibles, y de las pérdidas tributarias que se espera,
+        razonablemente, compensar en periodos futuros (NIC 12, párrafos 24 y 34). Cuando se
+        reconozcan participaciones de los trabajadores diferidas, se utilizará la subcuenta 372.`,
+      `La medición, en el reconocimiento inicial y posterior, es al costo, sin ningún descuento
+        financiero, utilizando las tasas impositivas que se espera sean de aplicación en el
+        periodo que las diferencias temporales deducibles reviertan (NIC 12, párrafos 47 y 53).`,
+      `NIIF PYMES:
+        Las actualizaciones de valor por medición a valor razonable, como las revaluaciones,
+        no da lugar al reconocimiento de activos o pasivos diferidos (29.13, párrafo final).`,
+    ],
+    debited: [
+      'El importe del activo por diferencias temporales deducibles o por pérdidas tributarias compensables en periodos futuros, o por cambios en la legislación originadas en el periodo.',
+      'El importe del activo que surja de una transacción reconocida directamente en el patrimonio.',
+      'Los intereses no devengados incorporados por el financiamiento recibido.',
+    ],
+    accredited: [
+      'Las reducciones de activos por diferencias temporales deducibles, que revirtieron en el periodo o por cambios en la legislación.',
+      'Las reducciones de activos por reversión de las diferencias temporales deducibles, reconocidas directamente en el patrimonio.',
+      'Los intereses devengados por el financiamiento recibido.',
+    ],
+    comments: [
+      `El impuesto a las ganancias diferido tiene como contrapartida la subcuenta 882,
+        cuando el impacto es en resultados, mientras que afecta la subcuenta de excedente
+        de revaluación cuando corresponde a una actualización de valor reconocida
+        directamente en el patrimonio. El mismo tratamiento corresponde a la participación
+        de trabajadores diferida, cuando se opta por reconocer el impacto de las diferencias
+        temporales deducibles en esa participación, afectando en el caso de los resultados
+        del periodo a la sub divisionaria 62942. El efecto de los reconocimientos en resultados
+        es de un ahorro o menor gasto.`,
+      `Los intereses diferidos no se presentan en los estados financieros, pues son
+        compensados contra las cuentas por pagar que los contienen.`,
+      `La divisionaria 3732 Intereses no devengados en medición a valor descontado,
+        acumula los intereses implícitos incorporados en el valor de compra de bienes y
+        servicios. El devengado de los gastos por intereses se acumula en la divisionaria 6792
+        Gastos financieros en medición a valor descontado.`,
+    ]
+  },
+  {
+    code: '38',
+    name: 'OTROS ACTIVOS',
+    description: `Agrupa las subcuentas en las que se registra el costo de adquisición de los bienes que
+      no están destinados para la venta ni para el desarrollo de las actividades propias de la
+      entidad, como es el caso de las obras de arte, las bibliotecas, las monedas
+      conmemorativas, entre otros.`,
+    subAccounts: [
+      {
+        code: '381',
+        name: 'Bienes de arte y cultura',
+        description: `Incluye obras de arte como cuadros de pintura y
+          esculturas, así como antigüedades, libros, revistas, entre otros.`
+      },
+      {
+        code: '382',
+        name: 'Diversos',
+        description: `Incluye monedas y joyas, y cualquier otro bien de similar naturaleza,
+          no incluidos en la subcuenta anterior.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los bienes que componen esta cuenta deben registrarse al costo de adquisición, o a su
+        valor razonable en el caso de bienes aportados, recibidos por donación o ingresados al
+        patrimonio por cualquier otro concepto.`,
+      `El costo de adquisición incluye el total de los desembolsos por los bienes incluyendo
+        aquellos relacionados con: honorarios profesionales, comisiones, impuestos de compra
+        no recuperables y otros similares.`,
+    ],
+    debited: [
+      'El costo de adquisición de los bienes de arte y cultura y otros similares que se registran en otros activos.',
+    ],
+    accredited: [
+      'El costo de adquisición de activos vendidos o retirados.',
+      'Las pérdidas de valor.',
+    ],
+    comments: [
+      `Para efectos de presentación en el estado de situación financiera, este rubro se
+        presentará como última partida del activo a largo plazo. Por su naturaleza, los bienes
+        en esta cuenta no están sujetos a depreciación, en tanto, generalmente, su valor se
+        incrementa con el transcurso del tiempo.`,
+    ]
+  },
+  {
+    code: '39',
+    name: 'DEPRECIACIÓN y AMORTIZACIÓN ACUMULADOS',
+    description: `Acumula la distribución sistemática del importe depreciable de un activo a lo largo de su
+      vida útil, así como la amortización de los intangibles.`,
+    subAccounts: [
+      {
+        code: '391',
+        name: 'Depreciación acumulada propiedades de inversión',
+        description: `Corresponde a la
+          depreciación acumulada de los activos contenidos en la cuenta 31.`
+      },
+      {
+        code: '392',
+        name: 'Depreciación acumulada propiedades de inversión – Arrendamiento financiero',
+        description: `Corresponde a la depreciación acumulada de los activos contenidos
+          en la subcuenta 321.`
+      },
+      {
+        code: '393',
+        name: 'Depreciación acumulada propiedad, planta y equipo – Arrendamiento financiero',
+        description: `Corresponde a la depreciación acumulada de activos contenidos en
+          la subcuenta 322.`
+      },
+      {
+        code: '394',
+        name: 'Depreciación acumulada – Arrendamiento operativo',
+        description: `Corresponde a la
+          depreciación acumulada de activos contenidos en la subcuenta 323.`
+      },
+      {
+        code: '395',
+        name: 'Depreciación acumulada propiedad, planta y equipo',
+        description: `Corresponde a la
+          depreciación acumulada de activos contenidos en la subcuenta 33.`
+      },
+      {
+        code: '396',
+        name: 'Amortización acumulada',
+        description: `Incluye la amortización de activos intangibles. La
+          amortización corresponde a los activos reconocidos en la cuenta 34.`
+      },
+      {
+        code: '398',
+        name: 'Depreciación acumulada - Activos biológicos en producción',
+        description: `Incluye la
+          depreciación acumulada de los activos reconocidos en la cuenta 35.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `La depreciación y amortización se reconocen a lo largo de la vida útil de los activos con
+        los que están relacionados, siguiendo un método que refleje el patrón de consumo de
+        beneficios económicos incorporados en el activo.`,
+      `En todos los casos, la vida útil resulta de una estimación, por lo que cualquier cambio
+        en los supuestos que dan origen a la estimación, y que resulta en una nueva estimación
+        de vida útil, debe ser reconocido a partir de la oportunidad en que tales cambios se
+        producen.`,
+      `Se debe depreciar o amortizar por separado cada unidad de activo reconocido
+        individualmente. La vida útil de cada activo se debe revisar por lo menos una vez al año,
+        al cierre del periodo económico y, si las expectativas difieren de las estimaciones
+        previas, los cambios se contabilizarán como un cambio en una estimación contable (NIC
+        8, párrafos 32 a 38).`,
+      `La depreciación se inicia cuando el activo está disponible para su uso, lo que ocurre
+        cuando se encuentra en la ubicación y condiciones necesarias para operar en la forma
+        prevista por la Gerencia.`,
+    ],
+    debited: [
+      'La reducción o anulación, de la depreciación o amortización acumulados correspondiente a activos vendidos, retirados o transferidos a disponibles para la venta.',
+      `La disminución de la depreciación
+        acumulada y de la amortización
+        acumulada, cuando los valores de
+        revaluación son menores que el valor
+        en libros y se sigue el método de
+        reajuste proporcional de la
+        depreciación y amortización, o
+        cuando se sigue el método de
+        eliminación de la depreciación.`
+    ],
+    accredited: [
+      'La depreciación y amortización del periodo.',
+      `El incremento en la depreciación y
+        amortización por la revaluación de los
+        activos relacionados, cuando se sigue
+        el método de reajuste proporcional de
+        la depreciación y amortización.`
+    ],
+    comments: [
+      `La depreciación y amortización acumuladas, reflejan el consumo de beneficios
+        económicos incorporados en los activos relacionados. Su presentación es la de una
+        cuenta de valuación, reduciendo los valores de los activos relacionados.`,
+      `El reconocimiento de la depreciación o amortización se hace para cada componente
+        de valor por separado, distinguiendo costo, revaluación y costos de financiación. `,
+    ]
+  },
+  {
     code: 'x',
     name: '',
     description: ``,
