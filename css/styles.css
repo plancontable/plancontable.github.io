@@ -17,23 +17,23 @@ h1, h2, h3, h4 {
 
 h1 {
   margin: 2rem 0 1.5rem 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 h2 {
   margin: 1.5rem 0 0.7rem 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 h3 {
   margin: 0.7rem 0 0.2rem 0;
   color: #15668C;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 p, li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
 li {
