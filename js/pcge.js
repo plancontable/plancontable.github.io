@@ -3029,6 +3029,413 @@ const PCGE = [
     ]
   },
   {
+    code: '50',
+    name: 'CAPITAL',
+    description: `Agrupa las subcuentas que representan aportes de accionistas, socios o participes,
+      formalizados desde el punto de vista legal. Asimismo, se incluye las acciones de propia
+      emisión que han sido readquiridas (acciones en tesorería).`,
+    subAccounts: [
+      {
+        code: '501',
+        name: 'Capital social',
+        description: `Acumula los aportes de socios, accionistas o participes, en
+          efectivo o en especie.`
+      },
+      {
+        code: '502',
+        name: 'Acciones en tesorería',
+        description: `Acciones o participaciones de propia emisión,
+          readquiridas por la entidad. Su naturaleza es deudora.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `El importe del capital se registra por el monto nominal de las acciones aportado. En el
+        caso de aportes en especies, el importe del capital relacionado corresponde a la
+        valuación del activo a su valor razonable, sin perjuicio de la forma legal aplicable.`,
+      `Cuando existe una diferencia (en exceso o en defecto) entre el valor de las acciones
+        recompradas y su valor nominal, o entre el valor nominal de las acciones y el monto
+        pagado por ellas, se genera una prima (descuento) de emisión, la que se registra en la
+        cuenta 52.`,
+    ],
+    debited: [
+      'Las reducciones de capital.',
+      'Recompra de acciones propias.',
+    ],
+    accredited: [
+      'El capital aportado.',
+      'Las capitalizaciones de reservas, acreencias y utilidades, debidamente formalizadas desde el punto de vista legal.',
+    ],
+    comments: [
+      `Este Plan dispone códigos a nivel de cuatro dígitos (divisionarias) para esta cuenta.
+        Puede ser conveniente, dependiendo del tipo de instrumento patrimonial, abrir sub
+        divisionarias adicionales que permitan una clasificación por tipo específico de
+        instrumento patrimonial, por ejemplo acciones del tipo ordinario o preferente.`,
+      `No obstante la forma legal de los montos contenidos en esta cuenta, desde el punto
+        de vista financiero, alguno de estos saldos podría corresponder a un pasivo y no a
+        una cuenta patrimonial, como ocurre en ciertos casos con las acciones preferentes.
+        De existir este tipo de partidas, requieren ser reclasificadas para efectos de
+        presentación del estado de situación financiera. Concordantemente, los dividendos
+        pagados a los tenedores de dichas acciones preferentes, serán reclasificados para
+        efectos de presentación como gastos financieros.`,
+      `En los casos de aportes acordados en una moneda distinta a la de curso legal, las
+        diferencias cambiarias generadas entre la fecha del acuerdo y la fecha de pago del
+        aporte, corresponden a una prima (descuento) de emisión.`,
+      `El capital aportado, las capitalizaciones de reservas, acreencias y utilidades, y las
+        reducciones de capital, se reconocen en esta cuenta cuando se ha completado la
+        forma legal, incluyendo la inscripción en el registro público correspondiente. Los
+        acuerdos de accionistas, socios o participes sobre tales incrementos y reducciones
+        de capital, se mantienen hasta la oportunidad de su inscripción en el registro público,
+        en la cuenta 52.`,
+    ]
+  },
+  {
+    code: '51',
+    name: 'ACCIONES DE INVERSIÓN',
+    description: `Agrupa las subcuentas que representa las acciones de inversión, formalizadas
+      legalmente. Asimismo, se incluye las acciones de inversión que han sido readquiridas
+      (acciones de inversión en tesorería).`,
+    subAccounts: [
+      {
+        code: '511',
+        name: 'Acciones de inversión',
+        description: `Comprende el valor nominal de las acciones de
+          inversión.`
+      },
+      {
+        code: '512',
+        name: 'Acciones de inversión en tesorería',
+        description: `Acumula acciones de inversión,
+          readquiridas por la entidad. La naturaleza de la cuenta es deudora.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `El importe del accionariado de inversión se registra por el monto nominal de las acciones
+        y de las respectivas capitalizaciones efectuadas.`,
+    ],
+    debited: [
+      'Las redenciones o pagos de acciones de inversión.',
+    ],
+    accredited: [
+      'Aumentos por aportes y/o capitalización de otras partidas.',
+    ],
+    comments: [
+      ``,
+    ]
+  },
+  {
+    code: '52',
+    name: 'CAPITAL ADICIONAL',
+    description: `Agrupa las subcuentas que representan las primas (descuentos) de emisión y los
+      aportes y reducciones de capital que se encuentran en proceso de formalización legal.`,
+    subAccounts: [
+      {
+        code: '521',
+        name: 'Primas (descuento) de acciones',
+        description: `Variación (exceso o defecto) entre el valor
+          nominal de las acciones y el precio pagado por ellas en una emisión; o entre el
+          valor nominal y su precio de compra en el caso de adquisiciones (las acciones
+          de tesorería). Incluye también la diferencia cambiaria que se genera entre la
+          fecha del acuerdo y la fecha de pago del aporte, cuando éste se ha acordado en
+          moneda distinta a la del curso legal.`
+      },
+      {
+        code: '522',
+        name: 'Capitalizaciones en trámite',
+        description: `Comprende los aportes ya efectuados que se
+          encuentran pendientes de formalización legal e inscripción en los registros
+          públicos. Esta subcuenta recibe los montos acordados por capitalizar de otras
+          subcuentas patrimoniales como reservas y resultados acumulados, así como el
+          monto de deuda con acuerdo de capitalización.`
+      },
+      {
+        code: '523',
+        name: 'Reducciones de capital pendientes de formalización',
+        description: `Incluye las reducciones
+          de capital que se encuentran pendientes de formalización legal e inscripción en
+          los registros correspondientes. Su naturaleza es deudora.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `El importe del capital adicional se registra por el monto que excede (o que es menor) al
+        valor nominal de las acciones, en el caso de las primas; y, en el caso de los aportes por
+        capitalizar al valor nominal de los aportes.`,
+      `Las capitalizaciones en trámite y las reducciones de capital pendientes de ser
+        formalizadas en registros públicos, se reconocen en la oportunidad del acuerdo de
+        accionistas, socios o partícipes.`,
+      `Las suscripciones pendientes de pago, cuando fueron acordadas en moneda extranjera,
+        generan diferencia de cambio por las cuentas por cobrar relacionadas, la que se corrige
+        de acuerdo al tipo de cambio aplicable a la fecha de los estados financieros.`,
+    ],
+    debited: [
+      'La capitalización parcial o total de las partidas acreditadas en esta cuenta (transferencias a las cuentas 50 y 51).',
+      'El descuento de acciones cuando el valor nominal de las acciones es mayor que el importe recibido.',
+      'Las reducciones de capital pendientes de formalización.',
+    ],
+    accredited: [
+      'La primas de emisión, cuando exceden el valor nominal de las acciones.',
+      'Los aportes, reservas, acreencias y utilidades con acuerdo de capitalización.',
+    ],
+    comments: [
+      `El capital adicional es una cuenta patrimonial de tipo transitorio. Recibe el importe de
+        transacciones por acuerdos tomados por accionistas, pero respecto de los cuales, por
+        mandato de la Ley de Sociedades u otros dispositivos de ley, se requiere su
+        inscripción en los registros públicos. Mientras tal inscripción no se ha producido, los
+        saldos no deben ser transferidos a la cuenta 50. Este plan de cuentas dispone códigos
+        al nivel de cuatro dígitos (divisionarias) para esta cuenta. Puede ser conveniente,
+        dependiendo del tipo de instrumento patrimonial, abrir sub divisionarias adicionales
+        que permitan una clasificación por tipo específico de instrumento patrimonial; por
+        ejemplo acciones del tipo ordinario o preferente.`,
+      `No obstante la forma legal de los montos contenidos en esta cuenta, desde el punto
+        de vista financiero, alguno de estos, podrían corresponder a un pasivo y no a una
+        cuenta patrimonial, como ocurre en ciertos casos con las acciones preferentes. De
+        existir este tipo de partidas, su evaluación es necesaria para efectos de su
+        presentación en el estado de situación financiera.`,
+      `La diferencia de cambio generada en cuentas por cobrar a los accionistas, socios o
+        partícipes, por suscripciones pendientes de pago, se reconocen directamente en el
+        patrimonio (primas o descuento de acciones) y no en los resultados del período.`,
+    ]
+  },
+  {
+    code: '56',
+    name: 'RESULTADOS NO REALIZADOS',
+    description: `Agrupa las subcuentas que representan las ganancias por diferencias de cambio
+      originadas por las inversiones netas en una entidad extranjera; la ganancia o pérdida en
+      la cobertura del flujo de efectivo; las obtenidas en activos y pasivos financieros medidos
+      a valor razonable con cambios en el patrimonio; y, las que se obtienen como resultado
+      de la venta o compra convencional de una inversión en la fecha de liquidación.`,
+    subAccounts: [
+      {
+        code: '561',
+        name: 'Diferencia en cambio de inversiones permanentes en entidades extranjeras',
+        description: `Incluye las ganancias o pérdidas generadas por la tenencia de una
+          inversión neta en un negocio en el extranjero, originada en partidas monetarias.`
+      },
+      {
+        code: '562',
+        name: 'Instrumentos financieros – Coberturas',
+        description: `Comprende las ganancias o pérdidas
+          generadas por un instrumento financiero de cobertura de flujo de efectivo.`
+      },
+      {
+        code: '563',
+        name: 'Resultado en activos o pasivos financieros mantenidos para negociación',
+        description: `Comprende la acumulación de las ganancias o pérdidas generadas por activos
+          o pasivos financieros en cartera, mantenidos para negociación.`
+      },
+      {
+        code: '564',
+        name: 'Resultado en otros activos o pasivos por inversiones financieras',
+        description: `Acumula
+          las ganancias o pérdidas que se originan en el reconocimiento de los cambios
+          de valor en un activo o pasivo financiero con cambios en el patrimonio.`
+      },
+      {
+        code: '565',
+        name: 'Resultado en activos o pasivos financieros mantenidos para negociación – Compra o venta convencional fecha de liquidación',
+        description: `Acumula las ganancias
+          o pérdidas para activos o pasivos financieros para los cuales existe un acuerdo
+          de compra o venta, calificada como una transacción convencional, cuando dicha
+          transacción se reconoce en la fecha de liquidación.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los resultados no realizados descritos en esta cuenta se reconocen en la oportunidad
+        en que se mide los instrumentos financieros asociados, o en la oportunidad en que se
+        mide la inversión permanente en una entidad extranjera. Consecuentemente, su
+        medición resulta de los incrementos o disminuciones de los valores atribuidos a los
+        activos o pasivos correspondientes.`,
+    ],
+    debited: [
+      'La pérdida por diferencia de cambio en inversiones netas realizadas en una entidad extranjera.',
+      'La transferencia a resultados del periodo, en el momento de la desapropiación de la inversión permanente en una entidad extranjera.',
+      'La ganancia acumulada en la fecha de expiración de la cobertura o realización del activo o pasivo financiero, transferida a resultados.',
+    ],
+    accredited: [
+      'La ganancia por diferencia de cambio en inversiones netas o de cobertura realizada en una entidad extranjera.',
+      'La transferencia a resultados del periodo, en el momento de la desapropiación de la inversión permanente en una entidad extranjera.',
+      'La porción de la ganancia en el instrumento de cobertura que se haya determinado como una cobertura eficaz.',
+      'La pérdida acumulada en la fecha de expiración de la cobertura o realización del activo o pasivo financiero con cambios en patrimonio, transferido a resultados.',
+    ],
+    comments: [
+      `Las subcuentas 563 y 564 se relacionan con la subcuenta 113 Activos financieros –
+        Acuerdo de compra, y con la 464 Pasivos por instrumentos financieros.`,
+    ]
+  },
+  {
+    code: '57',
+    name: 'EXCEDENTE DE REVALUACIÓN',
+    description: `Corresponde a las variaciones en las propiedades, planta y equipo; intangibles;
+      propiedades de inversión; y, activos por exploración y evaluación de recursos minerales,
+      que han sido objeto de revaluación. Asimismo, incluye los excedentes de revaluación
+      originados por acciones liberadas recibidas, y la participación en excedente de
+      revaluación por el mantenimiento de inversiones en entidades bajo control o influencia
+      significativa, cuando se aplica el método de participación patrimonial.`,
+    subAccounts: [
+      {
+        code: '571',
+        name: 'Excedente de revaluación',
+        description: `Acumula los incrementos por actualización de valor
+          de los bienes de propiedad, planta y equipo, intangibles, propiedad de inversión,
+          y activos por exploración y evaluación de recursos minerales, netos del pasivo
+          por impuesto diferido se ha revertido. También incluye las disminuciones de valor
+          por excedentes de revaluación, hasta el límite de los incrementos reconocidos
+          anteriormente por el mismo concepto.`
+      },
+      {
+        code: '572',
+        name: 'Excedente de revaluación – Acciones liberadas recibidas',
+        description: `Acumula el
+          importe de las acciones liberadas recibidas, originadas en la capitalización de
+          actualizaciones de valor en entidades en las que se mantiene inversiones.`
+      },
+      {
+        code: '573',
+        name: 'Participación en excedente de revaluación – Inversiones en entidades relacionadas',
+        description: `Acumula el efecto neto de aumentos y disminuciones en la
+          medición a valor de participación patrimonial, de inversiones en el patrimonio
+          neto de entidades bajo control o influencia significativa (grupos económicos),
+          cuando dicha participación patrimonial se basa en variaciones patrimoniales por
+          actualización de valor de la entidad relacionada en cuyo patrimonio neto se ha
+          invertido (aplicación del método de participación patrimonial).`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Con posterioridad al reconocimiento inicial de diversos activos inmovilizados, estos
+        pueden ser medidos al valor revaluado, determinado mediante tasación o por referencia
+        a un mercado activo, dependiendo del tipo de activo que se revalúa. Los incrementos
+        por revaluación, netos del impuesto a las ganancias y, participaciones de los
+        trabajadores diferidas, si se opta por diferir participaciones, así como las disminuciones
+        de valor hasta el límite de los excedentes previamente registrados, se reconocen en
+        esta cuenta.`,
+    ],
+    debited: [
+      'La disminución del valor de los activos revaluados cuando existe excedente previo.',
+      'La liberación del excedente de revaluación en la proporción que corresponde al monto de la depreciación o amortización del activo revaluado o del activo vendido.',
+    ],
+    accredited: [
+      'El excedente proveniente del mayor valor de los activos inmovilizados, y por las acciones liberadas recibidas provenientes de capitalización en las entidades en las que se invierte.',
+      'La transferencia proporcional del pasivo por impuesto a las ganancias y participaciones de los trabajadores diferidas.',
+      'La participación en excedentes de revaluación en entidades bajo control o influencia significativa, cuando se aplica el método de participación patrimonial.',
+    ],
+    comments: [
+      `Las actualizaciones de valor que dan lugar a excedente de revaluación se descuentan
+        en el monto del impuesto a las ganancias y participaciones de los trabajadores
+        diferidas, a fin de determinar el incremento o disminución que afecta al patrimonio
+        neto.`,
+      `El excedente de revaluación se origina en una expectativa futura de ganancia
+        marginal, por lo que sus efectos incrementales se reconocen en el patrimonio neto y
+        no en los resultados del período en que se revalúa.`,
+      `NIIF PYMES:
+        No se admite revaluaciones de activos intangibles, propiedades de inversión ni activos
+        de exploración y evaluación de recursos naturales.`,
+    ]
+  },
+  {
+    code: '58',
+    name: 'RESERVAS',
+    description: `Agrupa las subcuentas que representa apropiaciones de utilidades, autorizadas por ley,
+      por los estatutos, o por acuerdo de los accionistas (o socios) y, que serán destinadas a
+      fines específicos o para cubrir eventualidades.`,
+    subAccounts: [
+      {
+        code: '581',
+        name: 'Reinversión',
+        description: `Para reinvertirlas en la entidad al amparo de dispositivos de ley.`
+      },
+      {
+        code: '582',
+        name: 'Legal',
+        description: `De acuerdo a lo dispuesto por la Ley General de Sociedades.`
+      },
+      {
+        code: '583',
+        name: 'Contractuales',
+        description: `De acuerdo con las cláusulas previstas en los contratos suscritos por la entidad.`
+      },
+      {
+        code: '584',
+        name: 'Estatuarias',
+        description: `En cumplimiento de lo establecido en los estatutos de la entidad.`
+      },
+      {
+        code: '585',
+        name: 'Facultativas',
+        description: `Constituidas por decisión voluntaria de los socios o accionistas.`
+      },
+      {
+        code: '589',
+        name: 'Otras reservas',
+        description: `Cualquier otra reserva con carácter diferente a las señaladas
+          en las subcuentas anteriores.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      'La capitalización de las reservas constituidas.',
+      'Las disminuciones de las reservas por acuerdos societarios o dispositivos de ley, o cobertura de resultados.',
+    ],
+    accredited: [
+      'Las detracciones de utilidades atendiendo a razones de orden legal, estatutario, contractual o por acuerdo de los accionistas (o socios).',
+    ],
+    comments: [
+      `Las reservas resultan de detracciones de utilidades y consecuentemente
+        corresponden a transacciones patrimoniales, y no de resultados.`,
+    ]
+  },
+  {
+    code: '59',
+    name: 'RESULTADOS ACUMULADOS',
+    description: `Agrupa las subcuentas que representan utilidades no distribuidas y las pérdidas
+      acumuladas sobre las que los accionistas, socios o participes no han tomado
+      decisiones.`,
+    subAccounts: [
+      {
+        code: '591',
+        name: 'Utilidades no distribuidas',
+        description: `Contiene las utilidades netas acumuladas así como
+          la corrección de utilidades de años anteriores y la liberación de excedentes de
+          revaluación y otras actualizaciones de valor. Incluye los efectos de los cambios
+          en las políticas contables correspondientes a años anteriores, así como los
+          originados en la corrección de errores, cuando dan lugar a utilidades.`
+      },
+      {
+        code: '592',
+        name: 'Pérdidas acumuladas',
+        description: `Contiene las pérdidas netas acumuladas así como la
+          corrección de pérdidas de años anteriores. Incluye los efectos de los cambios en
+          las políticas contables correspondientes a años anteriores, así como los
+          originados en la corrección de errores, cuando dan lugar a pérdidas.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      'Los ajustes de periodos anteriores cuando corresponda a mayores pérdidas o menores utilidades.',
+      'La pérdida del periodo.',
+      'La aplicación de las utilidades como dividendos o apropiación a reservas.',
+      'Las pérdidas producto de cambios en las políticas contables y errores contables.',
+    ],
+    accredited: [
+      'Los ajustes de periodos anteriores cuando corresponda a mayores utilidades o menores pérdidas.',
+      'La utilidad del periodo.',
+      'La cobertura de pérdida.',
+      'Las utilidades producto de cambios en las políticas contables y errores contables.',
+    ],
+    comments: [
+      `Las subcuentas de utilidades no distribuidas y pérdidas acumuladas recogen
+        directamente los efectos financieros que corresponden a años anteriores, por los
+        errores contables de importancia significativa detectados en el periodo corriente, o
+        por cambios de políticas contables incorporadas en el periodo corriente (NIC 8).
+        Desde el punto de vista contable, entonces, tales errores y cambios en políticas
+        contables, no requieren la modificación de registros contables de años anteriores. Sin
+        embargo, para propósitos de presentación de información, los años previos requieren
+        ser restructurados.`,
+    ]
+  },
+  {
     code: 'x',
     name: '',
     description: ``,
