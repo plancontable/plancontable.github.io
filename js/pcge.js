@@ -2223,6 +2223,812 @@ const PCGE = [
     ]
   },
   {
+    code: '40',
+    name: 'TRIBUTOS CONTRAPRESTACIONES Y APORTES AL SISTEMA PÚBLICO DE PENSIONES Y DE SALUD POR PAGAR',
+    description: `Agrupa las subcuentas que representan obligaciones por impuestos, contribuciones y
+      otros tributos, a cargo de la entidad, por cuenta propia o como agente retenedor.
+      También incluye el impuesto a las transacciones financieras que la entidad liquida.`,
+    subAccounts: [
+      {
+        code: '401',
+        name: 'Gobierno nacional',
+        description: `Incluye los tributos que representan ingresos del Gobierno
+          nacional, provenientes de la entidad, en su calidad de contribuyente y en su
+          calidad de agente retenedor.`
+      },
+      {
+        code: '402',
+        name: 'Certificados tributarios',
+        description: `Contiene los documentos recibidos por reintegro de
+          tributos. Esta subcuenta es de naturaleza deudora.`
+      },
+      {
+        code: '403',
+        name: 'Instituciones públicas',
+        description: `Incluye las obligaciones por contribuciones de la
+          entidad en diferentes instituciones públicas, tales como las de seguridad social,
+          y las contribuciones a la ONP. Estas obligaciones se originan en los descuentos
+          efectuados a los trabajadores y las aportaciones de la entidad.`
+      },
+      {
+        code: '405',
+        name: 'Gobiernos regionales',
+        description: `Contemplado para la acumulación de obligaciones por
+          tributos para los gobiernos regionales en el futuro. Por el momento, la ley no los
+          ha establecido.`
+      },
+      {
+        code: '406',
+        name: 'Gobiernos locales',
+        description: `Comprende el importe de tributos por concepto de licencias,
+          arbitrios y otros impuestos municipales.`
+      },
+      {
+        code: '409',
+        name: 'Otros costos administrativos e intereses',
+        description: `Incluye obligaciones por sanciones
+          administrativas, tributarias y no tributarias, otros costos legales relacionados con
+          deuda tributaria y otros con los niveles de gobierno en su capacidad
+          sancionadora.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los tributos, y aportes a los sistemas de pensiones y de salud, se reconocen a su valor
+        nominal menos los pagos efectuados. Su valor nominal corresponde al monto calculado
+        cuando es de cuenta propia, o retenido cuando es por cuenta de terceros, en las fechas
+        de las transacciones.`,
+    ],
+    debited: [
+      'El pago de las obligaciones tributarias.',
+      'La compensación de pagos o tributos por acreditar reconocidos en la subcuenta 167. impuesto a las ganancias',
+      'El importe nominal de los certificados de reintegro tributario recibido.',
+      'El IGV acreditable.',
+    ],
+    accredited: [
+      'El importe de todos los tributos a cargo de la entidad.',
+      'El importe de los impuestos y contribuciones retenidos.',
+      'El IGV facturado.',
+      'La venta o aplicación de los certificados tributarios.',
+    ],
+    comments: [
+      `El detalle de las divisionarias y otras clasificaciones adicionales que se utilicen en esta
+        cuenta, debe considerar la forma y detalle con que se liquidan los tributos de acuerdo
+        a lo requerido por los órganos competentes para administrar tributos.`,
+      `Para efectos de presentación de los tributos de saldo deudor, se debe considerar el
+        plazo en que razonablemente se espera sean aplicados, a efectos de determinar su
+        clasificación como corriente o no corriente; su presentación corresponde al activo del
+        estado de situación financiera.`,
+      `En la divisionaria 4011 se registra el Impuesto General a las Ventas (IGV) declarado,
+        pendiente de acreditación.`,
+      `La subcuenta 167 acumula los pagos de tributos por cuenta propia, y el IGV por
+        acreditar, que se compensa con tributos similares acumulados en esta cuenta.`,
+      `Los pasivos con las administradoras de fondos de pensiones se reconocen en la
+        cuenta 41. A su vez, los pasivos con entidades prestadoras de servicios de salud, se
+        reconocen como parte de las cuentas por pagar comerciales.`,
+    ]
+  },
+  {
+    code: '41',
+    name: 'REMUNERACIONES Y PARTICIPACIONES POR PAGAR',
+    description: `Agrupa las subcuentas que representan las obligaciones devengadas con los
+      trabajadores por concepto de remuneraciones, participaciones por pagar, y beneficios
+      sociales.`,
+    subAccounts: [
+      {
+        code: '411',
+        name: 'Remuneraciones por pagar',
+        description: `Comprende los sueldos, salarios, comisiones,
+          incluyendo las remuneraciones en especie, devengadas a favor de los
+          trabajadores, así como las obligaciones devengadas por vacaciones y
+          gratificaciones legales.`
+      },
+      {
+        code: '413',
+        name: 'Participaciones de los trabajadores por pagar',
+        description: `Incluye las obligaciones que
+          por disposiciones de ley o convenio laboral, o de manera voluntaria, corresponde
+          pagar a los trabajadores por concepto de participaciones en las utilidades.`
+      },
+      {
+        code: '415',
+        name: 'Beneficios sociales de los trabajadores por pagar',
+        description: `Comprende las
+          obligaciones por concepto de compensación por tiempo de servicios y pensiones
+          de jubilación.`
+      },
+      {
+        code: '417',
+        name: 'Administradoras de fondos de pensiones',
+        description: `Incluye las obligaciones con fondos
+          de pensiones privados, originadas en retenciones a los trabajadores o en aportes
+          de la entidad.`
+      },
+      {
+        code: '419',
+        name: 'Otras remuneraciones y participaciones por pagar',
+        description: `Incluye cualquier otra
+          obligación de la entidad con sus trabajadores no considerada en las subcuentas
+          anteriores, tales como gratificaciones extraordinarias y otros beneficios como los
+          que se derivan de convenios colectivos.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Las obligaciones por remuneraciones y participaciones por pagar, tanto para las que
+        representan beneficios a corto o largo plazos, como los beneficios posteriores al retiro
+        de los trabajadores, se reconocen al costo que normalmente es su valor nominal. El
+        importe total de dichos beneficios será descontado de cualquier importe ya pagado.`,
+      `Si existieran importes por pagar en moneda extranjera a la fecha de los estados
+        financieros, éstos se expresarán al tipo de cambio aplicable a las transacciones a dicha
+        fecha.`,
+      `Las pensiones por jubilación o cesantía resultan del valor actual de las pensiones que
+        se tendrían que pagar a partir de la fecha en que se adquiere ese derecho, utilizando
+        hipótesis actuariales y financieras, y acumuladas a lo largo del periodo activo del
+        trabajador.`,
+    ],
+    debited: [
+      'El pago de las obligaciones acreditadas a esta cuenta.',
+    ],
+    accredited: [
+      'Las remuneraciones por pagar.',
+      'Las participaciones por pagar y otras remuneraciones devengadas.',
+      'Los beneficios sociales devengados.',
+    ],
+    comments: [
+      `Las remuneraciones y participaciones por pagar suponen una relación de
+        subordinación de un trabajador hacia una entidad.`,
+      `Las obligaciones con trabajadores independientes se reconocen dentro de la
+        subcuenta 424 Honorarios por pagar.`,
+      `Para efectos de presentación, deben distinguirse las obligaciones corrientes de las
+        que corresponde al pasivo no corriente.`,
+    ]
+  },
+  {
+    code: '42',
+    name: 'CUENTAS POR PAGAR COMERCIALES – TERCEROS',
+    description: `Agrupa las subcuentas que representan obligaciones que contrae la entidad por la
+      compra de bienes y servicios en operaciones que son parte del objeto del negocio.`,
+    subAccounts: [
+      {
+        code: '421',
+        name: 'Facturas, boletas y otros comprobantes por pagar',
+        description: `Obligaciones por
+          concepto de bienes o servicios adquiridos.`
+      },
+      {
+        code: '422',
+        name: 'Anticipos a proveedores',
+        description: `Efectivo o sus equivalentes, entregado a
+          proveedores a cuenta de compras posteriores. Es de naturaleza deudora.`
+      },
+      {
+        code: '423',
+        name: 'Letras por pagar',
+        description: `Obligaciones sustentadas en documentos de cambio
+          aceptados por la entidad.`
+      },
+      {
+        code: '424',
+        name: 'Honorarios por pagar',
+        description: `Obligaciones con personas naturales, proveedores de
+          servicios prestados en relación de independencia.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Las cuentas por pagar comerciales se reconocerán por el monto nominal de la
+        transacción, menos los pagos efectuados, lo que es igual al costo amortizado.`,
+      `Las cuentas en moneda extranjera pendientes de pago a la fecha de los estados
+        financieros, se expresarán al tipo de cambio aplicable a las transacciones a dicha fecha.`,
+    ],
+    debited: [
+      'Los pagos efectuados a los proveedores.',
+      'La disminución de las obligaciones por devoluciones de compras a los proveedores.',
+      'Las notas de débito emitidas por los proveedores, y las notas de crédito emitidas por la entidad.',
+      'Los movimientos entre subcuentas, por ejemplo cuando se canjean las facturas por letras.',
+      'La diferencia de cambio si disminuye el tipo de cambio de la moneda extranjera.',
+    ],
+    accredited: [
+      'El importe de los bienes adquiridos y servicios recibidos de los proveedores.',
+      'Los movimientos entre subcuentas, por ejemplo cuando se canjean las facturas con letras.',
+      'La diferencia de cambio si se incrementa el tipo de cambio de la moneda extranjera.',
+    ],
+    comments: [
+      `En tanto para propósitos contables se contempla la forma financiera sin descuidar la
+        forma legal, las obligaciones comerciales no sustentadas en comprobantes de pago,
+        se reconocen en la divisionaria 4211 No emitidas. Con la recepción de la
+        documentación de sustento, se reclasifican a la divisionaria 4212 Emitidas.`,
+      `Los anticipos otorgados a proveedores, en cuanto corresponden a compra de bienes
+        o servicios pactados, deben reclasificarse para efectos de presentación, de acuerdo
+        con la naturaleza de la transacción. Si el anticipo no corresponde a una compra de
+        bienes o servicios pactados, corresponde presentarse como Otras cuentas por cobrar
+        en el estado de situación financiera.`,
+      `Para efectos de presentación, deben distinguirse las obligaciones corrientes de las
+        que corresponde al pasivo no corriente.`,
+    ]
+  },
+  {
+    code: '43',
+    name: 'CUENTAS POR PAGAR COMERCIALES – RELACIONADAS',
+    description: `Agrupa las subcuentas que representan obligaciones que se contrae con entidades
+      relacionadas, derivadas de la compra de bienes y servicios en operaciones objeto del
+      negocio.`,
+    subAccounts: [
+      {
+        code: '431',
+        name: 'Facturas, boletas y otros comprobantes por pagar',
+        description: `Obligaciones por
+          concepto de bienes o servicios adquiridos.`
+      },
+      {
+        code: '432',
+        name: 'Anticipos otorgados',
+        description: `Efectivo o sus equivalentes, entregado a cuenta de
+          compras posteriores. Es de naturaleza deudora.`
+      },
+      {
+        code: '433',
+        name: 'Letras por pagar',
+        description: `Obligaciones sustentadas en documentos de cambio
+          aceptados por la entidad.`
+      },
+      {
+        code: '434',
+        name: 'Honorarios por pagar',
+        description: `Incluye las obligaciones con Gerentes, Directores u otros
+          funcionarios de entidades relacionadas.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Las cuentas por pagar comerciales se reconocerán por el monto nominal de la
+        transacción, menos los pagos efectuados, lo que es igual al costo amortizado. `,
+      `Las cuentas en moneda extranjera pendientes de pago a la fecha de los estados
+        financieros, se expresarán al tipo de cambio aplicable a las transacciones a dicha fecha.`,
+    ],
+    debited: [
+      'Lo pagos efectuados.',
+      'La disminución de las obligaciones por devoluciones de compras.',
+      'Notas de débito emitidas por entidades relacionadas o notas de crédito emitidas por la entidad.',
+      'Los movimientos entre subcuentas, por ejemplo cuando se canjean facturas por letras.',
+      'La diferencia de cambio si disminuye el tipo de cambio de la moneda extranjera.',
+    ],
+    accredited: [
+      'El importe de los bienes adquiridos y servicios recibidos.',
+      'Los movimientos entre subcuentas, por ejemplo cuando se canjean facturas por letras.',
+      'La diferencia de cambio si se incrementa el tipo de cambio de la moneda extranjera.',
+    ],
+    comments: [
+      `Los saldos que resulten deudores, en adición a la subcuenta 432, deben ser
+        presentados como parte del activo. Su presentación en el activo es de acuerdo con la
+        naturaleza y objeto del anticipo.`,
+      `De acuerdo con la NIC 24, Información a revelar sobre partes relacionadas, deberá
+        exponerse información por separado respecto de los saldos por cobrar y pagar,
+        ingresos y gastos, entre otra información, por transacciones efectuadas con entes
+        vinculados.`,
+      `La entidad podrá incorporar dentro de los códigos contables no prescritos por este
+        PCGE, cuentas de detalle adicional para acumular información por separado sobre
+        tipos de vinculadas.`,
+      `Para efectos de presentación, deben distinguirse las obligaciones corrientes de las
+        que corresponde al pasivo no corriente.`,
+    ]
+  },
+  {
+    code: '44',
+    name: 'CUENTAS POR PAGAR A LOS ACCIONISTAS (SOCIOS, PARTÍCIPES) y DIRECTORES',
+    description: `Agrupa las subcuentas que representan las sumas adeudadas por la entidad a los
+      accionistas (o socios) y directores.`,
+    subAccounts: [
+      {
+        code: '441',
+        name: 'Accionistas (o socios)',
+        description: `Obligaciones con los accionistas por concepto de
+          préstamos y dividendos, entre otros.`
+      },
+      {
+        code: '442',
+        name: 'Directores',
+        description: `Obligaciones con los directores por dietas u otros conceptos.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Las cuentas por pagar a accionistas, directores y gerentes, se reconocerán por el monto
+        de la transacción, menos los pagos efectuados.`,
+      `El saldo de moneda extranjera se expresará al tipo de cambio al que se pagarían las
+        transacciones a la fecha de los estados financieros.`,
+    ],
+    debited: [
+      'Los pagos efectuados a los accionistas y directores.',
+      'La diferencia de cambio si disminuye el tipo de cambio de la moneda extranjera.',
+      'La capitalización legal de préstamos recibidos de accionistas.',
+    ],
+    accredited: [
+      'Los préstamos recibidos de accionistas (o socios).',
+      'Los dividendos declarados a favor de los accionistas (o socios) menos cualquier impuesto o retención.',
+      'Las dietas devengadas a favor de los directores.',
+      'La diferencia de cambio, si se incrementa el tipo de cambio de la moneda extranjera.',
+    ],
+    comments: [
+      `En esta cuenta sólo se incluye las transacciones realizadas con accionistas que son
+        personas naturales; las realizadas con personas jurídicas se presentan en la cuenta
+        47.`,
+      `Para efectos de presentación, deben distinguirse las obligaciones corrientes de las
+        que corresponde al pasivo no corriente.`,
+    ]
+  },
+  {
+    code: '45',
+    name: 'OBLIGACIONES FINANCIERAS',
+    description: `Agrupa las subcuentas que representan obligaciones por operaciones de financiación
+      que contrae la entidad con instituciones financieras y otras entidades no vinculadas, y
+      por emisión de instrumentos financieros de deuda. También se incluyen las
+      acumulaciones y costos financieros asociados a dicha financiación y otras obligaciones
+      por derivados financieros.`,
+    subAccounts: [
+      {
+        code: '451',
+        name: 'Préstamos de instituciones financieras y otras entidades',
+        description: `Operaciones de
+          préstamos en general obtenidos de bancos y otras instituciones.`
+      },
+      {
+        code: '452',
+        name: 'Contratos de arrendamiento financiero',
+        description: `Préstamos obtenidos bajo la
+          modalidad de arrendamiento financiero, los que están relacionados con los
+          activos adquiridos (Propiedades de inversión y Propiedad, planta y equipo).`
+      },
+      {
+        code: '453',
+        name: 'Obligaciones emitidas',
+        description: `Obligaciones por concepto de deuda emitida para la
+          obtención de fondos, tales como papeles comerciales y bonos corporativos.`
+      },
+      {
+        code: '454',
+        name: 'Otros instrumentos financieros por pagar',
+        description: `Obligaciones por concepto de
+          letras; papeles comerciales; bonos; pagarés, entre otros, que la entidad ha
+          adquirido.`
+      },
+      {
+        code: '455',
+        name: 'Costos de financiación por pagar',
+        description: `Acumula todos los costos de financiación
+          relacionados con obligaciones financieras contraídas de acuerdo con las
+          subcuentas precedentes, tales como: intereses, comisiones, costos de
+          reestructuración de deuda, legales y costos incrementales relacionados con la
+          obligación financiera contraída.`
+      },
+      {
+        code: '456',
+        name: 'Préstamos con compromisos de recompra',
+        description: `Registra las obligaciones
+          contraídas con terceros referidas a préstamos obtenidos, entregando a cambio
+          valores en garantía (con pacto de recompra), los que son readquiridos en plazos
+          y condiciones predeterminados.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los préstamos de instituciones financieras y otros instrumentos financieros por pagar
+        se reconocen al valor razonable, que es generalmente igual al costo. Después de su
+        reconocimiento inicial se medirán al costo amortizado, utilizando el método de la tasa
+        de interés efectiva, o al valor razonable cuando la obligación está vinculada a un activo
+        que se mide al valor razonable.`,
+      `Las cuentas en moneda extranjera pendientes de pago a la fecha de los estados
+        financieros, se expresarán al tipo de cambio aplicable a las transacciones a dicha fecha.`,
+    ],
+    debited: [
+      'Los pagos de préstamos o instrumentos financieros de deuda.',
+      'Los pagos de costos de financiación.',
+      'La reducción de valor por la aplicación del valor razonable.',
+      'La diferencia de cambio si disminuye el tipo de cambio de la moneda extranjera.',
+    ],
+    accredited: [
+      'Los préstamos y otras formas de financiación recibidos de las instituciones financieras, distintos a los sobregiros en cuenta corriente.',
+      'Los instrumentos financieros de deuda emitidos y colocados.',
+      'Los costos de financiación devengados.',
+      'Las obligaciones que se contraen por contratos de arrendamiento financiero.',
+      'El incremento de valor por la aplicación del valor razonable.',
+      'La diferencia de cambio si el tipo de cambio de la moneda extranjera sube.',
+    ],
+    comments: [
+      `Los costos de financiación deben incrementar el valor del activo cuando éste tiene las
+        características de activo apto a que se refiere la NIC 23.`,
+      `Los activos dados en garantía se registran en cuentas de orden, subcuenta 012
+        Valores y bienes entregados en garantía.`,
+      `Para efectos de presentación, deben distinguirse las obligaciones corrientes de las
+        que corresponde al pasivo no corriente.`,
+      `NIIF PYMES: No se admite la capitalización de intereses al valor de los activos (sección 25).`,
+    ]
+  },
+  {
+    code: '46',
+    name: 'CUENTAS POR PAGAR DIVERSAS – TERCEROS',
+    description: `Agrupa las subcuentas que representan cuentas por pagar a terceros, que contrae la
+      entidad por transacciones distintas a las comerciales, tributarias, laborales y de
+      financiamiento.`,
+    subAccounts: [
+      {
+        code: '461',
+        name: 'Reclamaciones de terceros',
+        description: `Obligaciones con terceros por reclamos
+          pendientes de resolución, relacionadas con actividades comerciales y no
+          comerciales.`
+      },
+      {
+        code: '464',
+        name: 'Pasivos por instrumentos financieros',
+        description: `Incluye los pasivos financieros para los
+          que existe un acuerdo de venta cuando se reconocen en la fecha de
+          contratación, con cambios en el patrimonio. También acumula los pasivos
+          financieros por variaciones en los valores razonables, cuando el acuerdo de
+          venta se reconoce en la fecha de liquidación.`
+      },
+      {
+        code: '465',
+        name: 'Pasivos por compra de activo inmovilizado',
+        description: `Obligaciones por compra de
+          activos inmovilizados a terceros.`
+      },
+      {
+        code: '466',
+        name: 'Participación de terceros en acuerdos conjuntos',
+        description: `. Incorpora los pasivos por
+          contribuciones de operadores o participes a un acuerdo conjunto, cuando el
+          acuerdo conjunto no lleva contabilidad independiente.`
+      },
+      {
+        code: '467',
+        name: 'Depósitos recibidos en garantía',
+        description: `Importes recibidos por la entidad por
+          contratos o convenios como condición de garantía.`
+      },
+      {
+        code: '469',
+        name: 'Otras cuentas por pagar diversas',
+        description: `Cualquier cuenta por pagar a terceros no
+          considerada en las subcuentas anteriores, incluyendo las subvenciones
+          gubernamentales sujetas al cumplimiento de condiciones o distribuibles en más
+          de un periodo.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Estas subcuentas se reconocen inicialmente a su valor razonable, generalmente igual
+        al costo. Después de su reconocimiento inicial se reconocen a su costo amortizado,
+        utilizando el método de la tasa de interés efectiva, excepto para los pasivos por
+        instrumentos financieros derivados y pasivos financieros por compromiso de venta, los
+        que deben reflejar el valor razonable de los instrumentos relacionados.`,
+      `Las cuentas en moneda extranjera pendientes de pago a la fecha de los estados
+        financieros, se expresarán al tipo de cambio aplicable a las transacciones a dicha fecha.`,
+    ],
+    debited: [
+      'Los pagos efectuados por acreencias reconocidas en esta cuenta.',
+      'La devolución de los depósitos recibidos en garantía.',
+      'La diferencia de cambio si disminuye el tipo de cambio de la moneda extranjera.',
+      'El cumplimiento de los compromisos de venta.',
+    ],
+    accredited: [
+      'Las reclamaciones de terceros.',
+      'Las obligaciones con terceros por compra de activos inmovilizados.',
+      'Los depósitos que se reciben de terceros en calidad de garantía por préstamos otorgados u otras operaciones contractuales.',
+      'La diferencia de cambio si el tipo de cambio de la moneda extranjera sube.',
+      'Los compromisos de venta cuando se reconocen en la fecha de contratación y las variaciones de dichos compromisos reconocidos en la fecha de contratación o liquidación.',
+    ],
+    comments: [
+      `Los subsidios gubernamentales (divisionaria) y las donaciones condicionadas
+        (divisionaria 4692) pueden estar sujetos al cumplimiento de condiciones, y por lo
+        tanto, de haberse recibido de manera anticipada, se reconoce un pasivo por la
+        obligación de devolver tal subsidio (subvención) o donación condicionada, en caso de
+        incumplimiento. En otros casos, las subvenciones y donaciones recibidas deben
+        reconocerse a lo largo de períodos en que se compensarán los costos relacionados
+        a su objeto. Las divisionarias de ingresos relacionadas son las 7591 y 7593.`,
+      `La subcuenta 465, pasivos por compra de activo inmovilizado, permite identificar los
+        montos no desembolsados en dichas compras para efectos de preparar el estado de
+        flujos de efectivo. Los cambios en la subcuenta 464, se reconocen directamente en el
+        patrimonio, en la cuenta 563.`,
+      `Para efectos de presentación, deben distinguirse las obligaciones corrientes de las
+        que corresponde al pasivo no corriente.`,
+    ]
+  },
+  {
+    code: '47',
+    name: 'CUENTAS POR PAGAR DIVERSAS – RELACIONADAS',
+    description: `Agrupa las subcuentas que representan obligaciones a favor de entidades relacionadas,
+      que contrae la entidad por operaciones diferentes a las comerciales y a las obligaciones
+      financieras.`,
+    subAccounts: [
+      {
+        code: '471',
+        name: 'Préstamos',
+        description: `Financiamiento obtenido, sujeto o no a costos financieros.`
+      },
+      {
+        code: '472',
+        name: 'Costos de financiación',
+        description: `Incluye los costos de financiación relacionados con las
+          obligaciones financieras.`
+      },
+      {
+        code: '473',
+        name: 'Anticipos recibidos',
+        description: `Efectivo o sus equivalentes, recibido en calidad de
+          anticipos a ser aplicados a cuenta de compras posteriores.`
+      },
+      {
+        code: '474',
+        name: 'Regalías',
+        description: `Obligaciones originadas en el uso o explotación de intangibles que
+          posee otra entidad, y que se determina de acuerdo con el contrato que sustente
+          las regalías.`
+      },
+      {
+        code: '475',
+        name: 'Dividendos',
+        description: `Comprende las obligaciones con los accionistas, como
+          remuneración al capital invertido, por declaración de dividendos. Asimismo,
+          incluye las obligaciones que con carácter similar se distribuye en otros tipos de
+          organización.`
+      },
+      {
+        code: '476',
+        name: 'Depósitos en garantía',
+        description: `Importes recibidos por la entidad por contratos o
+          convenios como condición de garantía.`
+      },
+      {
+        code: '477',
+        name: 'Pasivo por compra de activo inmovilizado',
+        description: `Obligaciones por compra de
+          activos inmovilizados.`
+      },
+      {
+        code: '479',
+        name: 'Otras cuentas por pagar diversas',
+        description: `Obligaciones con entidades relacionadas
+          por conceptos distintos de las subcuentas precedentes.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Las obligaciones con entidades relacionadas se reconocerán inicialmente por el monto
+        de la transacción. Posteriormente se medirán a su costo amortizado, utilizando el
+        método de la tasa de interés efectiva menos los pagos realizados.`,
+      `Las cuentas en moneda extranjera pendientes de pago a la fecha de los estados
+        financieros, se expresarán al tipo de cambio aplicable a las transacciones a dicha fecha.`,
+    ],
+    debited: [
+      'Los pagos efectuados por los conceptos acreditados en esta cuenta.',
+      'La diferencia de cambio, si disminuye el tipo de cambio de la moneda extranjera.',
+    ],
+    accredited: [
+      'Los préstamos recibidos.',
+      'Los costos de financiación, las regalías y los dividendos.',
+      'Los anticipos recibidos.',
+      'La obligación por compra de activo inmovilizado.',
+      'La diferencia de cambio, si el tipo de cambio de la moneda extranjera sube.',
+    ],
+    comments: [
+      `Para facilitar la presentación de saldos, las entidades pueden distinguir los saldos de
+        obligaciones sujetas a costos financieros de aquellas no sujetas a dichos costos.`,
+      `Los pasivos por compra de activos inmovilizados facilitan la preparación del estado
+        de flujos de efectivo, en lo que corresponde a la determinación de flujos obtenidos o
+        aplicados en las actividades de inversión. Véase la NIC 7 Estado de flujos de efectivo.`,
+      `Para efectos de presentación, deben distinguirse las obligaciones corrientes de las
+        que corresponde al pasivo no corriente.`,
+    ]
+  },
+  {
+    code: '48',
+    name: 'PROVISIONES',
+    description: `Agrupa las subcuentas que expresan los valores estimados por obligaciones de monto
+      u oportunidad inciertos. `,
+    subAccounts: [
+      {
+        code: '481',
+        name: 'Provisión para litigios',
+        description: `Estimación de la provisión en casos de litigios en curso.`
+      },
+      {
+        code: '482',
+        name: 'Provisión por desmantelamiento, retiro o rehabilitación del inmovilizado',
+        description: `Importe estimado de los costos de desmantelamiento o retiro del activo
+          inmovilizado, así como la rehabilitación del lugar donde se encuentra. La
+          obligación se reconoce paralelamente con el activo.`
+      },
+      {
+        code: '483',
+        name: 'Provisión para reestructuraciones',
+        description: `Estimación de los costos que surgen de
+          una reestructuración, como por ejemplo en la venta o liquidación de una línea de
+          actividad, la clausura de emplazamiento de la entidad en un país o región, o los
+          cambios en la estructura gerencial. Existe obligación implícita sólo si la entidad
+          tiene un plan formal y detallado para proceder y se ha producido una expectativa
+          válida entre los afectados.`
+      },
+      {
+        code: '484',
+        name: 'Provisión para protección y remediación del medio ambiente',
+        description: `Obligaciones
+          legales, contractuales o implícitas de la entidad, para prevenir o reparar daños
+          sobre el medio ambiente, salvo las que tengan origen en el desmantelamiento,
+          retiro o rehabilitación del activo inmovilizado.`
+      },
+      {
+        code: '485',
+        name: 'Provisión para gastos de responsabilidad social',
+        description: `Comprende las
+          obligaciones por los gastos en los que la entidad estima incurrir en la atención
+          de aspectos de responsabilidad social.`
+      },
+      {
+        code: '486',
+        name: 'Provisión para garantías',
+        description: `Incluye la estimación de gastos a incurrir por la
+          reparación o reposición de activos vendidos, durante el periodo de garantía.`
+      },
+      {
+        code: '487',
+        name: 'Provisión para activos por derecho de uso',
+        description: `Directamente relacionados con el
+          reconocimiento de este tipo de activos en la cuenta 32.`
+      },
+      {
+        code: '489',
+        name: 'Otras provisiones',
+        description: `Comprende cualquier otra provisión no incluida en las
+          subcuentas precedentes.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Una provisión se debe reconocer sólo cuando: a) la entidad tiene una obligación
+        presente como resultado de un suceso pasado; b) es probable que la entidad tenga que
+        desprenderse de recursos que involucren beneficios económicos, para pagar la
+        obligación; y c) puede estimarse de manera fiable el importe de la obligación (NIC 37,
+        párrafo 14).`,
+      `Las provisiones en moneda extranjera a la fecha de los estados financieros, se
+        expresarán al tipo de cambio aplicable a las transacciones a dicha fecha.`,
+    ],
+    debited: [
+      'La transferencia de las provisiones efectuadas a otras cuentas de pasivo.',
+      'La reversión de las provisiones.',
+      'La diferencia de cambio, si disminuye el tipo de cambio de la moneda extranjera',
+    ],
+    accredited: [
+      'Las provisiones estimadas para cubrir obligaciones.',
+      'El incremento de la provisión por nuevas estimaciones o actualización financiera de valor.',
+      'La diferencia de cambio, si se incrementa el tipo de cambio de la moneda extranjera.',
+    ],
+    comments: [
+      `A diferencia de las cuentas por pagar comerciales y de las obligaciones devengadas,
+        las provisiones corresponden a obligaciones de monto u oportunidad de pago,
+        inciertos. Una provisión es distinta a una estimación de recuperación de un activo; la
+        primera representa una obligación, mientras que la estimación permite mostrar el
+        monto recuperable del activo.`,
+      `Algunas de las subcuentas aquí contenidas se deben reconocer inicialmente al valor
+        descontado, según lo establece la NIC 37. En esos casos, la actualización financiera
+        de valor se reconoce en la sub divisionaria correspondiente de las subcuentas 6792
+        y 6793.`,
+      `Una vez confirmada la obligación, la provisión es ajustada y trasladada a la cuenta de
+        pasivo correspondiente para su desembolso.`,
+      `Para efectos de presentación, deben distinguirse las obligaciones corrientes de las
+        que corresponde al pasivo no corriente.`,
+    ]
+  },
+  {
+    code: '49',
+    name: 'PASIVO DIFERIDO',
+    description: `Incluye los pasivos por impuestos que se generan por diferencias temporales gravables
+      (imponibles) y en actualizaciones de valor de activos inmovilizados, cuando se sigue
+      una medición valor razonable o valor revaluado, sin efecto impositivo. También contiene
+      la participación de los trabajadores diferidas cuando se opta por su reconocimiento.
+      Asimismo, incorpora los intereses referidos a cuentas por cobrar que aún no han
+      devengado, y otros ingresos y costos diferidos.`,
+    subAccounts: [
+      {
+        code: '491',
+        name: 'Impuesto a las ganancias diferido',
+        description: `Acumula los efectos del gasto contable por
+          impuesto a las ganancias originado en diferencias temporales gravables, que se
+          estima dará lugar al pago de impuesto a las ganancias en periodos futuros.
+          Asimismo, acumula el efecto del impuesto a las ganancias diferido por
+          actualización de valor sin efecto tributario, como es el caso de las revaluaciones,
+          reconocidas directamente en el patrimonio neto.`
+      },
+      {
+        code: '492',
+        name: 'Participaciones de los trabajadores diferidas',
+        description: `. Acumula el efecto del gasto en
+          las participaciones de los trabajadores que se calculan sobre la base de la renta
+          tributaria (y no contable), originado en diferencias temporales gravables, que se
+          estima darán lugar al pago de participaciones en periodos futuros. Asimismo,
+          acumula el efecto de las participaciones de los trabajadores diferidas por
+          actualización de valor sin efecto tributario, como es el caso de las revaluaciones,
+          reconocidas directamente en el patrimonio neto.`
+      },
+      {
+        code: '493',
+        name: 'Intereses diferidos',
+        description: `Incorpora los intereses relacionados con cuentas por
+          cobrar, los que aún no han devengado. Estos intereses pueden incluir tanto
+          aquellos que se pactan explícitamente, como los que están implícitamente
+          contenidos en las cuentas por cobrar.`
+      },
+      {
+        code: '494',
+        name: 'Ganancia en venta con arrendamiento financiero paralelo',
+        description: `Acumula el
+          ingreso en la venta de activos con arrendamiento financiero paralelo, el que se
+          devenga durante el plazo del contrato del arrendamiento.`
+      },
+      {
+        code: '495',
+        name: 'Subsidios recibidos diferidos',
+        description: `Acumulan ingresos no devengados por
+          subsidios recibidos del Estado, para los cuales no existe obligación de
+          devolución.`
+      },
+      {
+        code: '496',
+        name: 'Ingresos diferidos',
+        description: `Incluye los ingresos que se devengan en resultados en el
+          futuro no contenidos en las subcuentas anteriores. No incluye la contabilización
+          de ingresos de contratos de construcción, los anticipos recibidos por venta futura
+          de bienes o servicios, ni los adelantos por venta de bienes futuros.`
+      },
+      {
+        code: '497',
+        name: 'Costos diferidos',
+        description: `Corresponde a los costos asociados con los ingresos
+          diferidos acumulados en la subcuenta 496.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Las transacciones acumuladas en esta cuenta se miden al costo. Se reconocen pasivos
+        diferidos por impuesto a las ganancias y participaciones de los trabajadores por las
+        diferencias temporales gravables (imponibles) en períodos futuros y por las
+        actualizaciones de valor reconocidas directamente en el patrimonio neto (NIC 12,
+        párrafos 15 y 20).`,
+      `La ganancia en venta con pacto de retro arrendamiento se reconoce en resultados en
+        el plazo del arrendamiento financiero.`,
+      `Los subsidios recibidos relacionados con la inversión en un activo o ejecución de
+        actividades, se reconocen como ingresos en resultados, asociándolos al consumo de
+        beneficios económicos del activo o la ejecución de las actividades.`,
+      `NIIF PYMES:
+        Las actualizaciones de valor por medición a valor razonable, como las revaluaciones,
+        no da lugar al reconocimiento de activos o pasivos diferidos (29.13, párrafo final).`,
+    ],
+    debited: [
+      'Disminución del impuesto a las ganancias y participaciones de los trabajadores diferidas por la reversión de las diferencias temporales gravables (imponibles) relacionadas.',
+      'Disminución del impuesto a las ganancias y participaciones de los trabajadores diferidas por transacciones relacionadas con el patrimonio',
+      'Intereses devengados en el financiamiento entregado a terceros.',
+      'Los costos diferidos, asociados a ingresos diferidos.',
+      'El reconocimiento en resultados de los ingresos diferidos y de la ganancia en venta de activos en transacciones paralelas de arrendamiento financiero.',
+    ],
+    accredited: [
+      'El impuesto a las ganancias y participaciones de los trabajadores diferidas, originadas en diferencias temporales gravables (imponibles) relacionadas con transacciones que se reconocen en los resultados del período o en el patrimonio.',
+      'El incremento de estos pasivos por cambios en la legislación tributaria en relación con el impuesto a las ganancias y participaciones de los trabajadores.',
+      'Los subsidios recibidos y la ganancia en venta de activos y arrendamiento financiero paralelo.',
+      'Los intereses no devengados incorporados por el financiamiento otorgado a terceros.',
+      'La ganancia en la venta de activos en transacciones con arrendamiento financiero paralelo.',
+      'Los ingresos diferidos y el reconocimiento en resultados de los costos diferidos.',
+    ],
+    comments: [
+      `La subcuenta 491 se relaciona con la subcuenta 882, Impuesto a las ganancias
+        diferido. En el caso de optar por el reconocimiento de participaciones de los
+        trabajadores diferidas, la subcuenta relacionada es la 62942. `,
+      `El reconocimiento en resultados (estado de resultado integral) de ingresos por
+        subsidios recibidos del Estado, previamente acumulados en la subcuenta 495, se
+        registran en la divisionaria 7591.`,
+      `Los intereses diferidos reconocidos en la divisionaria 4931, no se presentan en los
+        estados financieros; son compensados con la cuenta por cobrar correspondiente, en
+        tanto constituyen intereses no devengados.`,
+      `La NIIF 15 para los ingresos por ventas, de manera consistente con otras Normas
+        sobre activos que involucran financiamiento otorgado o recibido, requiere la
+        diferenciación entre los componentes comerciales y financieros en las transacciones
+        con terceros. Así, cuando una cuenta por cobrar originada en una venta contiene
+        intereses, sin diferenciarlos, se requiere el reconocimiento por separado del ingreso
+        por la venta, del de intereses, para lo cual expone la medición a valor actual de las
+        cuentas por cobrar.`,
+    ]
+  },
+  {
     code: 'x',
     name: '',
     description: ``,
