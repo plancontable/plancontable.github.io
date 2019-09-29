@@ -3436,6 +3436,854 @@ const PCGE = [
     ]
   },
   {
+    code: '60',
+    name: 'COMPRAS',
+    description: `Acumula las compras de bienes que efectúa la entidad, para destinarlos a la venta o
+      para incorporarlos al proceso productivo.`,
+    subAccounts: [
+      {
+        code: '601',
+        name: 'Mercaderías',
+        description: ``
+      },
+      {
+        code: '602',
+        name: 'Materias primas',
+        description: ``
+      },
+      {
+        code: '603',
+        name: 'Materiales auxiliares, suministros y repuestos',
+        description: ``
+      },
+      {
+        code: '604',
+        name: 'Envases y embalajes',
+        description: ``
+      },
+      {
+        code: '609',
+        name: 'Costos vinculados con las compras',
+        description: ``
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Las subcuentas 601 a 604 acumulan el costo de compra al proveedor, mientras que la
+        subcuenta 609 acumula todos los costos adicionales necesarios para tener los
+        inventarios en condiciones de ser utilizadas en el propósito del negocio.`,
+    ],
+    debited: [
+      'El importe de las compras, de acuerdo con su naturaleza, distinguiendo entre el costo de adquisición del proveedor y otros costos vinculados, con abono a las cuentas 42 o 43, según corresponda a terceros o a entidades relacionadas.',
+    ],
+    accredited: [
+      'El valor de las devoluciones de las compras.',
+      `El saldo de esta cuenta, al cierre del
+        período, con cargo a la cuenta 82
+        Valor agregado (excepto el saldo de
+        la subcuenta 601, que se traslada a la
+        subcuenta 801 Margen Comercial).`
+    ],
+    comments: [
+      `Las compras deberán registrarse en las subcuentas que correspondan, efectuando la
+        transferencia del costo total de las compras a los inventarios del Elemento 2, a través
+        de la cuenta 61 Variación de inventarios, de manera simultánea al reconocimiento en
+        esta cuenta.`,
+      `Esta cuenta incluye además las compras de bienes destinados al consumo inmediato
+        y que por lo tanto no formarán parte de los inventarios de la entidad. En este caso la
+        transferencia por destino se hará a través de la subcuenta 791 Cargas imputables a
+        cuentas de costos y gastos. Cuando la compra se destina al costo de activos
+        inmovilizados, la transferencia se efectúa a la cuenta del activo inmovilizado
+        correspondiente, a través de la cuenta 72 Producción de activo inmovilizado.`,
+      `La subcuenta 601 Mercaderías y la divisionaria 6091 Costos vinculados con las
+        compras de mercaderías, permiten, conjuntamente con la subcuenta 611 Variación
+        de inventarios – mercaderías, construir el costo de mercaderías vendidas de acuerdo
+        con su naturaleza, para determinar el margen comercial. Por su parte, las subcuentas
+        602 a 604, y la divisionarias 6092 a 6094, permiten, conjuntamente con las
+        subcuentas 612 a 614, acumular el valor agregado generado en el período (cuenta
+        82).`,
+      `La información acumulada en esta cuenta contribuye a preparar un detalle de los
+        gastos basado en su naturaleza, requerido por la NIC 1, párrafo 99.`,
+    ]
+  },
+  {
+    code: '61',
+    name: 'VARIACIÓN DE INVENTARIOS',
+    description: `Acumula las variaciones en los saldos de inventarios de mercadería, materias primas,
+      materiales auxiliares y suministros, y envases y embalajes.`,
+    subAccounts: [
+      {
+        code: '611',
+        name: 'Mercaderías',
+        description: `Incluye las compras de mercaderías así como su consumo o
+          venta; se encuentra relacionada con la cuenta 20.`
+      },
+      {
+        code: '612',
+        name: 'Materias primas',
+        description: `Incluye las compras de materias primas así como su consumo;
+          se encuentra relacionada con la cuenta 24.`
+      },
+      {
+        code: '613',
+        name: 'Materiales auxiliares, suministros y repuestos',
+        description: `Incluye las compras de
+          materiales auxiliares y suministros así como su consumo; se encuentra
+          relacionada con la cuenta 25.`
+      },
+      {
+        code: '614',
+        name: 'Envases y embalajes',
+        description: `Incluye las compras de envases y embalajes así como
+          su venta, se encuentra relacionada con la cuenta 26.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El costo por la utilización de materias
+        primas, materiales auxiliares y
+        suministros, y de envases y
+        embalajes, con abono a las cuentas:
+        20 Mercaderías; 24 Materias primas;
+        25 Materiales auxiliares, suministros y
+        repuestos; o 26 Envases y embalajes.`,
+      `El costo de los bienes devueltos a los
+        proveedores, con abono a las
+        cuentas: 20 Mercaderías; 24 Materias
+        primas; 25 Materiales auxiliares,
+        suministros y repuestos; o 26
+        Envases y embalajes.`,
+      `<strong>Al cierre del período:</strong>`,
+      `La transferencia del saldo de las
+        subcuentas correspondientes de la
+        cuenta 69 Costo de ventas.`,
+      `El saldo acreedor de la subcuenta
+        611 Mercaderías con abono a la
+        cuenta 80 Margen comercial; y ,`,
+      `Los saldos acreedores de las
+        divisionarias 612 Materias primas,
+        613 Materiales auxiliares, suministros
+        y repuestos, y 614 Envases y
+        embalajes con abono a la cuenta 82
+        Valor agregado.`,
+    ],
+    accredited: [
+      `El costo de los componentes de esta
+        cuenta adquiridos por la entidad, con
+        cargo a las cuentas correspondientes
+        del Elemento 2 Inventarios.`,
+      `<strong>Al cierre del período:</strong>`,
+      `El saldo deudor de la subcuenta 611
+        Mercaderías con cargo a la cuenta 80
+        Margen comercial; y`,
+      `Los saldos deudores de las
+        subcuentas 612 Materias primas, 613
+        Materiales auxiliares, suministros y
+        repuestos, y 614 Envases y
+        embalajes con cargo a la cuenta 82
+        Valor agregado.`,
+    ],
+    comments: [
+      `Las variaciones de inventarios participan a nivel de resultados por naturaleza como
+        cuentas correctoras de las compras de la manera siguiente:`,
+      `- Si presentan saldos deudores, indican que las ventas de mercaderías y las salidas
+        a producción de materias primas, materiales auxiliares y suministros, y envases y
+        embalajes, han sido mayores que las compras del período, lo que ha determinado
+        que la diferencia sea cubierta con los inventarios iniciales.`,
+      `- Si presentan saldos acreedores, indican que las ventas de mercaderías y las
+        salidas de materias primas, materiales auxiliares y suministros, y envases y
+        embalajes, a la producción, han sido menores que las compras del período, lo que
+        ha originado un aumento en el nivel de los inventarios iniciales.`,
+      `La variación de productos terminados, productos en proceso, subproductos,
+        desechos, desperdicios e inventarios de servicios, se registran en la cuenta 71
+        Variación de la producción almacenada.`,
+      `La variación de envases y embalajes que hayan sido producidos por la entidad se
+        registran en la subcuenta 714 Variación de envases y embalajes.`,
+    ]
+  },
+  {
+    code: '62',
+    name: 'GASTOS DE PERSONAL Y DIRECTORES',
+    description: `Agrupa las subcuentas que representan las remuneraciones a que tiene derecho el
+      trabajador, tanto en efectivo como en especie así como las distintas contribuciones para
+      seguridad y previsión social, y en general todas las cargas que lo benefician. Incluye por
+      extensión, las dietas a los miembros del Directorio de la entidad.`,
+    subAccounts: [
+      {
+        code: '621',
+        name: 'Remuneraciones',
+        description: `Gastos incurridos por concepto de remuneraciones del
+          personal, que incluye los sueldos, salarios, comisiones, remuneraciones en
+          especie, vacaciones, y gratificaciones, entre otros, de carácter fijo.`
+      },
+      {
+        code: '622',
+        name: 'Otras remuneraciones',
+        description: `Gastos por concepto de bonos extraordinarios,
+          movilidad, pasajes, asignación para vivienda, escolaridad, entre otros.`
+      },
+      {
+        code: '623',
+        name: 'Indemnizaciones al personal',
+        description: `Comprende los gastos por concepto de pagos
+          adicionales a las remuneraciones, por ejemplo en el caso de ceses de personal.`
+      },
+      {
+        code: '624',
+        name: 'Capacitación',
+        description: `Importe utilizado en la capacitación del personal, ya sea dentro
+          de la entidad o fuera de ella, en otras instituciones especializadas`
+      },
+      {
+        code: '625',
+        name: 'Atención al personal',
+        description: `Gastos de atención al personal, tal como almuerzos,
+          celebración de festividades, entre otros.`
+      },
+      {
+        code: '627',
+        name: 'Seguridad, previsión social y otras contribuciones',
+        description: `Contribuciones de la
+          entidad establecidas por ley, tales como seguro social, seguro complementario
+          de trabajos de riesgo, SENCICO, SENATI, entre otras similares. También incluye
+          los seguros particulares de salud y de prestaciones – EPS, y la contribución a la
+          AFP de cargo de la entidad.`
+      },
+      {
+        code: '628',
+        name: 'Retribuciones al directorio',
+        description: `Importe de las retribuciones por dietas asignadas
+          a los miembros del directorio.`
+      },
+      {
+        code: '629',
+        name: 'Beneficios sociales de los trabajadores',
+        description: `Gastos por concepto de
+          compensación por tiempo de servicios de acuerdo a ley, y por concepto de
+          pensiones de jubilación y otros beneficios, después de terminado el vínculo
+          laboral (post-empleo), como los seguros de salud y otros pagados a
+          pensionistas. Incluye además, la participación en las utilidades otorgada por ley,
+          por acuerdo entre la entidad y sus trabajadores, o voluntarias.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El monto bruto de las
+        remuneraciones, en efectivo o en
+        especie, del personal permanente o
+        eventual.`,
+      `El importe total de las contribuciones
+        devengadas a cargo de la entidad.`,
+      `Los gastos de capacitación y
+        atenciones con el personal.`,
+      `Las retribuciones asignadas a los
+        Directores.`,
+      `Los beneficios sociales de los
+        trabajadores, pensiones de jubilación
+        y otros beneficios post-empleo.`,
+    ],
+    accredited: [
+      `<strong>Al cierre del periodo:</strong>`,
+      `El total de las cargas de personal, al
+        cierre del período, con cargo a la
+        cuenta 83 Excedente bruto
+        (insuficiencia bruta) de explotación.`,
+    ],
+    comments: [
+      `La contratación de mano de obra y otros servicios a entidades especializadas se
+        registran en la cuenta 63 Gastos de servicios prestados por terceros.`,
+      `Los gastos de personal se transfieren a las cuentas de activo o gasto, según
+        corresponda, a través de la subcuenta 791 Cargas imputables a cuentas de costos y
+        gastos.`,
+    ]
+  },
+  {
+    code: '63',
+    name: 'GASTOS DE SERVICIOS PRESTADOS POR TERCEROS',
+    description: `Agrupa las subcuentas que acumulan los gastos de servicios prestados por terceros a
+      la entidad.`,
+    subAccounts: [
+      {
+        code: '631',
+        name: 'Transporte, correos y gastos de viaje',
+        description: `Incluye los fletes relacionados con la
+          venta de mercaderías, transporte entre establecimientos, transporte colectivo de
+          personal, pasajes en el ámbito nacional e internacional u otros medios de
+          transporte, y otros fletes y gastos de correo. Asimismo, incluye los gastos de
+          viaje, como alojamiento, alimentación, entre otros.`
+      },
+      {
+        code: '632',
+        name: 'Asesoría y consultoría',
+        description: `Servicios recibidos por asesoría y consultoría, en
+          materia: administrativa; contable; legal; notarial; planeamiento y producción;
+          mercadotecnia; medioambiental, entre otros.`
+      },
+      {
+        code: '633',
+        name: 'Producción encargada a terceros',
+        description: `Comprende el servicio relacionado con la
+          producción que se encarga a terceros, a los cuales la entidad le proporciona los
+          insumos.`
+      },
+      {
+        code: '634',
+        name: 'Mantenimiento y reparaciones',
+        description: `Gastos relacionados con la conservación y
+          mantenimiento de los activos inmovilizados. Incluye tanto el gasto por los
+          servicios como el costo de los materiales y repuestos utilizados.`
+      },
+      {
+        code: '635',
+        name: 'Alquileres',
+        description: `Gastos relacionados con el arrendamiento operativo de bienes
+          muebles e inmuebles. Si corresponden al alquiler de un inmueble o similar para
+          uso de trabajadores, que constituya remuneración en especie, deberá ser
+          reconocido en la cuenta 62. Esta cuenta acumula el gasto por alquileres
+          (arrendamientos) cuando no se requirió su activación como activos por derecho
+          de uso, según se describe en la cuenta 32.`
+      },
+      {
+        code: '636',
+        name: 'Servicios básicos',
+        description: `Gastos en servicios básicos, tales como energía, agua y
+          comunicaciones`
+      },
+      {
+        code: '637',
+        name: 'Publicidad, publicaciones, relaciones públicas',
+        description: `Incluye los gastos
+          relacionados con anuncios, catálogos impresos y otras publicaciones,
+          atenciones en ferias, exposiciones, gastos de atención a clientes.`
+      },
+      {
+        code: '638',
+        name: 'Servicios de contratistas',
+        description: `Gastos por servicios prestados por contratistas.`
+      },
+      {
+        code: '639',
+        name: 'Otros servicios prestados por terceros',
+        description: `Gastos por otros servicios prestados
+          por terceros no incluidos en las subcuentas precedentes, tales como gastos de
+          laboratorio y gastos bancarios.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El importe de los servicios prestados
+        a la entidad por terceros.`,
+    ],
+    accredited: [
+      `El total al cierre del periodo con cargo
+        a la cuenta 82 Valor agregado.`,
+    ],
+    comments: [
+      `Los intereses relacionados con los créditos que se deriven por los servicios prestados
+        por terceros, deben ser registrados en la cuenta 67 Gastos financieros. Las primas de
+        seguros son registradas en la cuenta 65 Otros gastos de gestión.`,
+      `Los servicios vinculados con la construcción o desarrollo de propiedad, planta y
+        equipo, así como de otros activos inmovilizados, como los intangibles, biológicos,
+        propiedades de inversión y activos por derecho de uso, serán transferidos a las
+        cuentas del activo correspondiente, a través de la cuenta 72 Producción de activo
+        inmovilizado`,
+      `La divisionaria 6391 Gastos bancarios, acumula el gasto por los servicios recibidos
+        de los bancos y otras instituciones financieras, tales como la gestión de cuentas
+        bancarias y gastos de cobranzas de documentos, entre otros, los que corresponden
+        a consumo intermedio desde el punto de vista económico.`,
+      `En la presentación de información por la naturaleza del gasto, según lo prescribe la
+        NIC 1, no debe utilizarse una acumulación del tipo servicios prestados por terceros,
+        pues ello no indica la naturaleza del gasto. En lugar de ello, es conveniente distinguir
+        los componentes principales de esta cuenta, y acumular los saldos menores como
+        otros.`,
+    ]
+  },
+  {
+    code: '64',
+    name: 'GASTOS POR TRIBUTOS',
+    description: `Agrupa las subcuentas que acumulan los impuestos, tasas y contribuciones de cargo de
+      la entidad, establecidos por el gobierno nacional, el gobierno regional y el gobierno
+      municipal o local. También se incluyen los gastos asociados a la deuda tributaria.`,
+    subAccounts: [
+      {
+        code: '641',
+        name: 'Gobierno nacional',
+        description: `Comprende, a nivel de divisionarias, el importe del
+          Impuesto General a las Ventas, del Impuesto Selectivo al Consumo y del
+          Impuesto de Promoción Municipal por compra de bienes y servicios que no
+          pueden ser materia de crédito fiscal ni identificado con una categoría de activo o
+          gasto. Asimismo, incluye el impuesto a las transacciones financieras y el
+          impuesto temporal a los activos netos cuando no puede ser acreditado contra el
+          impuesto a las ganancias, así como las regalías mineras, los cánones sectoriales
+          y el impuesto a los juegos de casino y tragamonedas.`
+      },
+      {
+        code: '642',
+        name: 'Gobierno regional',
+        description: `Los tributos que se establezcan donde el perceptor sea el
+          gobierno regional.`
+      },
+      {
+        code: '643',
+        name: 'Gobierno local',
+        description: `Incluye los tributos municipales, tales como el impuesto predial
+          e impuesto vehicular, arbitrios, licencias y otras tasas.`
+      },
+      {
+        code: '644',
+        name: 'Otros gastos por tributos',
+        description: `Cualquier otro gasto por tributos no contemplados
+          en las subcuentas precedentes, tales como las contribuciones al SENCICO`
+      },
+      {
+        code: '645',
+        name: 'Gastos en deuda tributaria',
+        description: `Corresponde a los intereses, multas y costas,
+          incluyendo los intereses en fraccionamiento tributario.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `Los tributos devengados a cargo de la entidad.`,
+      `Las multas, intereses y costas
+        procesales, así como los intereses
+        en fraccionamiento tributario.`,
+    ],
+    accredited: [
+      `El total, al cierre del período, de los
+        tributos que afectan a la entidad, con
+        cargo a la cuenta 83 Excedente bruto
+        (insuficiencia bruta) de explotación.`,
+    ],
+    comments: [
+      `El Impuesto a las ganancias de las personas jurídicas, por su naturaleza, representa
+        una disposición o aplicación de las utilidades; en consecuencia, será objeto de
+        registro en la cuenta 88 Impuesto a las ganancias.`,
+      `Los impuestos a las ventas, selectivo al consumo, y promoción municipal relacionados
+        con la compra de bienes y servicios que se reconocen en esta cuenta, corresponden
+        a la porción que no puede ser acreditada con el impuesto facturado del mismo tipo, ni
+        que puede ser identificado con una categoría específica de activo o gasto. Cuando
+        estos tributos, no pueden ser acreditados para la liquidación de dicho impuesto, y se
+        identifican con un gasto o activo en particular, deben contabilizarse como parte del
+        gasto o activo, en tanto no son recuperables.`,
+    ]
+  },
+  {
+    code: '65',
+    name: 'OTROS GASTOS DE GESTIÓN',
+    description: `Agrupa las subcuentas que acumulan otros gastos de gestión que por su naturaleza no
+      se consideran como consumo de bienes relacionados con la producción o la prestación
+      de servicios, ni como remuneración de los factores de la producción (gastos de personal,
+      tributos, intereses, depreciaciones y provisiones del periodo).`,
+    subAccounts: [
+      {
+        code: '651',
+        name: 'Seguros',
+        description: `Incluye el importe de las primas por pólizas de seguros devengados
+          en el periodo económico que se toma para la cobertura de diversos riesgos.`
+      },
+      {
+        code: '652',
+        name: 'Regalías',
+        description: `Gastos referidos al usufructo de los derechos de autor, patentes,
+          marcas, diseños, entre otros.`
+      },
+      {
+        code: '653',
+        name: 'Suscripciones',
+        description: `Comprende los gastos por la suscripción de revistas, diarios y
+          otras publicaciones. Incluye las membresías sin derecho a devolución (cuotas
+          periódicas).`
+      },
+      {
+        code: '654',
+        name: 'Licencias y derechos de vigencia',
+        description: `Comprende los permisos de operación para
+          ciertas actividades, como la pesca o la minería, por ejemplo.`
+      },
+      {
+        code: '655',
+        name: 'Costo neto de enajenación de activos inmovilizados y operaciones discontinuadas',
+        description: `Corresponde al valor neto en libros que mantenían los activos
+          inmovilizados al momento de enajenarlos, o cuando han sido siniestrados.
+          Asimismo, incluye los gastos incurridos por la discontinuidad de segmentos de
+          negocios o actividad geográfica, o abandono de activos.`
+      },
+      {
+        code: '656',
+        name: 'Suministros',
+        description: `Incluye los suministros consumidos previamente activados o no,
+          distintos de los que se integran en productos elaborados, incluyendo aquellos
+          que se consumen en labores de oficina, las herramientas y equipos desechables,
+          vestimenta, suministros de campo, medicinas, y equipos no reconocidos como
+          activos.`
+      },
+      {
+        code: '658',
+        name: 'Gestión medioambienta',
+        description: `Incluye los gastos por naturaleza relacionados con
+          las contribuciones y otros gastos voluntarios que una entidad efectúa a favor de
+          la comunidad ubicada en su ámbito de influencia, tales como el apoyo
+          tecnológico, recreativo, de salud, entre otros. Estos gastos de gestión
+          medioambiental son distintos de aquellos que son acumulados en otras cuentas
+          por naturaleza, como las remuneraciones y beneficios sociales del personal
+          asignado a estas labores. Todos los gastos por naturaleza relacionados con la
+          gestión medioambiental pueden ser acumulados en cuenta de destino.`
+      },
+      {
+        code: '659',
+        name: 'Otros gastos de gestión',
+        description: `Cualquier otro gasto relacionado no incluido en las
+          subcuentas precedentes, entre ellos, las donaciones y las sanciones
+          administrativas.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El importe de las primas de seguros,
+        las regalías, suscripciones y
+        cotizaciones, donaciones, suministros
+        consumidos y otros.`,
+      `El valor contable neto de los activos
+        enajenados y discontinuados sin valor
+        de recuperación.`,
+      `Las sanciones administrativas,
+        distintas de las originadas en deuda
+        tributaria.`,
+      `Los gastos realizados con motivo de
+        la discontinuidad de operaciones.`,
+    ],
+    accredited: [
+      `El total al cierre del período, de Otros
+        gastos de gestión, con cargo a la
+        cuenta 84 Resultado de explotación.`,
+    ],
+    comments: [
+      `Las operaciones discontinuas son aquellas que resultan de la venta o abandono
+        (temporal o definitivo) de una operación que representa una línea importante del
+        negocio por separado y cuyos activos, utilidad o pérdida neta y actividades pueden
+        ser distinguidos físicamente, operacionalmente y para propósito de información
+        financiera (NIIF 5, párrafo 32).`,
+      `Las compras de útiles de escritorio se registran en la subcuenta 603 Materiales
+        auxiliares, suministros y repuestos.`,
+      `Los seguros de vida y los seguros particulares de prestaciones de salud se registran
+        en la subcuenta 627 Seguridad, previsión social y otras contribuciones.
+        Los seguros vinculados con la compra de existencias forman parte del costo de
+        adquisición, y se registran en la subcuenta 609 Costos vinculados con las compras.
+        En la presentación de información por la naturaleza del gasto, según lo prescribe la
+        NIC 1, no debe utilizarse una acumulación del tipo cargas diversas de gestión, pues
+        ello no indica la naturaleza del gasto. En lugar de ello, es conveniente distinguir los
+        componentes principales de esta cuenta, y acumular los saldos menores como otros.`,
+    ]
+  },
+  {
+    code: '66',
+    name: 'PÉRDIDA POR MEDICIÓN DE ACTIVOS NO FINANCIEROS AL VALOR RAZONABLE',
+    description: `Agrupa las subcuentas que acumulan las disminuciones del valor en libros de activos
+      no financieros, cuando son medidos al valor razonable.`,
+    subAccounts: [
+      {
+        code: '661',
+        name: 'Activo realizable',
+        description: `Incluye la disminución de valor de las mercaderías y los
+          productos terminados llevados al valor razonable, así como la de los activos no
+          corrientes mantenidos para la venta.`
+      },
+      {
+        code: '662',
+        name: 'Activo inmovilizado',
+        description: `Comprende la disminución de valor de las propiedades de
+          inversión y del activo biológico.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `La pérdida de valor de los activos
+        realizables e inmovilizados.`,
+    ],
+    accredited: [
+      `El total al cierre del período con cargo
+        a la cuenta 84 Resultado de
+        explotación`,
+    ],
+    comments: [
+      `La pérdida de valor de los activos y pasivos financieros medidos al valor razonable,
+        se registran en la subcuenta 677.`,
+    ]
+  },
+  {
+    code: '67',
+    name: 'GASTOS FINANCIEROS',
+    description: `Agrupa las subcuentas que acumulan los intereses y gastos ocasionados por la
+      obtención de recursos financieros temporales y financiamiento de operaciones
+      comerciales o por efectos de la diferencia en cambio, así como la pérdida por medición
+      de activos y pasivos financieros al valor razonable.`,
+    subAccounts: [
+      {
+        code: '671',
+        name: 'Gastos en operaciones de endeudamiento y otros',
+        description: `Corresponde a los gastos
+          diferentes de intereses en los que se incurre con las instituciones financieras que
+          prestan dinero a la entidad.`
+      },
+      {
+        code: '672',
+        name: 'Pérdida por instrumentos financieros derivados',
+        description: `Pérdidas obtenidas en
+          operaciones de cobertura realizadas.`
+      },
+      {
+        code: '673',
+        name: 'Intereses por préstamos y otras obligaciones',
+        description: `Incluye los gastos por
+          concepto de intereses que devengan los préstamos en un periodo económico.`
+      },
+      {
+        code: '674',
+        name: 'Gastos en operaciones de factoraje (factoring)',
+        description: `Incluye los gastos financieros
+          y otros originados en la venta de cuentas por cobrar.`
+      },
+      {
+        code: '675',
+        name: 'Descuentos concedidos por pronto pago',
+        description: `Descuentos que la entidad otorga
+          a sus clientes por pago anticipado de sus cuentas.`
+      },
+      {
+        code: '676',
+        name: 'Diferencia de cambio',
+        description: `Pérdidas por diferencia en cambio originadas en las
+          operaciones efectuadas en moneda extranjera.`
+      },
+      {
+        code: '677',
+        name: 'Pérdida por medición de activos y pasivos financieros al valor razonable',
+        description: `Comprende el menor valor de los instrumentos financieros en comparación con
+          su valor en libros a la fecha de los estados financieros.`
+      },
+      {
+        code: '678',
+        name: 'Participación en resultados de entidades relacionadas',
+        description: `Contiene la pérdida
+          en el valor de las inversiones en subsidiarias y afiliadas que reconoce la entidad,
+          con motivo de la disminución del patrimonio neto de dichas subsidiarias y
+          afiliadas, donde se ejerce control o influencia significativa, respectivamente.
+          Asimismo, incluye la pérdida en la participación en negocios conjuntos.`
+      },
+      {
+        code: '679',
+        name: 'Otros gastos financieros',
+        description: `Gastos similares no incluidos en las subcuentas
+          precedentes.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El importe de los gastos financieros
+        incurridos por la entidad durante el
+        período.`,
+      `El importe de los gastos financieros y
+        otros descontados en una operación
+        de venta de cuentas por cobrar
+        (factoring).`,
+    ],
+    accredited: [
+      `El total al cierre del período, de los
+        gastos financieros, con cargo a la
+        cuenta 85 Resultado antes de
+        participaciones e impuestos.`,
+    ],
+    comments: [
+      `Los intereses que se capitalicen según el tratamiento permitido por la NIC 23 Costos
+        por préstamos se incluirán en la cuenta de activo correspondiente.`,
+      `En la subcuenta 679 se incorpora una divisionaria 6792 – Gastos financieros en
+        medición a valor descontado, para acumular las actualizaciones por el costo del
+        dinero en el tiempo, de las subcuentas correspondientes de provisiones.`,
+      `NIIF PYMES:
+        No se permite la capitalización de intereses al valor de los activos.`,
+    ]
+  },
+  {
+    code: '68',
+    name: 'VALUACIÓN Y DETERIORO DE ACTIVOS Y PROVISIONES',
+    description: `Agrupa las subcuentas que acumulan el consumo de beneficio económico incorporado
+      en activos inmovilizados; la pérdida de valor de activos por medición a su valor
+      razonable; y, los gastos asociados a pasivos del tipo provisión.`,
+    subAccounts: [
+      {
+        code: '681',
+        name: 'Depreciación de propiedades de inversión',
+        description: `Comprende la estimación del
+          consumo de beneficio económico de las propiedades de inversión, cuando son
+          medidas al costo. Estos activos se acumulan en la cuenta 31 y su depreciación
+          acumulada en la subcuenta 391.`
+      },
+      {
+        code: '682',
+        name: 'Depreciación de activos por derecho de uso – arrendamiento financiero',
+        description: `Comprende la depreciación de las propiedades de inversión, y propiedad, planta
+          y equipo, adquiridos en operaciones de arrendamiento financiero. Estos activos
+          se acumulan en las subcuentas 321 y 322, y su depreciación acumulada en la
+          subcuentas 392 y 393.`
+      },
+      {
+        code: '683',
+        name: 'Depreciación de activos por derecho de uso – arrendamiento operativo',
+        description: `Corresponde a la depreciación de los activos por derechos de uso originados en
+          arrendamientos operativos. Estos activos se acumulan en la subcuenta 323, y
+          su depreciación acumulada en la subcuenta 394.`
+      },
+      {
+        code: '684',
+        name: 'Depreciación de propiedad, planta y equipo',
+        description: `Incluye la depreciación de los
+          activos acumulados en la cuenta 33, y su depreciación acumulada en la
+          subcuenta 395.`
+      },
+      {
+        code: '685',
+        name: 'Depreciación de activos biológicos en producción',
+        description: `Corresponde a la
+          depreciación de los activos biológicos distintos de las plantas productoras
+          clasificadas como bienes de propiedad, planta y equipo. Los activos
+          relacionados se acumulan en la cuenta 35, y su depreciación acumulada en la
+          subcuenta 398.`
+      },
+      {
+        code: '686',
+        name: 'Amortización de intangibles',
+        description: `Incluye la amortización de los intangibles de vida
+          definida, sea que se hayan adquirido o se hayan generado internamente. Los
+          activos relacionados se acumulan en la cuenta 34.`
+      },
+      {
+        code: '687',
+        name: 'Valuación de activos',
+        description: `Corresponde al gasto por deterioro de las cuentas por
+          cobrar, e inversiones mobiliarias. La desvalorización de inventarios se acumula
+          en la subcuenta 695.`
+      },
+      {
+        code: '688',
+        name: 'Deterioro del valor de los activos',
+        description: `Comprende la pérdida de valor de las
+          propiedades de inversión, activos financiados con operaciones de arrendamiento
+          financiero, propiedad, planta y equipo, intangibles y activos biológicos cuando se
+          miden al costo.`
+      },
+      {
+        code: '689',
+        name: 'Provisiones',
+        description: `Comprende los gastos asociados a pasivos respecto de los cuales
+          existe incertidumbre sobre su cuantía o vencimiento. Incluye provisiones por
+          litigios, desmantelamiento y similares, restructuraciones, protección y
+          remediación del medio ambiente, garantías y derechos de uso, sea por su
+          reconocimiento inicial, sea por su actualización financiera. Estas provisiones se
+          relacionan con la cuenta 48.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `La estimación de disminución de valor
+        de los activos, por referencia a su
+        valor razonable.`,
+      `La disminución de valor de los activos
+        inmovilizados, diferentes a la
+        valuación.`,
+      `La estimación de provisiones.`,
+    ],
+    accredited: [
+      `El saldo de esta cuenta al cierre del
+        período, con cargo a la cuenta 84
+        Resultado de explotación.`,
+    ],
+    comments: [
+      `La depreciación de los activos inmovilizados se reconoce en cuentas por separado
+        para cada componente de su valor en libros.`,
+      `Cuando la oportunidad del desembolso de las provisiones sea lejana en relación con
+        el reconocimiento original de la provisión, y el costo del dinero en el tiempo sea
+        importante, se requiere que esta última sea medida a su valor descontado. Las
+        actualizaciones posteriores de la provisión, referidas exclusivamente al transcurso del
+        tiempo, son reconocidas como parte de los gastos financieros en la divisionaria 6792.
+        La transferencia de estos gastos a cuentas de producción, o a las acumulativas de la
+        función del gasto, se efectúa a través de la cuenta 78.`,
+      `La recuperación de deterioro de valor previamente reconocida en la subcuenta 687,
+        se efectúa directamente en las divisionarias de la subcuenta 757 Recuperación de
+        deterioro de cuentas de activos inmovilizados.`,
+    ]
+  },
+  {
+    code: '69',
+    name: 'COSTO DE VENTAS',
+    description: `Agrupa las subcuentas que acumulan el costo de los bienes y/o servicios inherentes al
+      giro del negocio, transferidos a título oneroso. El costo de ventas distingue entre costos
+      asociados a ventas al exterior y ventas locales, así como ventas con entidades
+      relacionadas y con terceros.`,
+    subAccounts: [
+      {
+        code: '691',
+        name: 'Mercaderías',
+        description: `Costo de las mercaderías vendidas, previamente reconocidas en
+          la cuenta 20 Mercaderías.`
+      },
+      {
+        code: '692',
+        name: 'Productos terminados',
+        description: `Costo de los productos terminados vendidos
+          previamente reconocidos en la cuenta 21 Productos terminados, excepto la
+          subcuenta 215 de Inventario de servicios terminados.`
+      },
+      {
+        code: '693',
+        name: 'Servicios terminados',
+        description: `Costo de los subproductos, desechos y desperdicios
+          vendidos, previamente reconocidos en la cuenta 22.`
+      },
+      {
+        code: '694',
+        name: 'Subproductos, desechos y desperdicios',
+        description: `Costo de las existencias de
+          servicios prestados previamente reconocidos en la subcuenta 215 Existencias
+          de servicios terminados, o acumulado directamente en esta cuenta.`
+      },
+      {
+        code: '695',
+        name: 'Gastos por desvalorización de inventarios al costo',
+        description: `Incluye la pérdida de
+          valor de los inventarios por: medición a valor de realización, por deterioro, y por
+          diferencias de inventario.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      ``,
+    ],
+    accredited: [
+      ``,
+    ],
+    comments: [
+      ``,
+    ]
+  },
+  {
     code: 'x',
     name: '',
     description: ``,
@@ -3450,10 +4298,10 @@ const PCGE = [
       ``,
     ],
     debited: [
-      '',
+      ``,
     ],
     accredited: [
-      '',
+      ``,
     ],
     comments: [
       ``,
