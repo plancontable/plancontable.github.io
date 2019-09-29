@@ -4,6 +4,7 @@ $('#search-account').addEventListener('click', event => {
   let [account] = PCGE.filter(account => account.code == accountCode)
   if (account === undefined) return
   renderAccount(account)
+  hackStyles()
   $('#account').style.visibility = 'visible'
 })
 
@@ -64,5 +65,17 @@ function selectInput() {
 
 function $(selector) {
   return document.querySelector(selector)
+}
+
+function hackStyles() {
+  let strongInListDebited = $('#debited li strong')
+  if (strongInListDebited) {
+    strongInListDebited.parentElement.style.listStyle = 'none'
+  }
+
+  let strongInListAccredited= $('#accredited li strong')
+  if (strongInListAccredited) {
+    strongInListAccredited.parentElement.style.listStyle = 'none'
+  }
 }
 
