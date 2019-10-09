@@ -4274,37 +4274,1072 @@ const PCGE = [
       ``,
     ],
     debited: [
-      ``,
+      `El costo de los bienes y servicios
+        vendidos.`,
     ],
     accredited: [
-      ``,
+      `El costo de los bienes vendidos, que
+        han sido devueltos por los clientes.`,
+      `El saldo al cierre del periodo del costo
+        de ventas, con cargo a las cuentas 61
+        Variación de inventarios en el caso de
+        las mercaderías, y 71 Variación de la
+        producción almacenada, cuando se
+        trate de productos terminados,
+        subproductos, desechos y
+        desperdicios, y prestación de
+        servicios.`,
     ],
     comments: [
-      ``,
+      `Para la acumulación de cifras para el estado de resultados por naturaleza, el saldo de
+        la subcuenta 691 Costo de ventas – Mercaderías y la divisionaria 6951, deben ser
+        transferidos a la subcuenta 611 Variación de inventarios de mercaderías, y los saldos
+        de las subcuentas 692, 693 y 694, a las subcuentas correspondientes de la cuenta
+        71, incluyendo en este último caso las divisionarias correspondientes de la subcuenta
+        695.`,
     ]
   },
   {
-    code: 'x',
-    name: '',
-    description: ``,
+    code: '70',
+    name: 'VENTAS',
+    description: `Agrupa las subcuentas que acumulan los ingresos por ventas de bienes y/o servicios
+      inherentes a las operaciones del giro del negocio, desagregando las que corresponden
+      a entidades relacionadas de las que corresponden a ventas a terceros, así como ventas
+      locales de ventas de exportación.`,
     subAccounts: [
       {
-        code: '',
-        name: '',
-        description: ``
+        code: '701',
+        name: 'Mercaderías',
+        description: `Comprende las ventas de productos adquiridos para su venta.`
+      },
+      {
+        code: '702',
+        name: 'Productos terminados',
+        description: `Comprende las ventas de productos manufacturados.`
+      },
+      {
+        code: '703',
+        name: 'Servicios terminados',
+        description: `Incluye los ingresos por la prestación de servicios.`
+      },
+      {
+        code: '704',
+        name: 'Subproductos, desechos y desperdicios',
+        description: `Incluye las ventas de productos
+          originados en el proceso de producción o en el almacenamiento de inventarios,
+          con valor de recuperación reducido.`
+      },
+      {
+        code: '709',
+        name: 'Devoluciones sobre ventas',
+        description: `Comprende las devoluciones de las ventas de
+          inventarios señalados en las subcuentas 701 a la 703.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Los ingresos ventas se reconocen cuando se completa la obligación de desempeño
+        mediante la transferencia de los bienes o servicios comprometidos, lo que implica que
+        el cliente obtiene el control de esos bienes o servicios (NIIF 15, párrafo 32). El control
+        sobre un activo es la capacidad para redirigir su uso y obtener sustancialmente todos
+        los beneficios restantes (NIIF 15, párrafo 33).`,
+      `Las obligaciones de desempeño se pueden satisfacer en determinado momento o a lo
+        largo del tiempo (NIIF 15, párrafos 35 a 38).`,
+      `NIIF PYMES:
+        El reconocimiento de ingresos requiere el cumplimiento de las siguientes condiciones
+        en la venta de bienes: a) transferencia de riesgos y beneficios; b) ausencia de retención
+        de control sobre bienes vendidos; c) medición fiable de ingresos y costos; d)
+        probabilidad de obtención de beneficios económicos. En el caso de venta de servicios,
+        incluyendo los relacionados con los contratos de construcción, en adición a b), c) y d),
+        anteriores, se requiere cumplir con la medición fiable del grado de realización (avance)
+        de la transacción.`,
+    ],
+    debited: [
+      `Las devoluciones de bienes vendidos
+        a clientes.`,
+      `El saldo al cierre del período, con
+        abono a las cuentas:`,
+      `80 Margen comercial en el caso de
+        mercaderías u 81 Producción del
+        periodo, por las ventas de productos
+        terminados; subproductos, desechos
+        y desperdicios; y la prestación de
+        servicios.`,
+    ],
+    accredited: [
+      `El importe de las ventas de bienes y/o
+        servicios.`,
+    ],
+    comments: [
+      `Los descuentos concedidos por pronto pago, aun cuando se indiquen en facturas
+        deberán registrarse en la subcuenta 675 Descuentos concedidos por pronto pago,
+        pues tienen naturaleza financiera. Los intereses en financiamiento a clientes, se
+        reconocen en la subcuenta 772.`,
+      `Cuando el valor de venta incluye intereses por financiación, corresponde distribuir el
+        valor de venta en ingresos por ventas de bienes o servicios, e ingresos por intereses.
+        Estos ingresos se reconocen inicialmente en la divisionaria 4931, y con su devengo
+        en la subcuenta 772.`,
+    ]
+  },
+  {
+    code: '71',
+    name: 'VARIACIÓN DE LA PRODUCCIÓN ALMACENADA',
+    description: `Agrupa las subcuentas cuyos saldos representan las variaciones que se han originado
+      en un período determinado, entre los inventarios finales de productos en proceso y los
+      inventarios iniciales de dichos bienes; así como de los productos terminados, de los
+      subproductos, desechos y desperdicios, de los envases y embalajes, y de las
+      existencias de servicios.`,
+    subAccounts: [
+      {
+        code: '711',
+        name: 'Variación de productos terminados',
+        description: `Importe resultante de las variaciones
+        (positivas o negativas) originadas en el periodo, entre el inventario final e
+        inventario inicial de productos terminados.`
+      },
+      {
+        code: '712',
+        name: 'Variación de subproductos, desechos y desperdicios',
+        description: `Importe resultante de
+          las variaciones (positivas o negativas) originadas en el periodo, entre el
+          inventario final e inventario inicial de subproductos, desechos y desperdicios.`
+      },
+      {
+        code: '713',
+        name: 'Variación de productos en proceso',
+        description: `Importe resultante de las variaciones
+          (positivas o negativas) originadas en el periodo, entre el inventario final e
+          inventario inicial de productos en proceso.`
+      },
+      {
+        code: '714',
+        name: 'Variación de envases y embalajes',
+        description: `Importe resultante de las variaciones
+          (positivas o negativas) originadas en el periodo, entre el inventario final e
+          inventario inicial de envases y embalajes.`
+      },
+      {
+        code: '715',
+        name: 'Variación de existencias de servicios',
+        description: `Incluye la variación (positiva o negativa)
+          originada en el periodo, entre las existencias de servicios al final del periodo y
+          los saldos iniciales.`
       },
     ],
     recognitionAndMeasurement: [
       ``,
     ],
     debited: [
-      ``,
+      `Los productos en proceso, al inicio del
+        período.`,
+      `<strong>Al cierre del período:</strong>`,
+      `La transferencia de los saldos de las
+        subcuentas 692 Productos
+        terminados, 693 Subproductos,
+        desechos y desperdicios, y 694
+        Servicios, de la cuenta 69 Costo de
+        ventas.`,
+      `El saldo acreedor de los componentes
+        de esta cuenta, con abono a la cuenta
+        81 Producción del periodo.`,
     ],
     accredited: [
+      `El costo de los inventarios
+        producidos, con cargo a las
+        respectivas cuentas de inventarios.`,
+      `<strong>Al cierre del período:</strong>`,
+      `El saldo deudor de los componentes
+        de esta cuenta con cargo a la cuenta
+        81 Producción del periodo.`,
+    ],
+    comments: [
+      `La variación de la producción almacenada participa a nivel de resultados, como
+        cuenta correctora de los ingresos, de la manera siguiente:`,
+      `- Cuando muestra saldo deudor, indica que la producción vendida ha sido mayor
+        que la producción del período, lo que ha determinado que la diferencia sea cubierta
+        con el inventario inicial.`,
+      `- Cuando muestra saldo acreedor, indica que la producción vendida ha sido menor
+        que la producción del período, lo cual ha originado un aumento del inventario
+        inicial.`,
+      `Las variaciones de las mercaderías, materias primas, materiales auxiliares y
+        suministros; y envases y embalajes (solo los adquiridos, no los elaborados por la
+        entidad) se registran en la cuenta 61 Variación de inventarios.`,
+    ]
+  },
+  {
+    code: '72',
+    name: 'PRODUCCIÓN DE ACTIVO INMOVILIZADO',
+    description: `Esta cuenta registra el costo incurrido por la entidad en la construcción o producción de
+      activos inmovilizados para la obtención de rentas futuras, aumentar el valor de su capital
+      en el tiempo, o para su uso. Dicho costo, previamente registrado según su naturaleza
+      en el Elemento 6, se deberá transferir a través de esta cuenta, a los rubros de activo
+      inmovilizado que corresponda.`,
+    subAccounts: [
+      {
+        code: '721',
+        name: 'Propiedades de inversión',
+        description: `Comprende el costo incurrido en la construcción de
+          bienes que van a ser destinados a la obtención de rentas, aumentar el valor del
+          capital, o ambas. La cuenta de acumulación del activo es la 31.`
+      },
+      {
+        code: '722',
+        name: 'Propiedad, planta y equipo',
+        description: `Comprende el costo incurrido por la entidad en la
+          construcción o fabricación de bienes para su uso en el objeto de negocio, para
+          fines administrativos o para arrendarlos a terceros. La cuenta de acumulación
+          del activo es la 33.`
+      },
+      {
+        code: '723',
+        name: 'Intangibles',
+        description: `Comprende el costo incurrido en la producción o desarrollo de
+          bienes intangibles. La cuenta de acumulación del activo es la 34.`
+      },
+      {
+        code: '724',
+        name: 'Activos biológicos',
+        description: `Incluye el costo incurrido por la entidad en la producción o
+          desarrollo de activos biológicos. La cuenta de acumulación del activo es la 35.`
+      },
+      {
+        code: '725',
+        name: 'Costos de financiación capitalizados',
+        description: `Incluye el costo financiero incurrido en
+          la financiación de activo inmovilizado, que reúne las condiciones para ser
+          considerado como "activo apto", según se define en la NIC 23.`
+      },
+    ],
+    recognitionAndMeasurement: [
       ``,
+    ],
+    debited: [
+      `El total al cierre del período con
+        abono a la cuenta 81 Producción del
+        periodo, excepto la subcuenta 725,
+        cuyo saldo se transfiere a la cuenta
+        85 Resultado antes de participaciones
+        e impuestos.`,
+    ],
+    accredited: [
+      `El costo incurrido por la entidad con
+        cargo a las cuentas 31 Inversiones
+        inmobiliarias; 33 Inmuebles,
+        maquinaria y equipo; 34 Intangibles o
+        35 Activos biológicos.`,
+    ],
+    comments: [
+      `La producción de activos inmovilizados constituye ingreso de explotación, y se orienta
+        a compensar las cargas en que se han incurrido para su generación.`,
+      `Cuando corresponda la capitalización de costos financieros, según lo establece la NIC
+        23, su transferencia se efectúa a través de la subcuenta 725, la que no afecta la
+        producción del periodo (cuenta 81), sino más bien el resultado antes de
+        participaciones e impuestos (cuenta 85).`,
+      `NIIF PYMES:
+        No se permite la capitalización de intereses al costo de los activos.`,
+    ]
+  },
+  {
+    code: '73',
+    name: 'DESCUENTOS, REBAJAS Y BONIFICACIONES OBTENIDOS',
+    description: `Acumula los descuentos, rebajas y bonificaciones obtenidos sobre compras de bienes
+      y servicios corrientes, distintos al pronto pago, y de aquellos contenidos en facturas.
+      Esta cuenta distingue entre transacciones con partes relacionadas y con terceros.`,
+    subAccounts: [
+      {
+        code: '731',
+        name: 'Descuentos, rebajas y bonificaciones obtenidos',
+        description: `Corresponden a los
+          incrementos de beneficios económicos originados en compras, que no pueden
+          identificarse con el bien o servicio adquirido, y consecuentemente, no pueden ser
+          deducidos del costo de adquisición de aquellos.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El total al cierre del período, con
+        abono a la cuenta 84 Resultado de
+        explotación.`,
+    ],
+    accredited: [
+      `Los descuentos, rebajas y
+        bonificaciones obtenidos.`,
+    ],
+    comments: [
+      `Los descuentos por pronto pago se deben incluir como ingresos financieros en la
+        subcuenta 775 Descuentos obtenidos por pronto pago.`,
+      `Las bonificaciones están asociadas a una consideración de volumen. Por su parte,
+        los descuentos y rebajas corresponden a deducciones monetarias respecto de
+        valores previamente facturados.`,
+      `En tanto el descuento, la bonificación y la rebaja, son recibidos luego de la fecha de
+        facturación y oportunidad de reconocimiento de compras, su reconocimiento
+        corresponde a la clasificación general de otros ingresos para efectos de presentación,
+        luego del resultado de operación.`,
+      `Las NIIF sobre activos inmovilizados (NIC 16, NIC 38, y NIC 40, NIC 41) y la NIIF
+        PYMES, al referirse al costo de adquisición en el reconocimiento inicial de los activos
+        inmovilizados, requieren que cualquier descuento o rebaja obtenido sea deducido de
+        dicho costo. No obstante que no se menciona específicamente el caso de los
+        descuentos o rebajas obtenidos después de algún período de tiempo (cuando el
+        activo ya está siendo depreciado o amortizado), si tales descuentos o rebajas se
+        obtienen, también deben deducirse del activo, y su depreciación o amortización,
+        corregida en períodos futuros.`,
+    ]
+  },
+  {
+    code: '74',
+    name: 'DESCUENTOS, REBAJAS Y BONIFICACIONES CONCEDIDOS',
+    description: `Acumula los descuentos, rebajas y bonificaciones concedidos, distintos a los
+      descuentos por pronto pago. Su naturaleza es deudora.`,
+    subAccounts: [
+      {
+        code: '741',
+        name: 'Descuentos, rebajas y bonificaciones concedidos',
+        description: `Corresponden a las
+          disminuciones de beneficios económicos originados en descuentos, rebajas y
+          bonificaciones efectuadas a clientes sobre el valor de venta.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El monto de los descuentos,
+        bonificaciones y rebajas concedidos
+        sobre el precio de la venta.`,
+    ],
+    accredited: [
+      `El total, al cierre del período, de los
+        descuentos, bonificaciones y rebajas
+        concedidos sobre ventas, con cargo a
+        la cuenta 80.`,
+      `Margen comercial u 81 Producción
+        del periodo, según se relacionen con
+        la venta de mercaderías, o la venta de
+        bienes producidos, respectivamente.`,
+    ],
+    comments: [
+      `Los descuentos concedidos por el pronto pago efectuado por los clientes, deben
+        reconocerse como gastos financieros en la subcuenta 675.`,
+      `La presentación de los descuentos, rebajas y bonificaciones concedidos corresponde
+        a una corrección del monto bruto de venta.`,
+    ]
+  },
+  {
+    code: '75',
+    name: 'OTROS INGRESOS DE GESTIÓN',
+    description: `Agrupa las subcuentas que acumulan los ingresos distintos de los relacionados con la
+      actividad principal de la entidad y de los provenientes de financiamientos otorgados,
+      tanto de terceros como de entidades relacionadas.`,
+    subAccounts: [
+      {
+        code: '751',
+        name: 'Servicios en beneficio del personal',
+        description: `Ingresos provenientes de la prestación de
+          servicios al personal.`
+      },
+      {
+        code: '752',
+        name: 'Comisiones y corretajes',
+        description: `Servicios prestados por la entidad como intermediario
+          comercial a favor de terceros, tales como comisiones por ventas a consignación,
+          comisiones por venta de inmuebles, entre otros.`
+      },
+      {
+        code: '753',
+        name: 'Regalías',
+        description: `Ingresos por el uso de derechos de propiedad de la entidad por parte
+          de terceros, como es el caso de las marcas, patentes, modelos.`
+      },
+      {
+        code: '754',
+        name: 'Alquileres',
+        description: `Arrendamientos de activos inmovilizados, o de bienes muebles.`
+      },
+      {
+        code: '755',
+        name: 'Recuperación de cuentas de valuación',
+        description: `Comprende la recuperación de valor
+          de activos de cuentas por cobrar, inventarios e inversiones mobiliarias, cuyo
+          valor fue previamente disminuido por intermedio de cuentas de valuación.`
+      },
+      {
+        code: '756',
+        name: 'Enajenación de activos inmovilizados',
+        description: `Ingreso generado por la venta de
+          activos inmovilizados, clasificados según su naturaleza.`
+      },
+      {
+        code: '757',
+        name: 'Recuperación de deterioro de cuentas de activos inmovilizados',
+        description: `Incluye el
+          mayor valor actual de los activos que anteriormente fueron deteriorados, y cuyo
+          deterioro acumulado se encuentra registrado en la cuenta 36 Desvalorización de
+          activo inmovilizado, cuando los activos son medidos al costo.`
+      },
+      {
+        code: '759',
+        name: 'Otros ingresos de gestión',
+        description: `Los de similar naturaleza, diferentes a los
+          señalados en las subcuentas precedentes. Incluye los subsidios
+          gubernamentales, ingresos por reclamos al seguro, devoluciones tributarias, y
+          donaciones.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El total al cierre del período, con
+        abono a la cuenta 84 Resultado de
+        explotación.`,
+    ],
+    accredited: [
+      `Recuperación de cuentas de
+        valuación y de deterioro de activos.`,
+      `Los ingresos por concepto distinto a
+        la actividad principal de la entidad.`,
+    ],
+    comments: [
+      `Cuando los ingresos acumulados en esta cuenta como otros ingresos de gestión,
+        corresponden al objeto o propósito de la entidad, deben presentarse como
+        componentes principales de la actividad, al inicio del estado de resultados integrales.`,
+    ]
+  },
+  {
+    code: '76',
+    name: 'GANANCIA POR MEDICIÓN DE ACTIVOS NO FINANCIEROS AL VALOR RAZONABLE',
+    description: `Agrupa las subcuentas que acumulan los incrementos de valor de activos no financieros
+      en comparación con su valor en libros, cuando son medidos al valor razonable.`,
+    subAccounts: [
+      {
+        code: '761',
+        name: 'Activo realizable',
+        description: `Incluye el incremento de valor de las mercaderías y los
+          productos terminados llevados al valor razonable, así como la de los activos no
+          corrientes mantenidos para la venta.`
+      },
+      {
+        code: '762',
+        name: 'Activo inmovilizado',
+        description: `Comprende el incremento de valor de las propiedades de
+          inversión y del activo biológico.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El total al cierre del período con
+        abono a la cuenta 84 Resultado de
+        explotación.`,
+    ],
+    accredited: [
+      `El incremento por referencia al valor
+        razonable de los activos realizables e
+        inmovilizados.`,
+    ],
+    comments: [
+      `La ganancia por medición de activos y pasivos financieros al valor razonable, se
+        registra en la subcuenta 777.`,
+    ]
+  },
+  {
+    code: '77',
+    name: 'INGRESOS FINANCIEROS',
+    description: `Agrupa las subcuentas que acumulan las rentas o rendimientos provenientes de
+      colocación de capitales; de la diferencia en cambio a favor de la entidad; de los
+      descuentos obtenidos por pronto pago; así como de la ganancia por medición de activos
+      y pasivos al valor razonable.`,
+    subAccounts: [
+      {
+        code: '771',
+        name: 'Ganancia por instrumento financiero derivado',
+        description: `Ganancias en operaciones de
+          coberturas financieras realizadas por la entidad.`
+      },
+      {
+        code: '772',
+        name: 'Rendimientos ganados',
+        description: `Intereses que devengan los depósitos en cuentas en
+          instituciones financieras; las cuentas por cobrar comerciales; los préstamos
+          otorgados; y los bonos y otros títulos.`
+      },
+      {
+        code: '773',
+        name: 'Dividendos',
+        description: `Ganancias obtenidas por la tenencia de inversiones en valores
+          representativos del patrimonio de otras entidades.`
+      },
+      {
+        code: '774',
+        name: 'Ingresos en operaciones de factoraje (factoring)',
+        description: `Incluye los rendimientos
+          financieros y otros obtenidos en operaciones de compra de cuentas por cobrar.`
+      },
+      {
+        code: '775',
+        name: 'Descuentos obtenidos por pronto pago',
+        description: `Importe de los descuentos que la
+          entidad obtiene de sus proveedores por el pago anticipado de sus cuentas.`
+      },
+      {
+        code: '776',
+        name: 'Diferencia en cambio',
+        description: `Ganancias por diferencia en cambio originadas por las
+          operaciones efectuadas en moneda extranjera.`
+      },
+      {
+        code: '777',
+        name: 'Ganancia por medición de activos y pasivos financieros al valor razonable',
+        description: `Comprende el mayor valor de los instrumentos financieros primarios en
+          comparación con su valor en libros a la fecha de los estados financieros.`
+      },
+      {
+        code: '778',
+        name: 'Participación en los resultados de entidades relacionadas',
+        description: `Registra la
+          ganancia en el valor de las inversiones en subsidiarias, asociadas y negocios
+          conjuntos que reconoce la entidad, con motivo del incremento del patrimonio
+          neto de dichas entidades, donde se ejerce control o influencia significativa,
+          respectivamente.`
+      },
+      {
+        code: '779',
+        name: 'Otros ingresos financieros',
+        description: `Ingresos de naturaleza financiera no incluidos en
+          las subcuentas precedentes.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El total, al cierre del período de los
+        ingresos financieros, con abono a la
+        cuenta 85 Resultado antes de
+        participaciones e impuestos.`,
+    ],
+    accredited: [
+      `El importe de los ingresos financieros
+        obtenidos en el período.`,
+      `El importe de los ingresos financieros
+        y otros en operaciones de compra de
+        cuentas por cobrar (factoring).`,
+    ],
+    comments: [
+      `La subcuenta 773 Dividendos, incluye los dividendos derivados de las utilidades
+        generadas por la entidad donde se mantiene la inversión en fecha posterior a la
+        adquisición. En caso las utilidades correspondan a fecha anterior a su adquisición,
+        disminuirán el valor de la inversión.`,
+      `En la subcuenta 779 se incorpora una divisionaria 7792 – Ingresos financieros en
+        medición a valor descontado, para acumular los rendimientos financieros en compra
+        de activos o gastos, cuyo financiamiento incorpora implícitamente dicho componente.`,
+      `Esta divisionaria se incrementa por el devengado de intereses reconocidos en la
+        divisionaria 3732.`,
+    ]
+  },
+  {
+    code: '78',
+    name: 'CARGAS CUBIERTAS POR PROVISIONES',
+    description: `Esta cuenta se utiliza para transferir los gastos incurridos en el período para cubrir las
+      provisiones reconocidas en la cuenta 68.`,
+    subAccounts: [
+      {
+        code: '781',
+        name: 'Cargas cubiertas por provisiones',
+        description: `Transfiere las cargas por valuación,
+          deterioro de activos y provisiones, acumulados por su naturaleza, a cuenta del costo de
+          producción o cuentas acumulativas de función del gasto (Elemento 9).`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El total, a la fecha de los estados
+        financieros de los gastos cubiertos
+        por provisiones, con abono a la
+        cuenta 84 Resultados de explotación.`,
+    ],
+    accredited: [
+      `Las cargas por provisiones
+        imputables a cuentas de costos con
+        cargo a las cuentas del Elemento 9.`,
+    ],
+    comments: [
+      `El saldo acreedor de esta cuenta, no representa ingresos sino compensación de
+        gastos. Los gastos imputables a cuentas de costos, distintos de los de valuación y
+        deterioro de activos y provisiones, deben trasladarse a través de la cuenta 79 Cargas
+        imputables a cuentas de costos y gastos.`,
+      `Las cargas que inciden en la producción de activos por cuenta propia deben ser
+        registradas en la cuenta 72 Producción de activo inmovilizado.`,
+    ]
+  },
+  {
+    code: '79',
+    name: 'CARGAS IMPUTABLES A CUENTAS DE COSTOS Y GASTOS',
+    description: `Esta cuenta se utiliza para transferir, en los casos pertinentes, los gastos por naturaleza
+      registrados en el elemento 6, excepto a las cuentas de costos del elemento 9
+      Contabilidad Analítica de Explotación.`,
+    subAccounts: [
+      {
+        code: '791',
+        name: 'Cargas imputables a cuentas de costos y gastos',
+        description: `Transfiere costos y gastos
+          acumulados por su naturaleza, a cuentas de costo de producción o cuentas
+          acumulativas de función del gasto (Elemento 9).`
+      },
+      {
+        code: '792',
+        name: 'Gastos financieros imputables a cuentas de existencias',
+        description: `Transfiere los
+          costos financieros a las existencias aptas, según se definen en la NIC 23, de
+          productos en proceso (subcuenta 238).`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El total, al cierre del período, de las
+        cargas imputables a cuentas de
+        costos con abono a las Cuentas del
+        Elemento 9.`,
+    ],
+    accredited: [
+      `Los gastos imputables a cuentas de
+        costos con cargo a las cuentas del
+        Elemento 9.`,
+    ],
+    comments: [
+      `Es el nexo entre la contabilidad financiera y la contabilidad analítica de explotación.
+        Su saldo no constituye ingresos, es una cuenta de enlace de aquellos gastos que
+        deben afectar los costos.`,
+      `El saldo acreedor de esta cuenta debe ser igual a la sumatoria de los saldos deudores
+        de las cuentas de costos y gastos (Elemento 9), con los cuales se compensa al cierre
+        del periodo. Los gastos cubiertos por provisiones se transfieren a través de la cuenta
+        78.`,
+      `Las transferencias de los gastos por naturaleza que inciden en la producción de
+        activos construidos por la propia entidad para sí misma, se efectuarán utilizando la
+        cuenta 72 Producción de activo inmovilizado.`,
+    ]
+  },
+  {
+    code: '80',
+    name: 'MARGEN COMERCIAL',
+    description: `Se determina al cierre del periodo económico, por la diferencia entre las ventas de
+      mercaderías y el costo de las mismas. El costo de ventas de mercaderías se determina
+      por diferencia entre las compras y la variación, entre el saldo inicial y final, de las
+      existencias de mercaderías.`,
+    subAccounts: [
+      {
+        code: '801',
+        name: 'Margen comercial',
+        description: `Es la ganancia bruta por el servicio de intermediación
+          comercial de una entidad. Resulta de la comparación de los ingresos por ventas,
+          menos las devoluciones sobre ventas, descuentos, rebajas y bonificaciones
+          concedidas, y menos las compras, distinguiendo entre el costo de compra al
+          proveedor y los gastos vinculados con las compras (transporte, seguro, gastos y
+          derechos de aduana, entre otros), corregidas por el aumento o disminución de
+          saldos de mercaderías acumuladas en el período.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El saldo de las compras de
+        mercaderías - subcuenta 601 y
+        divisionaria 6091.`,
+      `El saldo deudor de la variación de
+        mercaderías - subcuenta 611.`,
+      `El saldo de esta cuenta 80 Margen
+        comercial, con abono a la cuenta 82
+        Valor agregado.`,
+    ],
+    accredited: [
+      `El saldo de las ventas de mercaderías
+        - subcuenta 701.`,
+      `El saldo acreedor de la variación de
+        mercaderías - subcuenta 611.`,
+    ],
+    comments: [
+      `La presentación de información por función expone el costo de mercaderías vendidas,
+        mientras que la información por naturaleza, determina esa magnitud por diferencia
+        entre compras y variación de inventarios.`,
+      `Los descuentos por pronto pago constituyen una carga financiera, y por lo tanto no
+        corrigen el monto de ventas, debiendo reconocerse en la cuenta 67.`,
+    ]
+  },
+  {
+    code: '81',
+    name: 'PRODUCCIÓN DEL EJERCICIO',
+    description: `Representa el valor de lo que la entidad ha producido al cierre del período, sea que se
+      haya vendido, almacenado o inmovilizado. La producción que se acumula es la que
+      corresponde a: bienes; servicios y producción de activos para su propio uso por la
+      entidad.`,
+    subAccounts: [
+      {
+        code: '811',
+        name: 'Producción de bienes',
+        description: `Resulta de la comparación de las ventas de productos
+          terminados y, subproductos, desechos y desperdicios menos las devoluciones
+          sobre ventas, descuentos, rebajas y bonificaciones concedidos, y el
+          almacenamiento o des-almacenamiento (disminución de los saldos al inicio del
+          período) de productos terminados, subproductos, desechos y desperdicios,
+          productos en proceso, y envases y embalajes.`
+      },
+      {
+        code: '812',
+        name: 'Producción de servicios',
+        description: `Se determina al comparar los ingresos por prestación
+          de servicios menos las devoluciones (servicios no aceptados por clientes),
+          descuentos y rebajas, y la variación de existencias de servicios (subcuenta 215).`
+      },
+      {
+        code: '813',
+        name: 'Producción de activo inmovilizado',
+        description: `Corresponde a la fabricación para uso o
+          explotación propios de: propiedades de inversión, propiedad, planta y equipo,
+          intangibles; y activos biológicos.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `Los saldos deudores de las
+        subcuentas 711, 712, 713 y 714, los
+        que se transfieren a la subcuenta 811
+        Producción de bienes.`,
+      `El saldo deudor de la cuenta 715, que
+        se transfiere a la subcuenta 812
+        Producción de servicios.`,
+      `El saldo acreedor de esta cuenta con
+        abono a la Cuenta 82 Valor agregado.`,
+    ],
+    accredited: [
+      `El saldo de las ventas de bienes y
+        servicios (subcuentas 702, 703 y
+        704).`,
+      `Los saldos acreedores de las
+        subcuentas 711, 712, 713 y 714, las
+        que se acumulan en la subcuenta 811
+        Producción de bienes.`,
+      `El saldo de la cuenta 72 - Producción
+        de activo inmovilizado, que se
+        acumula en la subcuenta 813.`,
+    ],
+    comments: [
+      `La producción del periodo incorpora en este PCGE el almacenamiento o desalmacenamiento de la producción de servicios, ahora contemplada como una clase
+        de inventarios, y dentro de la producción inmovilizada se presenta una mayor
+        distinción de activos inmovilizados, de manera concordante con el desarrollo de las
+        NIIF.`,
+    ]
+  },
+  {
+    code: '82',
+    name: 'VALOR AGREGADO',
+    description: `El valor agregado indica al cierre del período lo que la entidad añade en su proceso de
+      producción, según su actividad, a la economía nacional, como creación de valor. Esta
+      variable es medida por la diferencia entre la producción del período y los consumos de
+      bienes y servicios suministrados por terceros para esta producción (consumo
+      intermedio). Asimismo, el valor agregado equivale a la suma de las remuneraciones a
+      los factores de producción, es decir a la mano de obra y al capital.`,
+    subAccounts: [
+      {
+        code: '821',
+        name: 'Valor agregado',
+        description: `Resulta de comparar la producción total (actividad comercial y
+          actividades de producción de bienes y servicios), menos los bienes de
+          existencias de materias primas, materiales auxiliares, envases y embalajes, y
+          suministros diversos, a los costos facturados por proveedores y los gastos
+          vinculados con esas compras; y los servicios prestados por terceros, corregidos
+          por el incremento (almacenamiento) o disminución (desalmacenamiento) en su
+          nivel.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El saldo de las compras acumuladas
+        en las subcuentas 602, 603 y 604, y
+        el saldo de las divisionarias 6092,
+        6093 y 6094.`,
+      `El saldo deudor de las subcuentas de
+        Variación de existencias (subcuentas
+        612, 613 y 614).`,
+      `El saldo de la Cuenta 63 Gastos de
+        servicios prestados por terceros.`,
+      `El saldo de esta cuenta, con abono a
+        la cuenta 83 Excedente bruto
+        (insuficiencia bruta) de explotación.`,
+    ],
+    accredited: [
+      `El saldo de las cuentas 80 Margen
+        comercial y 81 Producción del
+        periodo.`,
+      `El saldo acreedor de las subcuentas
+        de Variación de existencias
+        (subcuentas 612, 613 y 614).`,
+    ],
+    comments: [
+      `El saldo acumulado de valor agregado (o añadido) no tiene equivalente en alguna
+        línea de presentación específica en un estado de ganancias y pérdidas.`,
+    ]
+  },
+  {
+    code: '83',
+    name: 'EXCEDENTE BRUTO (INSUFICIENCIA BRUTA) DE EXPLOTACIÓN',
+    description: `Desde el punto de vista económico, mide el resultado (ganancia o excedente bruto;
+      pérdida o insuficiencia bruta) que se deriva de la actividad productiva de la entidad; en
+      cuánto excedente, representa la generación de recursos financieros nuevos
+      procedentes de la explotación, y en tanto, insuficiencia, representa el consumo de
+      recursos financieros antes generados.`,
+    subAccounts: [
+      {
+        code: '831',
+        name: 'Excedente bruto (insuficiencia bruta) de explotación',
+        description: `Se deriva del valor
+          agregado o añadido (cuenta 82), del cual se descuenta los gastos de personal
+          (cuenta 62), los tributos indirectos (cuenta 64), y se adicionan los subsidios
+          recibidos (subcuenta 759).`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `Los saldos de las cuentas 62 Gastos
+        de personal, directores y gerentes, y
+        64 Gastos por tributos.`,
+      `El saldo acreedor de esta cuenta
+        (excedente bruto), con abono a la
+        cuenta 84 Resultado de explotación.`,
+    ],
+    accredited: [
+      `El saldo de la cuenta 82 Valor
+        agregado.`,
+      `Los subsidios recibidos.`,
+      `El saldo deudor de esta cuenta
+        (Insuficiencia bruta) con cargo a la
+        cuenta 84 Resultado de explotación.`,
+    ],
+    comments: [
+      `Los gastos de personal y los gastos por tributos representan desde el punto de vista
+        contable, componentes para determinar el resultado de operación; lo mismo ocurre
+        con los subsidios recibidos, en cuanto permiten compensar operaciones cuyos
+        rendimientos por sí solos no justificarían la inversión.`,
+    ]
+  },
+  {
+    code: '84',
+    name: 'RESULTADO DE EXPLOTACIÓN',
+    description: `Muestra el resultado obtenido por la entidad al cierre del período sin considerar los
+      efectos de la financiación externa de sus operaciones, ni de otras partidas ajenas a la
+      explotación.`,
+    subAccounts: [
+      {
+        code: '841',
+        name: 'Resultado de explotación',
+        description: `Resulta de sustraer al resultado bruto de
+          explotación, los otros gastos de gestión (cuenta 65) excepto el costo neto de
+          enajenación de activos inmovilizados y operaciones discontinuadas (subcuenta
+          655), las donaciones (divisionaria 6591), y las sanciones administrativas
+          (divisionaria 6592); y de adicionar los otros ingresos de gestión (cuenta 75),
+          excepto la divisionaria 7591 subsidios gubernamentales, la cuenta 78 Cargas
+          cubiertas por provisiones, y las ganancias por medición de activos no financieros
+          al valor razonable (cuenta 76).`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El saldo deudor de la cuenta 83
+        Excedente bruto (insuficiencia bruta)
+        de explotación.`,
+      `El saldo de las cuentas 65 Otros
+        gastos de gestión y 68 Valuación y
+        deterioro de activos y provisiones.`,
+      `El saldo acreedor de esta cuenta, con
+        abono a la cuenta 85 Resultado antes
+        de participaciones e impuestos.`,
+    ],
+    accredited: [
+      `El saldo acreedor de la cuenta 83
+        Excedente bruto (insuficiencia bruta)
+        de explotación.`,
+      `El saldo de las cuentas 75 Otros
+        ingresos de gestión (excepto la
+        divisionaria 7591 Subsidios
+        gubernamentales), 76 Ganancia por
+        medición de activos no financieros al
+        valor razonable, y 78 Cargas
+        cubiertas por provisiones`,
+      `El saldo deudor de esta cuenta con
+        cargo a la cuenta 85 Resultado antes
+        de participaciones e impuestos.`,
+    ],
+    comments: [
+      `El resultado de explotación coincide con el resultado antes de financiación, pe
+        impuesto a las ganancias, al presentar el estado de resultado integral por función.`,
+    ]
+  },
+  {
+    code: '85',
+    name: 'RESULTADO ANTES DE PARTICIPACIONES E IMPUESTOS',
+    description: `Muestra el resultado del período antes del impuesto a las ganancias.`,
+    subAccounts: [
+      {
+        code: '851',
+        name: 'Resultado antes del impuesto a las ganancias',
+        description: `Resulta de sustraer del
+          resultado neto de explotación, los montos de ingresos y gastos financieros.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El saldo deudor de la cuenta 84
+        Resultado de explotación.`,
+      `El saldo de la cuenta 67 Gastos
+        financieros.`,
+      `El saldo acreedor de esta cuenta con
+        abono a la cuenta 89 Determinación
+        del resultado del periodo.`,
+    ],
+    accredited: [
+      `El saldo acreedor de la cuenta 84
+        Resultado de explotación.`,
+      `El saldo de la cuenta 77 Ingresos
+        financieros.`,
+      `El saldo deudor de esta cuenta, con
+        cargo a la cuenta 89 Determinación
+        del resultado del periodo.`,
     ],
     comments: [
       ``,
+    ]
+  },
+  {
+    code: '88',
+    name: 'IMPUESTO A LA RENTA',
+    description: `En esta cuenta se reconoce el impuesto calculado sobre la renta imponible del periodo
+      (impuesto corriente), así como el importe del impuesto a las ganancias diferido.`,
+    subAccounts: [
+      {
+        code: '881',
+        name: 'Impuesto a las ganancias – Corriente',
+        description: `Es el gasto calculado sobre la base de
+          la renta tributaria.`
+      },
+      {
+        code: '882',
+        name: 'Impuesto a las ganancias – Diferido',
+        description: `Es el gasto o ingreso (ahorro) calculado
+          sobre la base de las diferencias temporales (gravables y deducibles),
+          determinado por la comparación de saldos contables y tributarios. También
+          incluye el ingreso (ahorro) en impuesto a las ganancias, calculado sobre
+          pérdidas tributarias que razonablemente se espera compensar en el futuro.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      `Se reconoce impuesto a las ganancias corriente, con la existencia de renta tributaria. El
+        componente diferido se reconoce con la existencias de diferencias temporales gravables
+        y deducibles que se espera reviertan en el futuro, dando lugar a impuestos corrientes
+        (en el futuro) o a una recuperación (deducción) de la carga tributaria.`,
+      `Asimismo, se reconocen ingresos (ahorros) originados en pérdidas tributarias
+        arrastrables, cuando es posible demostrar razonablemente que en el futuro se generará
+        renta tributaria para compensar dicha pérdida.`,
+      `El reconocimiento se efectúa al valor nominal.`,
+    ],
+    debited: [
+      `El importe del impuesto a las
+        ganancias corriente con abono a la
+        divisionaria 4017 Impuesto a las
+        ganancias.`,
+      `El importe del gasto contable por
+        impuesto a las ganancias originado
+        en diferencias temporales gravables
+        (gasto por impuesto diferido) con
+        abono a la divisionaria 4912.`,
+      `El importe del impuesto a las
+        ganancias diferido activo, relacionado
+        con la reversión de diferencias
+        temporales deducibles, reconocidas
+        en períodos anteriores.`,
+      `<strong>Al final del período:</strong>`,
+      `El saldo acreedor de esta cuenta con
+        abono a la cuenta 89 Determinación
+        del resultado del periodo.`,
+    ],
+    accredited: [
+      `El importe del impuesto a las
+        ganancias diferido pasivo, relacionado
+        con la reversión de diferencias
+        temporales gravables, reconocidas en
+        periodos anteriores.`,
+      `El importe del ingreso (ahorro)
+        contable reconocido en diferencias
+        temporales deducibles o pérdidas
+        tributarias, con cargo a la subcuenta
+        371.`,
+      `<strong>Al final del período:</strong>`,
+      `El saldo deudor de esta cuenta con
+        cargo a la cuenta 89 Determinación
+        del resultado del periodo.`,
+    ],
+    comments: [
+      ``,
+    ]
+  },
+  {
+    code: '89',
+    name: 'DETERMINACIÓN DEL RESULTADO DEL EJERCICIO',
+    description: `Muestra el resultado neto total que corresponde a un período determinado.
+      Por su naturaleza, al cierre de operaciones, se integra al balance ya que forma parte de
+      la estructura financiera del patrimonio neto de la entidad.`,
+    subAccounts: [
+      {
+        code: '891',
+        name: 'Utilidad',
+        description: `Incremento neto en los beneficios económicos del periodo.`
+      },
+      {
+        code: '892',
+        name: 'Pérdida',
+        description: `Disminución neta en los beneficios económicos del periodo.`
+      },
+    ],
+    recognitionAndMeasurement: [
+      ``,
+    ],
+    debited: [
+      `El saldo deudor de la cuenta 85
+        Resultado antes de participaciones e
+        impuestos.`,
+      `La distribución legal de la renta.`,
+      `El Impuesto a las ganancias.`,
+      `El saldo acreedor de esta cuenta, al
+        cierre del período con abono a la
+        cuenta 59 Resultados acumulados.`,
+    ],
+    accredited: [
+      `El saldo acreedor de la cuenta 85
+        Resultado antes de participaciones e
+        impuestos.`,
+      `El saldo deudor de esta cuenta, al
+        cierre del período con cargo a la
+        cuenta 59 Resultados acumulados.`,
+    ],
+    comments: [
+      `Tanto la utilidad como la pérdida antes de participaciones e impuestos pueden
+        incrementarse o disminuir por la existencia de componente diferido en ingresos
+        (ahorros) por participaciones e impuesto a las ganancias.`,
     ]
   },
 ]
