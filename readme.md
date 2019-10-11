@@ -5,4 +5,4 @@ descripción y dinámica contable de cada cuenta.
 
 El catálogo de cuentas empieza en 10 y termina en 89.
 
-![](https://raw.githubusercontent.com/plancontable/plancontable.github.io/master/pcge.gif)
+![](https://raw.githubusercontent.com/plancontable/plancontable.github.io/master/plancontable.gif)
