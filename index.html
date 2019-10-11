@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.ico"/>
     <link rel="stylesheet" href="css/styles.css">
     <title>Plan Contable</title>
@@ -11,10 +11,13 @@
   <body>
     <section class="content">
       <h1>PLAN CONTABLE GENERAL EMPRESARIAL</h1>
-      <form action="" class="search">
-        <input type="number" id="account-code" placeholder="Cuenta" autocomplete="off"
-          title="Una cuenta tiene dos dígitos" onclick="selectInput()" >
-        <button id="search-account">BUSCAR</button>
+      <form action="">
+        <div class="search">
+          <input type="number" id="account-code" placeholder="Cuenta" autocomplete="off"
+            title="Una cuenta tiene dos dígitos" onclick="selectInput()" >
+          <button id="search-account">BUSCAR</button>
+        </div>
+      <span class="help">Cuenta a nivel de dos dígitos.</span>
       </form>
     </section>
 
