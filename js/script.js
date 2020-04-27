@@ -2,13 +2,14 @@ $('#search-account').addEventListener('click', event => {
   event.preventDefault()
   const accountCode = $('#account-code').value
   let [account] = PCGE.filter(account => account.code == accountCode)
-  if (account === undefined) return
-  renderAccount(account)
-  hackStyles()
-  $('#account').style.visibility = 'visible'
+  if (account) {
+    render(account)
+    hackStyles()
+    $('#account').style.visibility = 'visible'
+  }
 })
 
-function renderAccount(account) {
+function render(account) {
   renderDescription(account)
   renderSubAccounts(account.subAccounts)
   renderRecognitionAndMeasurement(account.recognitionAndMeasurement)
