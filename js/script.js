@@ -23,18 +23,15 @@ function renderDescription(account) {
 }
 
 function renderSubAccounts(subAccounts) {
-  let htmlString = ''
-  subAccounts.forEach(s => htmlString += `<article>
-                                           <h3>${s.code} ${s.name}</h3>
-                                           <p>${s.description}</p>
-                                         </article>`)
-  $('#sub-accounts').innerHTML = htmlString
+  $('#sub-accounts').innerHTML = subAccounts.map(s => `<article>
+                                                         <h3>${s.code} ${s.name}</h3>
+                                                         <p>${s.description}</p>
+                                                       </article>`).join("")
 }
 
 function renderRecognitionAndMeasurement(recognitionAndMeasurement) {
-  let htmlString = ''
-  recognitionAndMeasurement.forEach(paragraph => htmlString += `<p>${paragraph}</p>`)
-  $('#recognition-and-measurement').innerHTML = htmlString
+  $('#recognition-and-measurement').innerHTML =
+    recognitionAndMeasurement.map(paragraph => `<p>${paragraph}</p>`).join("")
 }
 
 function renderDynamics(account) {
@@ -43,21 +40,15 @@ function renderDynamics(account) {
 }
 
 function renderDebited(debited) {
-  let htmlString = ''
-  debited.forEach(debit => htmlString += `<li>${debit}</li>`)
-  $('#debited').innerHTML = htmlString
+  $('#debited').innerHTML = debited.map(debit => `<li>${debit}</li>`).join("")
 }
 
 function renderAccredited(accredited) {
-  let htmlString = ''
-  accredited.forEach(accredit => htmlString += `<li>${accredit}</li>`)
-  $('#accredited').innerHTML = htmlString
+  $('#accredited').innerHTML = accredited.map(accredit => `<li>${accredit}</li>`).join("")
 }
 
 function renderComments(comments) {
-  let htmlString = ''
-  comments.forEach(paragraph => htmlString += `<p>${paragraph}</p>`)
-  $('#comments').innerHTML = htmlString
+  $('#comments').innerHTML = comments.map(paragraph => `<p>${paragraph}</p>`).join("")
 }
 
 function selectInput() {
