@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.ico"/>
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Plan Contable</title>
+    <link rel="stylesheet" href="style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150061762-1"></script>
     <script>
@@ -16,61 +15,22 @@
 
       gtag('config', 'UA-150061762-1');
     </script>
+    <title>Plan Contable</title>
   </head>
   <body>
-    <section class="content">
-      <h1>PLAN CONTABLE GENERAL EMPRESARIAL</h1>
-      <form action="">
-        <div class="search">
-          <input type="number" id="account-code" placeholder="Cuenta" autocomplete="off"
-            title="Una cuenta tiene dos dígitos" onclick="selectInput()" >
-          <button id="search-account">BUSCAR</button>
-        </div>
-      <span class="help">Cuenta a nivel de dos dígitos.</span>
-      </form>
-    </section>
+    <h1>Plan Contable</h1>
 
-    <section class="content" id="account">
-      <section>
-        <h2 id="account-name"></h2>
-        <p id="account-description"></p>
-      </section>
+    <main class="catalogue"></main>
 
-      <section>
-        <h2>NOMENCLATURA Y DESCRIPCIÓN DE LAS SUBCUENTAS</h2>
-        <article id="sub-accounts"></article>
-      </section>
-
-      <section>
-        <h2>RECONOCIMIENTO Y MEDICIÓN</h2>
-        <article id="recognition-and-measurement"></article>
-      </section>
-
-      <section>
-        <h2>DINÁMICA CONTABLE</h2>
-
-        <article>
-          <h3>Es debitada por:</h3>
-          <div id="debited"></div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <article class="account-detail">
         </article>
+      </div>
+    </div>
 
-        <article>
-          <h3>Es acreditada por:</h3>
-          <div id="accredited"></div>
-        </article>
-      </section>
-
-      <section>
-        <h2>COMENTARIOS</h2>
-        <article id="comments"></article>
-      </section>
-
-      <footer>
-        <p>Esta aplicación toma como referencia el <a href="https://www.mef.gob.pe/contenidos/conta_publ/documentac/PCGE_2019.pdf" target="_blank">PCGE 2019</a></p>
-      </footer>
-    </section>
-
-    <script src="js/pcge.js"></script>
-    <script src="js/script.js"></script>
+    <script src="pcge.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

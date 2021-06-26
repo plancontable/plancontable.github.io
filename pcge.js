@@ -5342,4 +5342,4 @@ const PCGE = [
         (ahorros) por participaciones e impuesto a las ganancias.`,
     ]
   },
-]
+];

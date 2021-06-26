@@ -1,5 +1,4 @@
 # Plan Contable General Empresarial - Perú
 
-Dinámica contable del Plan Contable a nivel de 2 dígitos.
-
-![](https://raw.githubusercontent.com/plancontable/plancontable.github.io/master/plancontable.gif)
+El objetivo de esta aplicación es proporcionar a los contadores una herramienta
+que les permita consultar de forma rápida e intuitiva el plan contable (PCGE).
